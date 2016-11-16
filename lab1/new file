@@ -1,0 +1,92 @@
+#!/bin/bash
+
+r_version="`R --version|grep ^R|grep version|cut -f 3 -d ' '`"
+lib="$HOME/R/TDDD56-deps_`uname -m`/$r_version"
+
+echo -n Checking version of R installed ...\ 
+if [ "`echo $r_version | sed -n '/^3/p'`" != "" ]
+then
+	echo OK
+else
+	echo Failed
+	echo This lab material requires R 3.0 or higher. Please install the correct version of R and try again
+	exit 1
+fi
+
+echo This will install the R package ggplot2 in your user space
+echo and update .tschrc and .bashrc so R can load it with no further action.
+echo This will take approx. 60MB on your account. This might ake a few minutes.
+echo
+echo Continue? [y/N]
+read cont
+if [ "$cont" != "y" ]
+then
+	echo No change performed
+	exit 1
+fi
+
+shell_comment="## Add \"$lib\" to R library search path"
+shell_var="R_LIBS_USER"
+
+install_bash()
+{
+	## Backup $HOME/.bashrc
+	if [ -f $HOME/.bashrc ]
+	then
+		echo Create backup for $HOME/.bashrc in $HOME/.bashrc.TDDD56.$$.bak
+		cp $HOME/.bashrc $HOME/.bashrc.TDDD56.$$.bak
+	fi
+
+	echo $shell_comment >> $HOME/.bashrc
+	echo export $shell_var='$'"$shell_var:$lib" >> $HOME/.bashrc
+}
+
+install_csh()
+{
+	## Backup $HOME/.bashrc
+	if [ -f $HOME/.cshrc ]
+	then
+		echo Create backup for $HOME/.cshrc in $HOME/.cshrc.TDDD56.$$.bak
+		cp $HOME/.cshrc $HOME/.cshrc.TDDD56.$$.bak
+	fi
+
+	echo >> $HOME/.cshrc
+	echo $shell_comment >> $HOME/.cshrc
+	echo 'if ($?'$shell_var') then' >> $HOME/.cshrc
+	echo '	setenv' $shell_var '${'"$shell_var}:$lib" >> $HOME/.cshrc	
+	echo 'else' >> $HOME/.cshrc
+	echo '	setenv' "$shell_var $lib" >> $HOME/.cshrc	
+	echo 'endif' >> $HOME/.cshrc
+}
+
+## Create the new directory
+mkdir -p $lib
+
+## Install ggplot
+R -e 'install.packages("ggplot2", dependencies = TRUE, repos = "http://ftp.acc.umu.se/mirror/CRAN/", lib = "'$lib'")'
+eval export $shell_var='$'"$shell_var:$lib"
+R -e 'library(ggplot2)' >/dev/null 2>&1
+success=$?
+
+if [ "$success" == "0" ]
+then
+	## Update the shell
+	case "`getent passwd $LOGNAME | cut -d: -f7 | rev | cut -f 1 -d '/' | rev`" in
+		"bash")
+			install_bash
+		;;
+		"tcsh")
+			install_csh
+		;;
+		*)
+			echo '[WARN]' Don"'"t know how to setup `getent passwd $LOGNAME | cut -d: -f7 | rev | cut -f 1 -d '/' | rev` to update $shell_var at startup.
+		;;
+	esac
+else
+	echo '[ERR ]' ggplot could not be loaded after installation, please contact your lab assistant
+	exit 1
+fi
+
+## Inform the use about the success of installation
+echo
+echo Installation done.
