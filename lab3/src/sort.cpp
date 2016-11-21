@@ -5,6 +5,8 @@
 
 #include "sort.h"
 
+#include <pthread.h>
+
 // These can be handy to debug your code through printf. Compile with CONFIG=DEBUG flags and spread debug(var)
 // through your code to display values that may understand better why your code may not work. There are variants
 // for strings (debug()), memory addresses (debug_addr()), integers (debug_int()) and buffer size (debug_size_t()).
@@ -135,6 +137,127 @@ simple_quicksort(int *array, size_t size)
 	}
 }
 
+struct thread_args
+{
+	int* subarray;
+	size_t size;
+};
+
+void
+Parallel_merge_sort(int* array, size_t size)
+{
+malloc(sizeof(thread_args))
+	if(size == 1)
+		return NULL;
+
+	else if(size == 2)
+	{
+		// Compare elements
+		if(data->subarray[size] > data->subarray[size+1])
+		{	
+			int temp = data->subarray;
+			data->subarray[size] = data->subarray[size+1];
+			data->subarray[size+1] = temp;
+		}
+		return NULL;
+	}
+
+	else
+	{
+		int* left, right;
+		int left_size, right_size;
+		int split_size = size / 2;
+		int left_ind = 0, right_ind = 0;
+		int count = 0;
+
+
+		left = data->subarray;
+		left_size = split_size;
+
+		right = data->subarray; + split_size;
+		right_size = split_size + size % 2;
+
+		Parallel_merge_sort(left, left_size)
+		Parallel_merge_sort(right, right_size);
+
+		do {
+			if(left[left_ind] <= right[right_ind])
+			{
+				//buffers[buf_usage][count] = left[left_ind];
+				left_ind++;
+			}
+			else
+			{
+				//buffers[buf_usage][count] = right[right_ind];
+				right_ind++;
+			}
+			//buf_usage = !buf_usage;
+			++count;
+
+		} while(right_size > right_ind && left_size > left_ind);
+
+		int i;
+		for (i = left_ind; i < left_size; ++i)
+		{
+			//buffers[buf_usage][count] = left[i];
+			++count;
+		}
+		for (i = right_ind; i < right_size; ++i)
+		{
+			//buffers[buf_usage][count] = right[i];
+			++count;
+		}
+/*
+		if(!buf_usage)
+		{
+			int* temp_ptr;
+			temp_ptr = data->subarray;
+			data->subarray = data->buffer;
+			//data->buffer = temp_ptr;
+		}*/
+	}
+}
+
+void
+merge_sort(int* array, size_t size)
+{
+#if NB_THREADS == 0
+
+Parallel_merge_sort(array, size);
+
+#else
+
+int step_size = size / NB_THREADS;
+pthread thread[NB_THREADS];
+thread_args t_args;
+
+t_args.size = step_size;
+
+
+// invalidate cache line?
+int i;
+for (i = 0; i < NB_THREADS - 1; ++i)
+{
+	t_args.subarray = array + step_size*i;
+	pthread_create(&thread, NULL, Parallel_merge_sort, &t_args);
+}
+
+// Speciall case for the last thread to handle the last if size in unevenly devided by NB_THREADS
+t_args.subarray = array + step_size*i+1;
+t_args.size = step_size + size % NB_THREADS;
+pthread_create(&thread, NULL, Parallel_merge_sort, &t_args);
+
+for (int i = 0; i < NB_THREADS; ++i)
+{
+	pthread_join(thread[i], NULL);
+}
+
+return NULL;
+
+#endif
+}
+
+
 // This is used as sequential sort in the pipelined sort implementation with drake (see merge.c)
 // to sort initial input data chunks before streaming merge operations.
 void
@@ -153,6 +276,7 @@ sort(int* array, size_t size)
 
 	// This is to make the base skeleton to work. Replace it with your own implementation
 	simple_quicksort(array, size);
+
 
 
 
