@@ -271,6 +271,18 @@ sort(int* array, size_t size)
 		pthread_join(thread[i], NULL);
 	}
 
+	// merge the threads
+#if NB_THREADS == 2
+	merge(array, step_size, size - step_size);
+#elif NB_THREADS == 3
+	merge(array, step_size, step_size);
+	merge(array, step_size * 2, step_size + size % NB_THREADS);
+#elif NB_THREADS == 4
+	merge(array, step_size, step_size);
+	merge(array + step_size*2, step_size, step_size + size % NB_THREADS);
+	merge(array, step_size * 2, step_size * 2 + size % NB_THREADS);
+#endif
+
 	return NULL;
 
 #endif
