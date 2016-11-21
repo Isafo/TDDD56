@@ -143,52 +143,19 @@ struct thread_args
 	size_t size;
 };
 
-void merge_sort(int* array, size_t size)
-{	
-	if(size == 1)
-	{
-		return NULL;
-	}
-	else if(size == 2)
-	{
-		// Compare elements
-		if(data->subarray[size] > data->subarray[size+1])
-		{	
-			int temp = data->subarray;
-			data->subarray[size] = data->subarray[size+1];
-			data->subarray[size+1] = temp;
-		}
-		return NULL;
-	}
-	else
-	{
-		int* left, right;
-		int left_size, right_size;
-		int split_size = size / 2;
-		int left_ind = 0, right_ind = 0;
-		int count = 0;
-
-
-		left = data->subarray;
-		left_size = split_size;
-
-		right = data->subarray; + split_size;
-		right_size = split_size + size % 2;
-
-		Parallel_merge_sort(left, left_size)
-		Parallel_merge_sort(right, right_size);
-
-		merge(array, temp, size);
-}
-
-void parallel_merge_sort(struct* thread_args)
+void copy(int* a1, int* a2, size_t size)
 {
-	merge_sort(thread_args.subarray, thread_args.size);
+	int i;
+	for(i = 0; i < size; ++i)
+	{
+	  a1[i] = a2[i];
+	}
 }
 
 void merge(int* array, size_t size1, size_t size2)
 {
-	int temp = malloc(sizeof(int) * size1 + size2);
+	
+	int* temp = (int*)malloc(sizeof(int) * (size1 + size2));
 	int ind1 = 0;
 	int ind2 = 0;
 
@@ -213,9 +180,55 @@ void merge(int* array, size_t size1, size_t size2)
 	for(; ind2 < size2; ++ind2)
 		temp[ind1 + ind2] = array[size1 + ind2];
 
-	memcpy(array, &temp, sizeof(int) * size1 + size2);
+	copy(array, temp, size1 + size2);
+	//memcpy(array, &temp, sizeof(int) * size1 + size2);
 
 	free(temp);
+}
+
+void merge_sort(int* array, size_t size)
+{	
+	if(size == 1)
+	{
+		return;
+	}
+	else if(size == 2)
+	{
+		// Compare elements
+		if(array[0] > array[1])
+		{	
+			int temp = array[0];
+			array[0] = array[1];
+			array[1] = temp;
+		}
+		return;
+	}
+	else
+	{
+		int* left; 
+		int* right;
+		int left_size, right_size;
+		int split_size = size / 2;
+		int left_ind = 0, right_ind = 0;
+		int count = 0;
+
+		left = array;
+		left_size = split_size;
+
+		right = array + split_size;
+		right_size = size - split_size;
+
+		merge_sort(left, left_size);
+		merge_sort(right, right_size);
+
+		merge(array, left_size, right_size);
+	}
+}
+
+void* parallel_merge_sort(void* args)
+{
+	struct thread_args* args_t = (thread_args*)args;
+	merge_sort(args_t->subarray, args_t->size);
 }
 
 // This is used as sequential sort in the pipelined sort implementation with drake (see merge.c)
@@ -235,36 +248,31 @@ sort(int* array, size_t size)
 
 
 	// This is to make the base skeleton to work. Replace it with your own implementation
-	simple_quicksort(array, size);
+	//simple_quicksort(array, size);
 
 
-	thread_args t_args;
-	
 #if NB_THREADS == 0
-	t_args.size = size;
-	t_args.subarray = array;
-	merge_sort(t_args);
-
+	merge_sort(array, size);
 #else
-
+	struct thread_args t_args;
+	
 	int step_size = size / NB_THREADS;
-	pthread thread[NB_THREADS];
+	pthread_t thread[NB_THREADS];
 	
 	t_args.size = step_size;
-
 
 	// invalidate cache line?
 	int i;
 	for (i = 0; i < NB_THREADS - 1; ++i)
 	{
 		t_args.subarray = array + step_size*i;
-		pthread_create(&thread, NULL, parallel_merge_sort, &t_args);
+		pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args);
 	}
 
 	// Speciall case for the last thread to handle the last if size in unevenly devided by NB_THREADS
-	t_args.subarray = array + step_size*i+1;
-	t_args.size = step_size + size % NB_THREADS;
-	pthread_create(&thread, NULL, parallel_merge_sort, &t_args);
+	t_args.subarray = array + step_size*i;
+	t_args.size = size - step_size * (NB_THREADS - 1);
+	pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args);
 
 	for (int i = 0; i < NB_THREADS; ++i)
 	{
@@ -276,14 +284,13 @@ sort(int* array, size_t size)
 	merge(array, step_size, size - step_size);
 #elif NB_THREADS == 3
 	merge(array, step_size, step_size);
-	merge(array, step_size * 2, step_size + size % NB_THREADS);
+	merge(array, step_size * 2, size - step_size*2);
 #elif NB_THREADS == 4
 	merge(array, step_size, step_size);
-	merge(array + step_size*2, step_size, step_size + size % NB_THREADS);
-	merge(array, step_size * 2, step_size * 2 + size % NB_THREADS);
+	merge(array + step_size*2, step_size, size - step_size*3);
+	merge(array, step_size * 2, size - step_size * 2);
 #endif
-
-	return NULL;
+	return;
 
 #endif
 
