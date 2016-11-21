@@ -143,13 +143,12 @@ struct thread_args
 	size_t size;
 };
 
-void
-Parallel_merge_sort(int* array, size_t size)
-{
-malloc(sizeof(thread_args))
+void merge_sort(int* array, size_t size)
+{	
 	if(size == 1)
+	{
 		return NULL;
-
+	}
 	else if(size == 2)
 	{
 		// Compare elements
@@ -161,7 +160,6 @@ malloc(sizeof(thread_args))
 		}
 		return NULL;
 	}
-
 	else
 	{
 		int* left, right;
@@ -180,83 +178,45 @@ malloc(sizeof(thread_args))
 		Parallel_merge_sort(left, left_size)
 		Parallel_merge_sort(right, right_size);
 
-		do {
-			if(left[left_ind] <= right[right_ind])
-			{
-				//buffers[buf_usage][count] = left[left_ind];
-				left_ind++;
-			}
-			else
-			{
-				//buffers[buf_usage][count] = right[right_ind];
-				right_ind++;
-			}
-			//buf_usage = !buf_usage;
-			++count;
+		merge(array, temp, size);
+}
 
-		} while(right_size > right_ind && left_size > left_ind);
+void parallel_merge_sort(struct* thread_args)
+{
+	merge_sort(thread_args.subarray, thread_args.size);
+}
 
-		int i;
-		for (i = left_ind; i < left_size; ++i)
+void merge(int* array, size_t size1, size_t size2)
+{
+	int temp = malloc(sizeof(int) * size1 + size2);
+	int ind1 = 0;
+	int ind2 = 0;
+
+	// merge the sub arrays
+	while (size1 > ind1 && size2 > ind2) {
+		if(array[ind1] < array[size1 + ind2])
 		{
-			//buffers[buf_usage][count] = left[i];
-			++count;
+			temp[ind1 + ind2] = array[ind1];
+			++ind1;
 		}
-		for (i = right_ind; i < right_size; ++i)
+		else
 		{
-			//buffers[buf_usage][count] = right[i];
-			++count;
+			temp[ind1 + ind2] = array[size1 + ind2];
+			++ind2;
 		}
-/*
-		if(!buf_usage)
-		{
-			int* temp_ptr;
-			temp_ptr = data->subarray;
-			data->subarray = data->buffer;
-			//data->buffer = temp_ptr;
-		}*/
 	}
+
+	// insert the remaining elements
+	for(; ind1 < size1; ++ind1)
+		temp[ind1 + ind2] = array[ind1];
+
+	for(; ind2 < size2; ++ind2)
+		temp[ind1 + ind2] = array[size1 + ind2];
+
+	memcpy(array, &temp, sizeof(int) * size1 + size2);
+
+	free(temp);
 }
-
-void
-merge_sort(int* array, size_t size)
-{
-#if NB_THREADS == 0
-
-Parallel_merge_sort(array, size);
-
-#else
-
-int step_size = size / NB_THREADS;
-pthread thread[NB_THREADS];
-thread_args t_args;
-
-t_args.size = step_size;
-
-
-// invalidate cache line?
-int i;
-for (i = 0; i < NB_THREADS - 1; ++i)
-{
-	t_args.subarray = array + step_size*i;
-	pthread_create(&thread, NULL, Parallel_merge_sort, &t_args);
-}
-
-// Speciall case for the last thread to handle the last if size in unevenly devided by NB_THREADS
-t_args.subarray = array + step_size*i+1;
-t_args.size = step_size + size % NB_THREADS;
-pthread_create(&thread, NULL, Parallel_merge_sort, &t_args);
-
-for (int i = 0; i < NB_THREADS; ++i)
-{
-	pthread_join(thread[i], NULL);
-}
-
-return NULL;
-
-#endif
-}
-
 
 // This is used as sequential sort in the pipelined sort implementation with drake (see merge.c)
 // to sort initial input data chunks before streaming merge operations.
@@ -278,7 +238,42 @@ sort(int* array, size_t size)
 	simple_quicksort(array, size);
 
 
+	thread_args t_args;
+	
+#if NB_THREADS == 0
+	t_args.size = size;
+	t_args.subarray = array;
+	merge_sort(t_args);
 
+#else
+
+	int step_size = size / NB_THREADS;
+	pthread thread[NB_THREADS];
+	
+	t_args.size = step_size;
+
+
+	// invalidate cache line?
+	int i;
+	for (i = 0; i < NB_THREADS - 1; ++i)
+	{
+		t_args.subarray = array + step_size*i;
+		pthread_create(&thread, NULL, parallel_merge_sort, &t_args);
+	}
+
+	// Speciall case for the last thread to handle the last if size in unevenly devided by NB_THREADS
+	t_args.subarray = array + step_size*i+1;
+	t_args.size = step_size + size % NB_THREADS;
+	pthread_create(&thread, NULL, parallel_merge_sort, &t_args);
+
+	for (int i = 0; i < NB_THREADS; ++i)
+	{
+		pthread_join(thread[i], NULL);
+	}
+
+	return NULL;
+
+#endif
 
 	// Alternatively, use C++ sequential sort, just to see how fast it is
 	//cxx_sort(array, size);
