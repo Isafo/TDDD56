@@ -252,7 +252,7 @@ sort(int* array, size_t size)
 
 
 #if NB_THREADS == 0
-	//merge_sort(array, size);
+	merge_sort(array, size);
 
 	int step_size = size / NB_THREADS;
 	int size1 = step_size;
