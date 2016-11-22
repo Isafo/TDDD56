@@ -262,9 +262,7 @@ sort(int* array, size_t size)
 	// invalidate cache line?
 	int i = 0;
 	t_args.subarray = array + step_size*i;
-	pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args);
 	merge_sort(t_args.subarray, step_size);
-
 
 	i = 1;
 	// Speciall case for the last thread to handle the last if size in unevenly devided by NB_THREADS
