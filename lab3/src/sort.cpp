@@ -253,17 +253,26 @@ sort(int* array, size_t size)
 
 #if NB_THREADS == 0
 	merge_sort(array, size);
-
+#if NB_THREADS == 2
+	struct thread_args t_args;
+	
 	int step_size = size / NB_THREADS;
-	int size1 = step_size;
-	int* subarray1 = array;
-	//merge_sort(t_args.subarray, step_size);
+	pthread_t thread[NB_THREADS];
+	
+	t_args.size = step_size;
+	t_args.subarray = array;
+	pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args);
 
-	// Speciall case for the last thread to handle the last if size in unevenly devided by NB_THREADS
-	int* subarray2 = array + step_size;
-	int size2 = size - step_size * (NB_THREADS - 1);
-	//merge_sort(t_args.subarray, t_args.size);
+	t_args.subarray = array + step_size;
+	t_args.size = size - step_size;
+	pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args);
 
+	for (int i = 0; i < NB_THREADS; ++i)
+	{
+		pthread_join(thread[i], NULL);
+	}
+
+	merge(array, step_size, size - step_size);
 #else
 	struct thread_args t_args;
 	
