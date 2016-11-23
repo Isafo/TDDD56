@@ -122,7 +122,23 @@ drake_run(task_t *task)
 
 	// Merge as much as you can here
 
+	int ind1 = 0;
+	int ind2 = 0;
 
+	// merge the sub arrays
+	while (left_size > ind1 && right_size > ind2) {
+		if(array[ind1] < array[left_size + ind2])
+		{
+			parent[ind1 + ind2] = array[ind1];
+			++ind1;
+		}
+		else
+		{
+			parent[ind1 + ind2] = array[left_size + ind2];
+			++ind2;
+		}
+	}
+	
 	// Don't forget, the task may receive more data from its left or right child, unless the left or right child terminated.
 	// You will need to know the state of a task with
 	//
@@ -133,11 +149,25 @@ drake_run(task_t *task)
 	// parent task.
 	// This returns 0 is more data can be accessible in later iterations, 1 if no more input can be expected from the task or if the task
 	// will not receive any more input from any of its input channels.
-
+	
+	// insert the remaining elements
+	while(ind1 < left_size && drake_task_killed(right_link->prod))
+	{
+		parent[ind1 + ind2] = array[ind1];
+		++ind1;
+	}
+	
+	while(ind2 < right_size && drake_task_killed(right_link->prod))
+	{
+		parent[ind1 + ind2] = array[left_size + ind2];
+		++ind2;
+	}
 	
 	// Write the number of element you consumed from left child and right child into left_consumed and right_consumed, respectively
 	// and the total number of elements you pushed toward parent in parent_pushed
-
+	left_consumed = ind1;
+	right_consumed = ind2;
+	parent_pushed = left_consumed + right_consumed;
 
 	// Now discarding input consumed and pushed output produced through channels and using the number of elements consumed and produced
 	// that you set above.
@@ -152,7 +182,8 @@ drake_run(task_t *task)
 	// check drake_task_is_depleted(task_tp t)
 	//
 	// That returns 1 if all predecessors of task t are killed and all input buffers are empty, or if task t is killed and 0 otherwise.
-	return 0;
+	
+	return drake_task_depleted(right_link->prod) && drake_task_is_depleted(left_link->prod);
 }
 
 int

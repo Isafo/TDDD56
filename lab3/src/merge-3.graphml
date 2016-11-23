@@ -36,7 +36,7 @@
       <data key="v_max_width">1</data>
     </node>
     <node id="n2">
-      <data key="v_name">root</data>
+      <data key="v_name">root_1</data>
       <data key="v_module">merge</data>
       <data key="v_workload">1</data>
       <data key="v_streaming">1</data>
@@ -56,23 +56,15 @@
       <data key="e_rate">1</data>
     </edge>
 
-<!-- thread 1-->
     <node id="n3">
-      <data key="v_name">leaf_1</data>
+      <data key="v_name">leaf_3</data>
       <data key="v_module">presort</data>
       <data key="v_workload">1</data>
       <data key="v_streaming">0</data>
       <data key="v_efficiency">1 1e-06 1e-06 </data>
       <data key="v_max_width">1</data>
     </node>
-    <node id="n4">
-      <data key="v_name">leaf_2</data>
-      <data key="v_module">presort</data>
-      <data key="v_workload">1</data>
-      <data key="v_streaming">0</data>
-      <data key="v_efficiency">1 1e-06 1e-06 </data>
-      <data key="v_max_width">1</data>
-    </node>
+
     <node id="n5">
       <data key="v_name">root</data>
       <data key="v_module">merge</data>
@@ -81,102 +73,17 @@
       <data key="v_efficiency">1 1e-06 1e-06 </data>
       <data key="v_max_width">1</data>
     </node>
+    <edge source="n2" target="n5">
+      <data key="e_producer_name">output</data>
+      <data key="e_consumer_name">left</data>
+      <data key="e_type">int</data>
+      <data key="e_rate">1</data>
+    </edge>
     <edge source="n3" target="n5">
       <data key="e_producer_name">output</data>
-      <data key="e_consumer_name">left</data>
-      <data key="e_type">int</data>
-      <data key="e_rate">1</data>
-    </edge>
-    <edge source="n4" target="n5">
-      <data key="e_producer_name">output</data>
       <data key="e_consumer_name">right</data>
       <data key="e_type">int</data>
       <data key="e_rate">1</data>
     </edge>
-
-<!-- merge t0 t1 -->
-
-    <node id="n6">
-      <data key="v_name">root</data>
-      <data key="v_module">merge</data>
-      <data key="v_workload">1</data>
-      <data key="v_streaming">1</data>
-      <data key="v_efficiency">1 1e-06 1e-06 </data>
-      <data key="v_max_width">1</data>
-    </node>
-    <edge source="n2" target="n6">
-      <data key="e_producer_name">output</data>
-      <data key="e_consumer_name">left</data>
-      <data key="e_type">int</data>
-      <data key="e_rate">1</data>
-    </edge>
-    <edge source="n5" target="n6">
-      <data key="e_producer_name">output</data>
-      <data key="e_consumer_name">right</data>
-      <data key="e_type">int</data>
-      <data key="e_rate">1</data>
-    </edge>
-
-<!-- thread 2 -->
-    <node id="n7">
-      <data key="v_name">leaf_1</data>
-      <data key="v_module">presort</data>
-      <data key="v_workload">1</data>
-      <data key="v_streaming">0</data>
-      <data key="v_efficiency">1 1e-06 1e-06 </data>
-      <data key="v_max_width">1</data>
-    </node>
-    <node id="n8">
-      <data key="v_name">leaf_2</data>
-      <data key="v_module">presort</data>
-      <data key="v_workload">1</data>
-      <data key="v_streaming">0</data>
-      <data key="v_efficiency">1 1e-06 1e-06 </data>
-      <data key="v_max_width">1</data>
-    </node>
-    <node id="n9">
-      <data key="v_name">root</data>
-      <data key="v_module">merge</data>
-      <data key="v_workload">1</data>
-      <data key="v_streaming">1</data>
-      <data key="v_efficiency">1 1e-06 1e-06 </data>
-      <data key="v_max_width">1</data>
-    </node>
-    <edge source="n7" target="n9">
-      <data key="e_producer_name">output</data>
-      <data key="e_consumer_name">left</data>
-      <data key="e_type">int</data>
-      <data key="e_rate">1</data>
-    </edge>
-    <edge source="n8" target="n9">
-      <data key="e_producer_name">output</data>
-      <data key="e_consumer_name">right</data>
-      <data key="e_type">int</data>
-      <data key="e_rate">1</data>
-    </edge>
-
-<!-- merge the two threads with the third -->
-
-    <node id="n10">
-      <data key="v_name">root</data>
-      <data key="v_module">merge</data>
-      <data key="v_workload">1</data>
-      <data key="v_streaming">1</data>
-      <data key="v_efficiency">1 1e-06 1e-06 </data>
-      <data key="v_max_width">1</data>
-    </node>
-    <edge source="n6" target="n10">
-      <data key="e_producer_name">output</data>
-      <data key="e_consumer_name">left</data>
-      <data key="e_type">int</data>
-      <data key="e_rate">1</data>
-    </edge>
-    <edge source="n9" target="n10">
-      <data key="e_producer_name">output</data>
-      <data key="e_consumer_name">right</data>
-      <data key="e_type">int</data>
-      <data key="e_rate">1</data>
-    </edge>
-
   </graph>
 </graphml>
