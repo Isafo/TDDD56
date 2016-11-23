@@ -181,7 +181,7 @@ void merge(int* array, size_t size1, size_t size2)
 		temp[ind1 + ind2] = array[size1 + ind2];
 
 	copy(array, temp, size1 + size2);
-	//memcpy(array, &temp, sizeof(int) * size1 + size2);
+//	memcpy(array, temp, sizeof(int) * size1 + size2);
 
 	free(temp);
 }
@@ -254,25 +254,24 @@ sort(int* array, size_t size)
 #if NB_THREADS == 0
 	merge_sort(array, size);
 #else
-	struct thread_args t_args;
+	struct thread_args t_args[NB_THREADS];
 	
 	int step_size = size / NB_THREADS;
 	pthread_t thread[NB_THREADS];
 	
-	t_args.size = step_size;
-
 	// invalidate cache line?
 	int i;
 	for (i = 0; i < NB_THREADS - 1; ++i)
 	{
-		t_args.subarray = array + step_size*i;
-		pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args);
+		t_args[i].size = step_size;
+		t_args[i].subarray = array + step_size*i;
+		pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args[i]);
 	}
 
 	// Speciall case for the last thread to handle the last if size in unevenly devided by NB_THREADS
-	t_args.subarray = array + step_size*i;
-	t_args.size = size - step_size * (NB_THREADS - 1);
-	pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args);
+	t_args[i].subarray = array + step_size*i;
+	t_args[i].size = size - step_size * (NB_THREADS - 1);
+	pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args[i]);
 
 	for (int i = 0; i < NB_THREADS; ++i)
 	{
