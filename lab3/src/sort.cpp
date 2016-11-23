@@ -141,6 +141,7 @@ struct thread_args
 {
 	int* subarray;
 	size_t size;
+	size_t parallel_depth_rest;
 };
 
 void copy(int* a1, int* a2, size_t size)
@@ -186,7 +187,7 @@ void merge(int* array, size_t size1, size_t size2)
 	free(temp);
 }
 
-void merge_sort(int* array, size_t size)
+void merge_sort(int* array, size_t size, size_t par_depth)
 {	
 	if(size == 1)
 	{
@@ -218,9 +219,35 @@ void merge_sort(int* array, size_t size)
 		right = array + split_size;
 		right_size = size - split_size;
 
-		merge_sort(left, left_size);
-		merge_sort(right, right_size);
+		if(par_depth > 0)
+		{
+			--par_depth;
+			pthread_t innerthread[2];
+			struct thread_args t_args[2];
 
+			int i = 0;
+
+			t_args[i].size = step_size;
+			t_args[i].subarray = array + step_size*i;
+			t_args[i].parallel_depth_rest = par_depth;
+			pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args[i]);
+			
+			i = 1;
+			// Speciall case for the last thread to handle the last if size in unevenly devided by NB_THREADS
+			t_args[i].subarray = array + step_size;
+			t_args[i].size = size - step_size;
+			t_args[i].parallel_depth_rest = par_depth;
+			pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args[i]);
+
+			pthread_join(thread[0], NULL);
+			pthread_join(thread[1], NULL);
+		}
+		else 
+		{
+			merge_sort(left, left_size);
+			merge_sort(right, right_size);
+		}
+		
 		merge(array, left_size, right_size);
 	}
 }
@@ -259,35 +286,51 @@ sort(int* array, size_t size)
 	int step_size = size / NB_THREADS;
 	pthread_t thread[NB_THREADS];
 	
-	// invalidate cache line?
+#if NB_THREADS == 3 || 1
 	int i;
 	for (i = 0; i < NB_THREADS - 1; ++i)
 	{
 		t_args[i].size = step_size;
 		t_args[i].subarray = array + step_size*i;
+		t_args[i].parallel_depth_rest = 0;
 		pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args[i]);
 	}
 
 	// Speciall case for the last thread to handle the last if size in unevenly devided by NB_THREADS
 	t_args[i].subarray = array + step_size*i;
 	t_args[i].size = size - step_size * (NB_THREADS - 1);
+	t_args[i].parallel_depth_rest = 0;
 	pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args[i]);
 
 	for (int i = 0; i < NB_THREADS; ++i)
 	{
 		pthread_join(thread[i], NULL);
 	}
+#else
+	int i = 0;
+
+	t_args[i].size = step_size;
+	t_args[i].subarray = array + step_size*i;
+	t_args[i].parallel_depth_rest = NB_THREADS - 3;
+	pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args[i]);
+	
+	i = 1;
+	// Speciall case for the last thread to handle the last if size in unevenly devided by NB_THREADS
+	t_args[i].subarray = array + step_size;
+	t_args[i].size = size - step_size;
+	t_args[i].parallel_depth_rest = NB_THREADS - 3;
+	pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args[i]);
+
+	pthread_join(thread[0], NULL);
+	pthread_join(thread[1], NULL);
+#endif
 
 	// merge the threads
-#if NB_THREADS == 2
+#if NB_THREADS == 2 || 4
 	merge(array, step_size, size - step_size);
 #elif NB_THREADS == 3
 	merge(array, step_size, step_size);
 	merge(array, step_size * 2, size - step_size*2);
-#elif NB_THREADS == 4
-	merge(array, step_size, step_size);
-	merge(array + step_size*2, step_size, size - step_size*3);
-	merge(array, step_size * 2, size - step_size * 2);
 #endif
 	return;
 
