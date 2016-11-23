@@ -1,0 +1,484 @@
+[INFO] New run on Wed Nov 23 15:07:30 CET 2016
+[INFO] Will run 384 instances
+[INFO] Instance 1/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:32; approx. 391.35 sec left (6.52 minutes)
+[INFO] Instance 2/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:32; approx. 214.94 sec left (3.58 minutes)
+[INFO] Instance 3/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:32; approx. 153.59 sec left (2.56 minutes)
+[INFO] Instance 4/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:32; approx. 122.81 sec left (2.05 minutes)
+[INFO] Instance 5/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:32; approx. 106.06 sec left (1.77 minutes)
+[INFO] Instance 6/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:32; approx. 93.40 sec left (1.56 minutes)
+[INFO] Instance 7/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:32; approx. 84.34 sec left (1.41 minutes)
+[INFO] Instance 8/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:32; approx. 77.59 sec left (1.29 minutes)
+[INFO] Instance 9/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:32; approx. 73.19 sec left (1.22 minutes)
+[INFO] Instance 10/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:32; approx. 68.99 sec left (1.15 minutes)
+[INFO] Instance 11/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:33; approx. 65.30 sec left (1.09 minutes)
+[INFO] Instance 12/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:33; approx. 62.22 sec left (1.04 minutes)
+[INFO] Instance 13/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:33; approx. 60.33 sec left (1.01 minutes)
+[INFO] Instance 14/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:33; approx. 57.96 sec left (0.97 minutes)
+[INFO] Instance 15/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:33; approx. 55.87 sec left (0.93 minutes)
+[INFO] Instance 16/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:33; approx. 54.08 sec left (0.90 minutes)
+[INFO] Instance 17/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:33; approx. 53.00 sec left (0.88 minutes)
+[INFO] Instance 18/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:33; approx. 51.55 sec left (0.86 minutes)
+[INFO] Instance 19/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:33; approx. 50.23 sec left (0.84 minutes)
+[INFO] Instance 20/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:33; approx. 49.05 sec left (0.82 minutes)
+[INFO] Instance 21/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:33; approx. 48.57 sec left (0.81 minutes)
+[INFO] Instance 22/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:34; approx. 47.65 sec left (0.79 minutes)
+[INFO] Instance 23/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:34; approx. 46.83 sec left (0.78 minutes)
+[INFO] Instance 24/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:34; approx. 46.05 sec left (0.77 minutes)
+[INFO] Instance 25/384: nb_threads=seq pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:34; approx. 45.71 sec left (0.76 minutes)
+[INFO] Instance 26/384: nb_threads=seq pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:34; approx. 45.03 sec left (0.75 minutes)
+[INFO] Instance 27/384: nb_threads=seq pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:34; approx. 44.51 sec left (0.74 minutes)
+[INFO] Instance 28/384: nb_threads=seq pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:34; approx. 44.03 sec left (0.73 minutes)
+[INFO] Instance 33/384: nb_threads=seq pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:34; approx. 39.29 sec left (0.65 minutes)
+[INFO] Instance 34/384: nb_threads=seq pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:34; approx. 39.07 sec left (0.65 minutes)
+[INFO] Instance 35/384: nb_threads=seq pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:35; approx. 38.74 sec left (0.65 minutes)
+[INFO] Instance 36/384: nb_threads=seq pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:35; approx. 38.44 sec left (0.64 minutes)
+[INFO] Instance 41/384: nb_threads=seq pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:35; approx. 35.12 sec left (0.59 minutes)
+[INFO] Instance 42/384: nb_threads=seq pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:35; approx. 34.89 sec left (0.58 minutes)
+[INFO] Instance 43/384: nb_threads=seq pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:35; approx. 34.71 sec left (0.58 minutes)
+[INFO] Instance 44/384: nb_threads=seq pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:35; approx. 34.56 sec left (0.58 minutes)
+[INFO] Instance 49/384: nb_threads=seq pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:35; approx. 32.10 sec left (0.54 minutes)
+[INFO] Instance 50/384: nb_threads=seq pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:35; approx. 32.04 sec left (0.53 minutes)
+[INFO] Instance 51/384: nb_threads=seq pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:36; approx. 31.95 sec left (0.53 minutes)
+[INFO] Instance 52/384: nb_threads=seq pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:36; approx. 31.83 sec left (0.53 minutes)
+[INFO] Instance 57/384: nb_threads=seq pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:36; approx. 29.90 sec left (0.50 minutes)
+[INFO] Instance 58/384: nb_threads=seq pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:36; approx. 29.82 sec left (0.50 minutes)
+[INFO] Instance 59/384: nb_threads=seq pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:36; approx. 29.76 sec left (0.50 minutes)
+[INFO] Instance 60/384: nb_threads=seq pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:36; approx. 29.69 sec left (0.49 minutes)
+[INFO] Instance 65/384: nb_threads=seq pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:36; approx. 28.09 sec left (0.47 minutes)
+[INFO] Instance 66/384: nb_threads=seq pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:36; approx. 28.09 sec left (0.47 minutes)
+[INFO] Instance 67/384: nb_threads=seq pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:37; approx. 28.02 sec left (0.47 minutes)
+[INFO] Instance 68/384: nb_threads=seq pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:37; approx. 27.97 sec left (0.47 minutes)
+[INFO] Instance 73/384: nb_threads=seq pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:37; approx. 26.53 sec left (0.44 minutes)
+[INFO] Instance 74/384: nb_threads=seq pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:37; approx. 26.40 sec left (0.44 minutes)
+[INFO] Instance 75/384: nb_threads=seq pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:37; approx. 26.29 sec left (0.44 minutes)
+[INFO] Instance 76/384: nb_threads=seq pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:37; approx. 26.15 sec left (0.44 minutes)
+[INFO] Instance 81/384: nb_threads=seq pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:37; approx. 25.02 sec left (0.42 minutes)
+[INFO] Instance 82/384: nb_threads=seq pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:37; approx. 24.91 sec left (0.42 minutes)
+[INFO] Instance 83/384: nb_threads=seq pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:37; approx. 24.83 sec left (0.41 minutes)
+[INFO] Instance 84/384: nb_threads=seq pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:38; approx. 24.73 sec left (0.41 minutes)
+[INFO] Instance 89/384: nb_threads=seq pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:38; approx. 23.74 sec left (0.40 minutes)
+[INFO] Instance 90/384: nb_threads=seq pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:38; approx. 23.65 sec left (0.39 minutes)
+[INFO] Instance 91/384: nb_threads=seq pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:38; approx. 23.58 sec left (0.39 minutes)
+[INFO] Instance 92/384: nb_threads=seq pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:38; approx. 23.49 sec left (0.39 minutes)
+[INFO] Instance 97/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:38; approx. 22.63 sec left (0.38 minutes)
+[INFO] Instance 98/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:38; approx. 22.56 sec left (0.38 minutes)
+[INFO] Instance 99/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:38; approx. 22.52 sec left (0.38 minutes)
+[INFO] Instance 100/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:39; approx. 22.45 sec left (0.37 minutes)
+[INFO] Instance 101/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:39; approx. 22.46 sec left (0.37 minutes)
+[INFO] Instance 102/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:39; approx. 22.39 sec left (0.37 minutes)
+[INFO] Instance 103/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:39; approx. 22.33 sec left (0.37 minutes)
+[INFO] Instance 104/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:39; approx. 22.27 sec left (0.37 minutes)
+[INFO] Instance 105/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:39; approx. 22.28 sec left (0.37 minutes)
+[INFO] Instance 106/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:39; approx. 22.23 sec left (0.37 minutes)
+[INFO] Instance 107/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:39; approx. 22.17 sec left (0.37 minutes)
+[INFO] Instance 108/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:39; approx. 22.11 sec left (0.37 minutes)
+[INFO] Instance 109/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:39; approx. 22.11 sec left (0.37 minutes)
+[INFO] Instance 110/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:39; approx. 22.05 sec left (0.37 minutes)
+[INFO] Instance 111/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:40; approx. 22.00 sec left (0.37 minutes)
+[INFO] Instance 112/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:40; approx. 21.94 sec left (0.37 minutes)
+[INFO] Instance 113/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:40; approx. 21.93 sec left (0.37 minutes)
+[INFO] Instance 114/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:40; approx. 21.87 sec left (0.36 minutes)
+[INFO] Instance 115/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.13 sec finished on 11/23/16 15:07:40; approx. 22.02 sec left (0.37 minutes)
+[INFO] Instance 116/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.08 sec finished on 11/23/16 15:07:40; approx. 22.16 sec left (0.37 minutes)
+[INFO] Instance 117/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.07 sec finished on 11/23/16 15:07:40; approx. 22.29 sec left (0.37 minutes)
+[INFO] Instance 118/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:41; approx. 22.36 sec left (0.37 minutes)
+[INFO] Instance 119/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:41; approx. 22.32 sec left (0.37 minutes)
+[INFO] Instance 120/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:41; approx. 22.27 sec left (0.37 minutes)
+[INFO] Instance 121/384: nb_threads=2 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:41; approx. 22.27 sec left (0.37 minutes)
+[INFO] Instance 122/384: nb_threads=2 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:41; approx. 22.21 sec left (0.37 minutes)
+[INFO] Instance 123/384: nb_threads=2 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:41; approx. 22.14 sec left (0.37 minutes)
+[INFO] Instance 124/384: nb_threads=2 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:41; approx. 22.08 sec left (0.37 minutes)
+[INFO] Instance 129/384: nb_threads=2 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:41; approx. 21.26 sec left (0.35 minutes)
+[INFO] Instance 130/384: nb_threads=2 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:41; approx. 21.21 sec left (0.35 minutes)
+[INFO] Instance 131/384: nb_threads=2 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:42; approx. 21.14 sec left (0.35 minutes)
+[INFO] Instance 132/384: nb_threads=2 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:42; approx. 21.09 sec left (0.35 minutes)
+[INFO] Instance 137/384: nb_threads=2 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:42; approx. 20.34 sec left (0.34 minutes)
+[INFO] Instance 138/384: nb_threads=2 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:42; approx. 20.28 sec left (0.34 minutes)
+[INFO] Instance 139/384: nb_threads=2 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.03 sec finished on 11/23/16 15:07:42; approx. 20.22 sec left (0.34 minutes)
+[INFO] Instance 140/384: nb_threads=2 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:42; approx. 20.16 sec left (0.34 minutes)
+[INFO] Instance 145/384: nb_threads=2 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:42; approx. 19.47 sec left (0.32 minutes)
+[INFO] Instance 146/384: nb_threads=2 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:43; approx. 19.43 sec left (0.32 minutes)
+[INFO] Instance 147/384: nb_threads=2 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:43; approx. 19.38 sec left (0.32 minutes)
+[INFO] Instance 148/384: nb_threads=2 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:43; approx. 19.33 sec left (0.32 minutes)
+[INFO] Instance 153/384: nb_threads=2 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:43; approx. 18.66 sec left (0.31 minutes)
+[INFO] Instance 154/384: nb_threads=2 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:43; approx. 18.60 sec left (0.31 minutes)
+[INFO] Instance 155/384: nb_threads=2 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:43; approx. 18.55 sec left (0.31 minutes)
+[INFO] Instance 156/384: nb_threads=2 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:43; approx. 18.51 sec left (0.31 minutes)
+[INFO] Instance 161/384: nb_threads=2 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:44; approx. 17.87 sec left (0.30 minutes)
+[INFO] Instance 162/384: nb_threads=2 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:44; approx. 17.82 sec left (0.30 minutes)
+[INFO] Instance 163/384: nb_threads=2 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:44; approx. 17.77 sec left (0.30 minutes)
+[INFO] Instance 164/384: nb_threads=2 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:44; approx. 17.72 sec left (0.30 minutes)
+[INFO] Instance 169/384: nb_threads=2 pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:44; approx. 17.09 sec left (0.28 minutes)
+[INFO] Instance 170/384: nb_threads=2 pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:44; approx. 17.02 sec left (0.28 minutes)
+[INFO] Instance 171/384: nb_threads=2 pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:44; approx. 16.94 sec left (0.28 minutes)
+[INFO] Instance 172/384: nb_threads=2 pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:44; approx. 16.87 sec left (0.28 minutes)
+[INFO] Instance 177/384: nb_threads=2 pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:45; approx. 16.29 sec left (0.27 minutes)
+[INFO] Instance 178/384: nb_threads=2 pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:45; approx. 16.22 sec left (0.27 minutes)
+[INFO] Instance 179/384: nb_threads=2 pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:45; approx. 16.16 sec left (0.27 minutes)
+[INFO] Instance 180/384: nb_threads=2 pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:45; approx. 16.11 sec left (0.27 minutes)
+[INFO] Instance 185/384: nb_threads=2 pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:45; approx. 15.57 sec left (0.26 minutes)
+[INFO] Instance 186/384: nb_threads=2 pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:45; approx. 15.51 sec left (0.26 minutes)
+[INFO] Instance 187/384: nb_threads=2 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:45; approx. 15.44 sec left (0.26 minutes)
+[INFO] Instance 188/384: nb_threads=2 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:45; approx. 15.37 sec left (0.26 minutes)
+[INFO] Instance 193/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:46; approx. 14.85 sec left (0.25 minutes)
+[INFO] Instance 194/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:46; approx. 14.79 sec left (0.25 minutes)
+[INFO] Instance 195/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:46; approx. 14.74 sec left (0.25 minutes)
+[INFO] Instance 196/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:46; approx. 14.68 sec left (0.24 minutes)
+[INFO] Instance 197/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:46; approx. 14.65 sec left (0.24 minutes)
+[INFO] Instance 198/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:46; approx. 14.58 sec left (0.24 minutes)
+[INFO] Instance 199/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:46; approx. 14.52 sec left (0.24 minutes)
+[INFO] Instance 200/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:46; approx. 14.45 sec left (0.24 minutes)
+[INFO] Instance 201/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:46; approx. 14.41 sec left (0.24 minutes)
+[INFO] Instance 202/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:47; approx. 14.36 sec left (0.24 minutes)
+[INFO] Instance 203/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:47; approx. 14.30 sec left (0.24 minutes)
+[INFO] Instance 204/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.08 sec finished on 11/23/16 15:07:47; approx. 14.27 sec left (0.24 minutes)
+[INFO] Instance 205/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:47; approx. 14.25 sec left (0.24 minutes)
+[INFO] Instance 206/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:47; approx. 14.20 sec left (0.24 minutes)
+[INFO] Instance 207/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:47; approx. 14.14 sec left (0.24 minutes)
+[INFO] Instance 208/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:47; approx. 14.07 sec left (0.23 minutes)
+[INFO] Instance 209/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:47; approx. 14.02 sec left (0.23 minutes)
+[INFO] Instance 210/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:47; approx. 13.95 sec left (0.23 minutes)
+[INFO] Instance 211/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:48; approx. 13.88 sec left (0.23 minutes)
+[INFO] Instance 212/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:48; approx. 13.81 sec left (0.23 minutes)
+[INFO] Instance 213/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:48; approx. 13.76 sec left (0.23 minutes)
+[INFO] Instance 214/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:48; approx. 13.70 sec left (0.23 minutes)
+[INFO] Instance 215/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:48; approx. 13.63 sec left (0.23 minutes)
+[INFO] Instance 216/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:48; approx. 13.56 sec left (0.23 minutes)
+[INFO] Instance 217/384: nb_threads=3 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:48; approx. 13.51 sec left (0.23 minutes)
+[INFO] Instance 218/384: nb_threads=3 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:48; approx. 13.45 sec left (0.22 minutes)
+[INFO] Instance 219/384: nb_threads=3 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:48; approx. 13.39 sec left (0.22 minutes)
+[INFO] Instance 220/384: nb_threads=3 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:49; approx. 13.33 sec left (0.22 minutes)
+[INFO] Instance 225/384: nb_threads=3 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:49; approx. 12.81 sec left (0.21 minutes)
+[INFO] Instance 226/384: nb_threads=3 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:49; approx. 12.75 sec left (0.21 minutes)
+[INFO] Instance 227/384: nb_threads=3 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:49; approx. 12.69 sec left (0.21 minutes)
+[INFO] Instance 228/384: nb_threads=3 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:49; approx. 12.62 sec left (0.21 minutes)
+[INFO] Instance 233/384: nb_threads=3 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:49; approx. 12.11 sec left (0.20 minutes)
+[INFO] Instance 234/384: nb_threads=3 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:49; approx. 12.05 sec left (0.20 minutes)
+[INFO] Instance 235/384: nb_threads=3 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:50; approx. 12.00 sec left (0.20 minutes)
+[INFO] Instance 236/384: nb_threads=3 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:50; approx. 11.94 sec left (0.20 minutes)
+[INFO] Instance 241/384: nb_threads=3 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.07 sec finished on 11/23/16 15:07:50; approx. 11.46 sec left (0.19 minutes)
+[INFO] Instance 242/384: nb_threads=3 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:50; approx. 11.43 sec left (0.19 minutes)
+[INFO] Instance 243/384: nb_threads=3 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.06 sec finished on 11/23/16 15:07:50; approx. 11.39 sec left (0.19 minutes)
+[INFO] Instance 244/384: nb_threads=3 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.06 sec finished on 11/23/16 15:07:50; approx. 11.36 sec left (0.19 minutes)
+[INFO] Instance 249/384: nb_threads=3 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:51; approx. 10.88 sec left (0.18 minutes)
+[INFO] Instance 250/384: nb_threads=3 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:51; approx. 10.82 sec left (0.18 minutes)
+[INFO] Instance 251/384: nb_threads=3 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:51; approx. 10.76 sec left (0.18 minutes)
+[INFO] Instance 252/384: nb_threads=3 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:51; approx. 10.69 sec left (0.18 minutes)
+[INFO] Instance 257/384: nb_threads=3 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:51; approx. 10.21 sec left (0.17 minutes)
+[INFO] Instance 258/384: nb_threads=3 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.07 sec finished on 11/23/16 15:07:51; approx. 10.16 sec left (0.17 minutes)
+[INFO] Instance 259/384: nb_threads=3 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.06 sec finished on 11/23/16 15:07:52; approx. 10.11 sec left (0.17 minutes)
+[INFO] Instance 260/384: nb_threads=3 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:52; approx. 10.05 sec left (0.17 minutes)
+[INFO] Instance 265/384: nb_threads=3 pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:52; approx. 9.57 sec left (0.16 minutes)
+[INFO] Instance 266/384: nb_threads=3 pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:52; approx. 9.50 sec left (0.16 minutes)
+[INFO] Instance 267/384: nb_threads=3 pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:52; approx. 9.43 sec left (0.16 minutes)
+[INFO] Instance 268/384: nb_threads=3 pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:52; approx. 9.35 sec left (0.16 minutes)
+[INFO] Instance 273/384: nb_threads=3 pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:52; approx. 8.89 sec left (0.15 minutes)
+[INFO] Instance 274/384: nb_threads=3 pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:53; approx. 8.82 sec left (0.15 minutes)
+[INFO] Instance 275/384: nb_threads=3 pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:53; approx. 8.74 sec left (0.15 minutes)
+[INFO] Instance 276/384: nb_threads=3 pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:53; approx. 8.67 sec left (0.14 minutes)
+[INFO] Instance 281/384: nb_threads=3 pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:53; approx. 8.21 sec left (0.14 minutes)
+[INFO] Instance 282/384: nb_threads=3 pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:53; approx. 8.14 sec left (0.14 minutes)
+[INFO] Instance 283/384: nb_threads=3 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:53; approx. 8.07 sec left (0.13 minutes)
+[INFO] Instance 284/384: nb_threads=3 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:53; approx. 7.99 sec left (0.13 minutes)
+[INFO] Instance 289/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:54; approx. 7.55 sec left (0.13 minutes)
+[INFO] Instance 290/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:54; approx. 7.48 sec left (0.12 minutes)
+[INFO] Instance 291/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:54; approx. 7.40 sec left (0.12 minutes)
+[INFO] Instance 292/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i1.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:54; approx. 7.33 sec left (0.12 minutes)
+[INFO] Instance 293/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:54; approx. 7.27 sec left (0.12 minutes)
+[INFO] Instance 294/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:54; approx. 7.19 sec left (0.12 minutes)
+[INFO] Instance 295/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.04 sec finished on 11/23/16 15:07:54; approx. 7.12 sec left (0.12 minutes)
+[INFO] Instance 296/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-1048576-i2.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:54; approx. 7.05 sec left (0.12 minutes)
+[INFO] Instance 297/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:54; approx. 6.98 sec left (0.12 minutes)
+[INFO] Instance 298/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:55; approx. 6.91 sec left (0.12 minutes)
+[INFO] Instance 299/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:55; approx. 6.84 sec left (0.11 minutes)
+[INFO] Instance 300/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i1.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:55; approx. 6.77 sec left (0.11 minutes)
+[INFO] Instance 301/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:55; approx. 6.70 sec left (0.11 minutes)
+[INFO] Instance 302/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:55; approx. 6.63 sec left (0.11 minutes)
+[INFO] Instance 303/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:55; approx. 6.56 sec left (0.11 minutes)
+[INFO] Instance 304/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-4194304-i2.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:55; approx. 6.49 sec left (0.11 minutes)
+[INFO] Instance 305/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:55; approx. 6.42 sec left (0.11 minutes)
+[INFO] Instance 306/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:56; approx. 6.35 sec left (0.11 minutes)
+[INFO] Instance 307/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:56; approx. 6.28 sec left (0.10 minutes)
+[INFO] Instance 308/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i1.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:56; approx. 6.20 sec left (0.10 minutes)
+[INFO] Instance 309/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:56; approx. 6.14 sec left (0.10 minutes)
+[INFO] Instance 310/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:56; approx. 6.06 sec left (0.10 minutes)
+[INFO] Instance 311/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:56; approx. 5.99 sec left (0.10 minutes)
+[INFO] Instance 312/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-uniform-random-16777216-i2.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:56; approx. 5.91 sec left (0.10 minutes)
+[INFO] Instance 313/384: nb_threads=4 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:56; approx. 5.84 sec left (0.10 minutes)
+[INFO] Instance 314/384: nb_threads=4 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:57; approx. 5.77 sec left (0.10 minutes)
+[INFO] Instance 315/384: nb_threads=4 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:57; approx. 5.70 sec left (0.10 minutes)
+[INFO] Instance 316/384: nb_threads=4 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:57; approx. 5.62 sec left (0.09 minutes)
+[INFO] Instance 321/384: nb_threads=4 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:57; approx. 5.18 sec left (0.09 minutes)
+[INFO] Instance 322/384: nb_threads=4 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:57; approx. 5.11 sec left (0.09 minutes)
+[INFO] Instance 323/384: nb_threads=4 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:57; approx. 5.03 sec left (0.08 minutes)
+[INFO] Instance 324/384: nb_threads=4 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:57; approx. 4.95 sec left (0.08 minutes)
+[INFO] Instance 329/384: nb_threads=4 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:58; approx. 4.52 sec left (0.08 minutes)
+[INFO] Instance 330/384: nb_threads=4 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:58; approx. 4.44 sec left (0.07 minutes)
+[INFO] Instance 331/384: nb_threads=4 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:58; approx. 4.37 sec left (0.07 minutes)
+[INFO] Instance 332/384: nb_threads=4 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-increasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:58; approx. 4.29 sec left (0.07 minutes)
+[INFO] Instance 337/384: nb_threads=4 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.07 sec finished on 11/23/16 15:07:58; approx. 3.86 sec left (0.06 minutes)
+[INFO] Instance 338/384: nb_threads=4 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.06 sec finished on 11/23/16 15:07:58; approx. 3.79 sec left (0.06 minutes)
+[INFO] Instance 339/384: nb_threads=4 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.06 sec finished on 11/23/16 15:07:59; approx. 3.71 sec left (0.06 minutes)
+[INFO] Instance 340/384: nb_threads=4 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-1048576.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:59; approx. 3.64 sec left (0.06 minutes)
+[INFO] Instance 345/384: nb_threads=4 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:59; approx. 3.21 sec left (0.05 minutes)
+[INFO] Instance 346/384: nb_threads=4 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:59; approx. 3.13 sec left (0.05 minutes)
+[INFO] Instance 347/384: nb_threads=4 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:59; approx. 3.05 sec left (0.05 minutes)
+[INFO] Instance 348/384: nb_threads=4 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-4194304.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:07:59; approx. 2.97 sec left (0.05 minutes)
+[INFO] Instance 353/384: nb_threads=4 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:00; approx. 2.55 sec left (0.04 minutes)
+[INFO] Instance 354/384: nb_threads=4 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:00; approx. 2.47 sec left (0.04 minutes)
+[INFO] Instance 355/384: nb_threads=4 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:00; approx. 2.39 sec left (0.04 minutes)
+[INFO] Instance 356/384: nb_threads=4 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-decreasing-16777216.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:00; approx. 2.31 sec left (0.04 minutes)
+[INFO] Instance 361/384: nb_threads=4 pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:00; approx. 1.89 sec left (0.03 minutes)
+[INFO] Instance 362/384: nb_threads=4 pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:00; approx. 1.81 sec left (0.03 minutes)
+[INFO] Instance 363/384: nb_threads=4 pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.06 sec finished on 11/23/16 15:08:00; approx. 1.73 sec left (0.03 minutes)
+[INFO] Instance 364/384: nb_threads=4 pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-1048576-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:01; approx. 1.65 sec left (0.03 minutes)
+[INFO] Instance 369/384: nb_threads=4 pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:01; approx. 1.23 sec left (0.02 minutes)
+[INFO] Instance 370/384: nb_threads=4 pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:01; approx. 1.15 sec left (0.02 minutes)
+[INFO] Instance 371/384: nb_threads=4 pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.06 sec finished on 11/23/16 15:08:01; approx. 1.07 sec left (0.02 minutes)
+[INFO] Instance 372/384: nb_threads=4 pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-4194304-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:01; approx. 0.99 sec left (0.02 minutes)
+[INFO] Instance 377/384: nb_threads=4 pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:01; approx. 0.57 sec left (0.01 minutes)
+[INFO] Instance 378/384: nb_threads=4 pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:02; approx. 0.49 sec left (0.01 minutes)
+[INFO] Instance 379/384: nb_threads=4 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:02; approx. 0.41 sec left (0.01 minutes)
+[INFO] Instance 380/384: nb_threads=4 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
+Failed. 0.05 sec finished on 11/23/16 15:08:02; approx. 0.33 sec left (0.01 minutes)
+[INFO] Failed. Batch took 31.38 seconds (0.52 minutes) to run, or 0.08 seconds per instance run (0.00 minutes).
+[INFO] Merging all results to benchmark/Wed_Nov_23_15-07-31_CET_2016/table.csv ...[INFO] Merging all results to benchmark/table.csv ...

@@ -127,14 +127,14 @@ drake_run(task_t *task)
 
 	// merge the sub arrays
 	while (left_size > ind1 && right_size > ind2) {
-		if(array[ind1] < array[left_size + ind2])
+		if(left[ind1] < right[ind2])
 		{
-			parent[ind1 + ind2] = array[ind1];
+			parent[ind1 + ind2] = left[ind1];
 			++ind1;
 		}
 		else
 		{
-			parent[ind1 + ind2] = array[left_size + ind2];
+			parent[ind1 + ind2] = right[ind2];
 			++ind2;
 		}
 	}
@@ -153,13 +153,13 @@ drake_run(task_t *task)
 	// insert the remaining elements
 	while(ind1 < left_size && drake_task_killed(right_link->prod))
 	{
-		parent[ind1 + ind2] = array[ind1];
+		parent[ind1 + ind2] = left[ind1];
 		++ind1;
 	}
 	
 	while(ind2 < right_size && drake_task_killed(right_link->prod))
 	{
-		parent[ind1 + ind2] = array[left_size + ind2];
+		parent[ind1 + ind2] = right[left_size + ind2];
 		++ind2;
 	}
 	
@@ -183,7 +183,7 @@ drake_run(task_t *task)
 	//
 	// That returns 1 if all predecessors of task t are killed and all input buffers are empty, or if task t is killed and 0 otherwise.
 	
-	return drake_task_depleted(right_link->prod) && drake_task_is_depleted(left_link->prod);
+	return drake_task_depleted(right_link->prod) && drake_task_depleted(left_link->prod);
 }
 
 int
