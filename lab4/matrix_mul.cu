@@ -19,6 +19,10 @@ void mat_mul(float* a, float* b, float* c, float* input)
 
 int main()
 {
+	cudaEvent_t e_start;
+	cudaEventCreate(&e_start);
+	cudaEventRecord(e_start, 0);
+
 	float *a = new float[N*N];
 	float *b = new float[N*N];
 	float *c = new float[N*N];
@@ -53,10 +57,21 @@ int main()
 	cudaFree( bd );
 	cudaFree( cd );
 
+	cudaEvent_t e_stop;
+	cudaEventCreate(&e_stop);
+	cudaEventRecord(e_stop, 0);
+
+	cudaEventSynchronize(e_start);
+	cudaEventSynchronize(e_stop);
+
+	float time;
+	cudaEventElapsedTime(&time, e_start, e_stop);
+
 	for (int i = 0; i < N*N; i++)
 		printf("%f ", c[i]);
 	printf("\n");
 	delete[] c;
-	printf("done\n");
+	
+	printf("done, time: %f \n", time);
 	return EXIT_SUCCESS;
 }
