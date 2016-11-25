@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 const int N = 16; 
-const int blocksize = 16 * 16; 
+const int blocksize = 16; 
 
 __global__
 void mat_mul(float* a, float* b, float* c, float* input) 
@@ -41,7 +41,7 @@ int main()
 	cudaMalloc( (void**)&bd, size );	
 	cudaMalloc( (void**)&cd, size );
 	
-	dim3 dimBlock( blocksize, 1 );
+	dim3 dimBlock( blocksize*blocksize, 1 );
 	dim3 dimGrid( 1, 1 );
 	
 	cudaMemcpy( ad, a, size, cudaMemcpyHostToDevice ); 
@@ -67,8 +67,13 @@ int main()
 	float time;
 	cudaEventElapsedTime(&time, e_start, e_stop);
 
-	for (int i = 0; i < N*N; i++)
-		printf("%f ", c[i]);
+
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < N; j++)
+		{
+			printf("%f ", c[i+j*N]);
+		}
+
 	printf("\n");
 	delete[] c;
 	
