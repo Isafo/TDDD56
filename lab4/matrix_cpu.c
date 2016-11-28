@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 
+#include "milli.h"
+
 void add_matrix(float *a, float *b, float *c, int N)
 {
 	int index;
@@ -17,7 +19,7 @@ void add_matrix(float *a, float *b, float *c, int N)
 
 int main()
 {
-	const int N = 16;
+	const int N = 32;
 
 	float a[N*N];
 	float b[N*N];
@@ -29,9 +31,14 @@ int main()
 			a[i+j*N] = 10 + i;
 			b[i+j*N] = (float)j / N;
 		}
+
+	ResetMilli();
 	
 	add_matrix(a, b, c, N);
 	
+	double stopTime = GetSeconds();
+
+
 	for (int i = 0; i < N; i++)
 	{
 		for (int j = 0; j < N; j++)
@@ -40,4 +47,6 @@ int main()
 		}
 		printf("\n");
 	}
+	
+	printf("time: %f \n", stopTime);
 }

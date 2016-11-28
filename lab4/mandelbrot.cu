@@ -14,9 +14,6 @@
 
 #include <stdio.h>
 
-const int N = 16; 
-const int blocksize = 16; 
-
 #ifdef __APPLE__
 #include <OpenGL/gl.h>
 #include <GLUT/glut.h>
@@ -57,37 +54,29 @@ struct cuComplex
     MYFLOAT   r;
     MYFLOAT   i;
     
-    cuComplex( MYFLOAT a, MYFLOAT b ) : r(a), i(b)  {}
+    __device__ cuComplex( MYFLOAT a, MYFLOAT b ) : r(a), i(b)  {}
     
-    __device__
-    float magnitude2( void )
+    __device__ float magnitude2( void )
     {
         return r * r + i * i;
     }
     
-    __device__
-    cuComplex operator*(const cuComplex& a)
+    __device__ cuComplex operator*(const cuComplex& a)
     {
         return cuComplex(r*a.r - i*a.i, i*a.r + r*a.i);
     }
     
-    
-    __device__
-    cuComplex operator+(const cuComplex& a)
+    __device__ cuComplex operator+(const cuComplex& a)
     {
         return cuComplex(r+a.r, i+a.i);
     }
 };
 
-__device__ 
-int mandelbrot(int x, int y)
+__device__ int mandelbrot(int x, int y, MYFLOAT scale, MYFLOAT ox, MYFLOAT oy, MYFLOAT zoom)
 {
-    float imgDim = DIM;
-    MYFLOAT ox = -200, oy = 0, zoom = 0;
-    MYFLOAT s = 1.5;
 
-    MYFLOAT jx = s * (float)(imgDim/2 - x + ox/s)/(imgDim/2);
-    MYFLOAT jy = s * (float)(imgDim/2 - y + oy/s)/(imgDim/2);
+    MYFLOAT jx = scale * (float)(DIM/2 - x + ox/scale)/(DIM/2);
+    MYFLOAT jy = scale * (float)(DIM/2 - y + oy/scale)/(DIM/2);
 
     cuComplex c(jx, jy);
     cuComplex a(jx, jy);
@@ -103,14 +92,13 @@ int mandelbrot(int x, int y)
     return i;
 }
 
-__global__ 
-void kernel(unsigned char* pxl)
+__global__ void kernel(unsigned char* pxl, MYFLOAT scale, MYFLOAT ox, MYFLOAT oy, MYFLOAT zoom)
 {
     int indx = blockIdx.x * blockDim.x + threadIdx.x;
     int indy = blockIdx.y * blockDim.y + threadIdx.y;
-    int imgind = indx + indy * blockDim.x * gridDim.x;
+    int imgInd = indx + indy * blockDim.x * gridDim.x;
 
-    int fractalValue = mandelbrot(indx, indy);
+    int fractalValue = mandelbrot(indx, indy, scale, ox, oy, zoom);
 
     int r, g, b;
 
@@ -127,10 +115,10 @@ void kernel(unsigned char* pxl)
     if (b > 255) 
         b = 255 - b;
     
-    pxl[imgind * 4 + 0] = r;
-    pxl[imgind * 4 + 1] = g;
-    pxl[imgind * 4 + 2] = b;
-    pxl[imgind * 4 + 3] = 255; 
+    pxl[imgInd * 4 + 0] = r;
+    pxl[imgInd * 4 + 1] = g;
+    pxl[imgInd * 4 + 2] = b;
+    pxl[imgInd * 4 + 3] = 255; 
 
     return;
 }
@@ -185,27 +173,20 @@ void PrintHelp()
 // Compute fractal and display image
 void Draw()
 {
-
-    cudaEvent_t e_start;
-	cudaEventCreate(&e_start);
-	cudaEventRecord(e_start, 0);
-
-    unsigned char *d_pxl;
-	//const int size = N * N * sizeof(float);
-    const int size = gImageHeight * gImageWidth * sizeof(float);
+	unsigned char *d_pxl;
+	const int size = DIM * DIM * 4 * sizeof(unsigned char);
 
 	cudaMalloc( (void**)&d_pxl, size );
 
-	dim3 dimGrid( DIM/16, DIM/16 );
+	dim3 dimGrid( DIM/16, DIM/16);
 	dim3 dimBlock( 16, 16 );
-	
-	mandelbrot<<<dimGrid, dimBlock>>>(d_pxl);
-	cudaThreadSynchronize();
-	
-	// cudaMemCpy(dest, src, datasize, arg)
-	cudaMemcpy( pixels, d_pxl, size, cudaMemcpyDeviceToHost ); 
 
-	cudaFree( ad );
+	cudaEvent_t e_start;
+	cudaEventCreate(&e_start);
+	cudaEventRecord(e_start, 0);
+
+	kernel<<<dimGrid, dimBlock>>>(d_pxl, scale, offsetx, offsety, zoom);
+	cudaThreadSynchronize();
 
 	cudaEvent_t e_stop;
 	cudaEventCreate(&e_stop);
@@ -214,8 +195,13 @@ void Draw()
 	cudaEventSynchronize(e_start);
 	cudaEventSynchronize(e_stop);
 
-    cudaEventDestroy(e_start);
-    cudaEventDestroy(e_stop);
+	// cudaMemCpy(dest, src, datasize, arg)
+	cudaMemcpy( pixels, d_pxl, size, cudaMemcpyDeviceToHost ); 
+
+	cudaFree( d_pxl );
+
+	cudaEventDestroy(e_start);
+	cudaEventDestroy(e_stop);
 
 // Dump the whole picture onto the screen. (Old-style OpenGL but without lots of geometry that doesn't matter so much.)
 	glClearColor( 0.0, 0.0, 0.0, 1.0 );
