@@ -5,7 +5,7 @@
 
 // Question answers:
 //
-// 1 ) 1 block is 16 threads so this program uses 16 x 16 = 256
+// 1 ) 1 block is 16 threads and the grid contains 1 block -> 16 threads
 //     1 block is 1 SM -> 16 SM
 //
 // 2 ) the square roots calculated using CUDA cannot be assumed to be the same assumed

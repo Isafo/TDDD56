@@ -11,7 +11,7 @@ const int N = 16;
 const int blocksize = 16; 
 
 __global__
-void mat_mul(float* a, float* b, float* c, float* input) 
+void mat_add(float* a, float* b, float* c, float* input) 
 {
 	int index = blockIdx.x * blockDim.x + threadIdx.x;
 	c[index] = a[index] + b[index];
