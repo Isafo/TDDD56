@@ -18,7 +18,7 @@ __global__ void find_max(int *g_idata, unsigned int n)
 	{
 		if (tid < s)
 			sdata[tid] += sdata[tid + s];
-		_syncthreads();
+		__syncthreads();
 	}
 	
 	if (tid < 32)
