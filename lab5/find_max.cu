@@ -5,7 +5,7 @@
 
 
 template <unsigned int blockSize>
-__global__ void find_max(int *g_idata, int *g_odata, unsigned int n)
+__global__ void find_max(int *g_idata, unsigned int n)
 {
 	extern __shared__ int sdata[];
 
@@ -32,7 +32,7 @@ __global__ void find_max(int *g_idata, int *g_odata, unsigned int n)
 		if (blockSize >= 2) sdata[tid] = max(sdata[tid], sdata[tid + 1]);
 	}
 	
-	if (tid == 0) g_odata[blockIdx.x] = sdata[0];
+	//if (tid == 0) g_odata[blockIdx.x] = sdata[0];
 }
 
 void launch_cuda_kernel(int *data, int N)
