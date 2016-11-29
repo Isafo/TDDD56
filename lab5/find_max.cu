@@ -6,6 +6,14 @@
 
 __global__ void find_max(int *g_idata, unsigned int n)
 {
+	extern __shared__ int sdata[];
+	
+	// each thread loads one element from global to shared mem
+	unsigned int tid = threadIdx.x;
+	unsigned int i = blockIdx.x*blockDim.x + threadIdx.x;
+	sdata[tid] = g_idata[i];
+	__syncthreads();
+
 	for (unsigned int s=blockDim.x/2; s>32; s>>=1)
 	{
 		if (tid < s)
