@@ -1,18 +1,17 @@
-// Question answers:
-//
-// 1 ) calculating the x and y using the thread and block id and dims
-//
-// 2 ) 1024 (DIM/16) blocks and 256 threads per block
-//
-// 3 ) __device__
-//
-// 4 ) GPU is much faster
-//
-// 5 ) float: 0.12 double 0.63
-//
-// 6 ) By using many blocks loadbalancing becomes less of a problem
+// Mandelbrot explorer, based on my old Julia demo plus parts of Nicolas Melot's Lab 1 code.
+// CPU only! Your task: Rewrite for CUDA! Test and evaluate performance.
 
-#include <stdio.h>
+// Compile with:
+// gcc interactiveMandelbrot.cpp -shared-libgcc -lstdc++-static  -o interactiveMandelbrot -lglut -lGL
+// or
+// g++ interactiveMandelbrot.cpp -o interactiveMandelbrot -lglut -lGL
+
+// Your CUDA version should compile with something like
+// nvcc -lglut -lGL interactiveMandelbrotCUDA.cu -o interactiveMandelbrotCUDA
+
+// Preliminary version 2014-11-30
+// Cleaned a bit more 2014-12-01
+// Corrected the missing glRasterPos2i 2014-12-03
 
 #ifdef __APPLE__
 #include <OpenGL/gl.h>
@@ -54,35 +53,34 @@ struct cuComplex
     MYFLOAT   r;
     MYFLOAT   i;
     
-    __device__ cuComplex( MYFLOAT a, MYFLOAT b ) : r(a), i(b)  {}
+    cuComplex( MYFLOAT a, MYFLOAT b ) : r(a), i(b)  {}
     
-    __device__ float magnitude2( void )
+    float magnitude2( void )
     {
         return r * r + i * i;
     }
     
-    __device__ cuComplex operator*(const cuComplex& a)
+    cuComplex operator*(const cuComplex& a)
     {
         return cuComplex(r*a.r - i*a.i, i*a.r + r*a.i);
     }
     
-    __device__ cuComplex operator+(const cuComplex& a)
+    cuComplex operator+(const cuComplex& a)
     {
         return cuComplex(r+a.r, i+a.i);
     }
 };
 
-__device__ int mandelbrot(int x, int y, MYFLOAT scale, MYFLOAT ox, MYFLOAT oy, MYFLOAT zoom)
+int mandelbrot( int x, int y)
 {
-
-    MYFLOAT jx = scale * (float)(DIM/2 - x + ox/scale)/(DIM/2);
-    MYFLOAT jy = scale * (float)(DIM/2 - y + oy/scale)/(DIM/2);
+    MYFLOAT jx = scale * (MYFLOAT)(gImageWidth/2 - x + offsetx/scale)/(gImageWidth/2);
+    MYFLOAT jy = scale * (MYFLOAT)(gImageHeight/2 - y + offsety/scale)/(gImageWidth/2);
 
     cuComplex c(jx, jy);
     cuComplex a(jx, jy);
 
     int i = 0;
-    for (i=0; i < 20; i++)
+    for (i=0; i<maxiter; i++)
     {
         a = a * a + c;
         if (a.magnitude2() > 1000)
@@ -92,35 +90,31 @@ __device__ int mandelbrot(int x, int y, MYFLOAT scale, MYFLOAT ox, MYFLOAT oy, M
     return i;
 }
 
-__global__ void kernel(unsigned char* pxl, MYFLOAT scale, MYFLOAT ox, MYFLOAT oy, MYFLOAT zoom)
+void computeFractal( unsigned char *ptr)
 {
-    int indx = blockIdx.x * blockDim.x + threadIdx.x;
-    int indy = blockIdx.y * blockDim.y + threadIdx.y;
-    int imgInd = indx + indy * blockDim.x * gridDim.x;
+    // map from x, y to pixel position
+    for (int x = 0; x < gImageWidth; x++)
+	    for (int y = 0; y < gImageHeight; y++)
+	    {
+		    int offset = x + y * gImageWidth;
 
-    int fractalValue = mandelbrot(indx, indy, scale, ox, oy, zoom);
-
-    int r, g, b;
-
-    // Colorize it
-    r = 255 * fractalValue/20;
-    if (r > 255) 
-        r = 255 - r;
-    
-    g = 255 * fractalValue*4/20;
-    if (g > 255) 
-        g = 255 - g;
-    
-    b = 255 * fractalValue*20/20;
-    if (b > 255) 
-        b = 255 - b;
-    
-    pxl[imgInd * 4 + 0] = r;
-    pxl[imgInd * 4 + 1] = g;
-    pxl[imgInd * 4 + 2] = b;
-    pxl[imgInd * 4 + 3] = 255; 
-
-    return;
+		    // now calculate the value at that position
+		    int fractalValue = mandelbrot( x, y);
+		    
+		    // Colorize it
+		    int red = 255 * fractalValue/maxiter;
+		    if (red > 255) red = 255 - red;
+		    int green = 255 * fractalValue*4/maxiter;
+		    if (green > 255) green = 255 - green;
+		    int blue = 255 * fractalValue*20/maxiter;
+		    if (blue > 255) blue = 255 - blue;
+		    
+		    ptr[offset*4 + 0] = red;
+		    ptr[offset*4 + 1] = green;
+		    ptr[offset*4 + 2] = blue;
+		    
+		    ptr[offset*4 + 3] = 255;
+    	}
 }
 
 char print_help = 0;
@@ -173,41 +167,8 @@ void PrintHelp()
 // Compute fractal and display image
 void Draw()
 {
-	unsigned char *d_pxl;
-	const int size = DIM * DIM * 4 * sizeof(unsigned char);
-
-	cudaMalloc( (void**)&d_pxl, size );
-
-	dim3 dimGrid( DIM/16, DIM/16);
-	dim3 dimBlock( 16, 16 );
-
-	cudaEvent_t e_start;
-	cudaEventCreate(&e_start);
-	cudaEventRecord(e_start, 0);
-
-	kernel<<<dimGrid, dimBlock>>>(d_pxl, scale, offsetx, offsety, zoom);
-	cudaThreadSynchronize();
-
-	cudaEvent_t e_stop;
-	cudaEventCreate(&e_stop);
-	cudaEventRecord(e_stop, 0);
-
-	cudaEventSynchronize(e_start);
-	cudaEventSynchronize(e_stop);
-
-	// cudaMemCpy(dest, src, datasize, arg)
-	cudaMemcpy( pixels, d_pxl, size, cudaMemcpyDeviceToHost ); 
-
-	cudaFree( d_pxl );
-
-	float time;
-	cudaEventElapsedTime(&time, e_start, e_stop);
-
-	cudaEventDestroy(e_start);
-	cudaEventDestroy(e_stop);
-
-
-
+	computeFractal(pixels);
+	
 // Dump the whole picture onto the screen. (Old-style OpenGL but without lots of geometry that doesn't matter so much.)
 	glClearColor( 0.0, 0.0, 0.0, 1.0 );
 	glClear( GL_COLOR_BUFFER_BIT );
@@ -306,4 +267,3 @@ int main( int argc, char** argv)
 	
 	glutMainLoop();
 }
-

@@ -203,6 +203,9 @@ void Draw()
 	float time;
 	cudaEventElapsedTime(&time, e_start, e_stop);
 
+
+	printf("done, time: %f \n", time);
+
 	cudaEventDestroy(e_start);
 	cudaEventDestroy(e_stop);
 

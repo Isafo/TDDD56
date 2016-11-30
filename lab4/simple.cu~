@@ -30,11 +30,8 @@ void simple(float* c, float* input)
 int main()
 {
 	float *c = new float[N];
-	float* test = new float[N];
-	for(int i = 0; i < N; ++i){
+	for(int i = 0; i < N; ++i)
 		c[i] = i;
-		test[i] = i;	
-	}
 
 	float *cd, *bd;
 	const int size = N*sizeof(float);
@@ -55,10 +52,8 @@ int main()
 	cudaFree( cd );
 	cudaFree( bd );
 	
-	for (int i = 0; i < N; i++){
-		printf("gpu %f \n", c[i]);		
-		printf("cpu %f \n", sqrt(test[i]));
-	}
+	for (int i = 0; i < N; i++)
+		printf("%f ", c[i]);
 	printf("\n");
 	delete[] c;
 	printf("done\n");
