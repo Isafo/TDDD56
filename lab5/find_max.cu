@@ -3,33 +3,52 @@
 #include <stdio.h>
 #include "milli.c"
 
-
 __global__ void find_max(int *g_idata, unsigned int n)
 {
-	extern __shared__ int sdata[];
-	
-	// each thread loads one element from global to shared mem
-	unsigned int tid = threadIdx.x;
-	unsigned int i = blockIdx.x*blockDim.x + threadIdx.x;
-	sdata[tid] = g_idata[i];
+	extern __shared__ int sdata[8];
+
+	unsigned int sIdx = threadIdx.x;
+	unsigned int tid = blockIdx.x*blockDim.x + threadIdx.x;
+	sdata[sIdx] = g_idata[tid];
 	__syncthreads();
 
-	for (unsigned int s=blockDim.x/2; s>32; s>>=1)
+	int i = blockDim.x / 2;
+
+	while (i != 0)
 	{
-		if (tid < s)
-			sdata[tid] += sdata[tid + s];
-		__syncthreads();
+		if (sIdx < i)
+			if (sData[sIdx] < sData[sIdx + i])
+				sData[sIdx] = sData[sIdx + i];
+		__syncyhreads();
+		i /= 2;
 	}
-	
-	if (tid < 32)
-	{
-		sdata[tid] = max(sdata[tid], sdata[tid + 32]);
-		sdata[tid] = max(sdata[tid], sdata[tid + 16]);
-		sdata[tid] = max(sdata[tid], sdata[tid + 8]);
-		sdata[tid] = max(sdata[tid], sdata[tid + 4]);
-		sdata[tid] = max(sdata[tid], sdata[tid + 2]);
-		sdata[tid] = max(sdata[tid], sdata[tid + 1]);
-	}
+
+	__syncyhreads();
+
+	g_idata[tid] = sdata[sIdx];
+
+	// each thread loads one element from global to shared mem
+	//unsigned int tid = threadIdx.x;
+	//unsigned int i = blockIdx.x*blockDim.x + threadIdx.x;
+	//sdata[tid] = g_idata[i];
+	//__syncthreads();
+
+	//for (unsigned int s=blockDim.x/2; s>32; s>>=1)
+	//{
+	//	if (tid < s)
+	//		sdata[tid] += sdata[tid + s];
+	//	__syncthreads();
+	//}
+	//
+	//if (tid < 32)
+	//{
+	//	sdata[tid] = max(sdata[tid], sdata[tid + 32]);
+	//	sdata[tid] = max(sdata[tid], sdata[tid + 16]);
+	//	sdata[tid] = max(sdata[tid], sdata[tid + 8]);
+	//	sdata[tid] = max(sdata[tid], sdata[tid + 4]);
+	//	sdata[tid] = max(sdata[tid], sdata[tid + 2]);
+	//	sdata[tid] = max(sdata[tid], sdata[tid + 1]);
+	//}
 }
 
 void launch_cuda_kernel(int *data, int N)
@@ -70,8 +89,8 @@ void find_max_cpu(int *data, int N)
 //#define SIZE 1024
 #define SIZE 16
 // Dummy data in comments below for testing
-int data[SIZE];// = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
-int data2[SIZE];// = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
+int data[SIZE] = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
+int data2[SIZE] = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
 
 int main()
 {
