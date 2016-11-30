@@ -157,9 +157,9 @@ drake_run(task_t *task)
 		++ind1;
 	}
 	
-	while(ind2 < right_size && drake_task_killed(right_link->prod))
+	while(ind2 < right_size && drake_task_killed(left_link->prod))
 	{
-		parent[ind1 + ind2] = right[left_size + ind2];
+		parent[ind1 + ind2] = right[ind2];
 		++ind2;
 	}
 	
