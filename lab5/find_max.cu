@@ -5,50 +5,31 @@
 
 __global__ void find_max(int *g_idata, unsigned int n)
 {
-	extern __shared__ int sdata[8];
+	__shared__ int sdata[16];
 
 	unsigned int sIdx = threadIdx.x;
 	unsigned int tid = blockIdx.x*blockDim.x + threadIdx.x;
-	sdata[sIdx] = g_idata[tid];
-	__syncthreads();
+	int i = blockDim.x;
 
-	int i = blockDim.x / 2;
+	sdata[sIdx] = g_idata[tid];
+	sdata[sIdx + i] = g_idata[tid + i];
+
+	__syncthreads();
 
 	while (i != 0)
 	{
 		if (sIdx < i)
-			if (sData[sIdx] < sData[sIdx + i])
-				sData[sIdx] = sData[sIdx + i];
-		__syncyhreads();
+			if (sdata[sIdx] < sdata[sIdx + i]) {
+				sdata[sIdx] = sdata[sIdx + i];
+				__syncthreads();
+			}
 		i /= 2;
 	}
 
-	__syncyhreads();
+	__syncthreads();
 
 	g_idata[tid] = sdata[sIdx];
 
-	// each thread loads one element from global to shared mem
-	//unsigned int tid = threadIdx.x;
-	//unsigned int i = blockIdx.x*blockDim.x + threadIdx.x;
-	//sdata[tid] = g_idata[i];
-	//__syncthreads();
-
-	//for (unsigned int s=blockDim.x/2; s>32; s>>=1)
-	//{
-	//	if (tid < s)
-	//		sdata[tid] += sdata[tid + s];
-	//	__syncthreads();
-	//}
-	//
-	//if (tid < 32)
-	//{
-	//	sdata[tid] = max(sdata[tid], sdata[tid + 32]);
-	//	sdata[tid] = max(sdata[tid], sdata[tid + 16]);
-	//	sdata[tid] = max(sdata[tid], sdata[tid + 8]);
-	//	sdata[tid] = max(sdata[tid], sdata[tid + 4]);
-	//	sdata[tid] = max(sdata[tid], sdata[tid + 2]);
-	//	sdata[tid] = max(sdata[tid], sdata[tid + 1]);
-	//}
 }
 
 void launch_cuda_kernel(int *data, int N)
