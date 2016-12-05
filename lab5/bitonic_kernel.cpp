@@ -55,7 +55,7 @@ void bitonic_gpu(int *data, int N)
 	dim3 blockSize(N, 1);
 	bitonic_sort_gpu <<<gridDim, blockSize, sizeof(int) * N >>>(d_data, N);
 
-	cudaMemcpy(data, d_data, sizeof(int) * NUM, cudaMemcpyDeviceToHost);
+	cudaMemcpy(data, d_data, sizeof(int) * N, cudaMemcpyDeviceToHost);
 
 	cudaFree(d_data);
 }
