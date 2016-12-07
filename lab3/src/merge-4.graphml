@@ -93,7 +93,7 @@
       <data key="e_rate">1</data>
     </edge>
 
-    <node id="n2">
+    <node id="n6">
       <data key="v_name">root</data>
       <data key="v_module">merge</data>
       <data key="v_workload">1</data>
