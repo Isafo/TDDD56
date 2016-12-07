@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schedule name="lpt" appname="pipelined_merge">
+ <core coreid="1">
+  <task name="leaf_2_t0" start="0.000000000" frequency="3500000.000000" width="1.000000" workload="1.000000"/>
+  <task name="leaf_1_t0" start="0.000000286" frequency="3500000.000000" width="1.000000" workload="1.000000"/>
+  <task name="root_t0" start="0.000000571" frequency="3500000.000000" width="1.000000" workload="1.000000"/>
+ </core>
+
+ <core coreid="2">
+  <task name="leaf_2_t1" start="0.000000000" frequency="3500000.000000" width="1.000000" workload="1.000000"/>
+  <task name="leaf_1_t1" start="0.000000286" frequency="3500000.000000" width="1.000000" workload="1.000000"/>
+  <task name="root_t1" start="0.000000571" frequency="3500000.000000" width="1.000000" workload="1.000000"/>
+  <task name="root" start="0.000000571" frequency="3500000.000000" width="1.000000" workload="1.000000"/>
+ </core>
+
+
+</schedule>

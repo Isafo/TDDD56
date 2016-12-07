@@ -1,0 +1,1292 @@
+[INFO] New run on Wed Dec 7 14:59:33 CET 2016
+[INFO] Will compile 96 settings
+[INFO] Setting 1/96: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=1... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_root.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_root.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_root.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-1.graphml.o platform-1.dat.o
+rm -f
+rm -f generate seq-drake-sort seq-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=0 VARIANT_parallel-sort=seq- DRAKE_PLATFORM=platform-1.dat DRAKE_SCHEDULE=schedule-1.xml DRAKE_TASKGRAPH=merge-1.graphml VARIANT_drake-sort=seq-
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+gcc -E -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.e generate.c
+gcc -c -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.o generate.c
+gcc -M -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include generate.c -MF bincc_generate_generate.d
+gcc -o generate -L. bincc_generate_generate.o -L/home/nicme26/tddd56/lib -lpelib-core -lboost_graph -lboost_regex -lm
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=1 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=1 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=1 -UNB_THREADS -DNB_THREADS=0 sort.cpp -MF bincxx_drake-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=1 -o bincxx_drake-sort_drake-sort.e drake-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=1 -o bincxx_drake-sort_drake-sort.o drake-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=1 drake-sort.c -MF bincxx_drake-sort_drake-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=1 -o bincxx_drake-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=1 -o bincxx_drake-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=1 utils.c -MF bincxx_drake-sort_utils.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 presort.c -MF drakecc_merge_leaf_1.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 presort.c -MF drakecc_merge_leaf_2.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.o merge.c
+merge.c: In function ‘merge_run_root’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root merge.c -MF drakecc_merge_root.d
+pelib-convert --input --lib platform-ampl_input --file platform-1.dat --input --lib taskgraph-graphml --file merge-1.graphml --input --lib schedule-xml --file schedule-1.xml --output --lib schedule-drake --file merge.schedule.c
+gcc -E -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge -o drakecc_merge.schedule.e merge.schedule.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge -o drakecc_merge.schedule.o merge.schedule.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge merge.schedule.c -MF drakecc_merge.schedule.d
+ld -r -b binary -o merge-1.graphml.o merge-1.graphml
+ld -r -b binary -o platform-1.dat.o platform-1.dat
+ar rs libmerge.a drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_root.o drakecc_merge.schedule.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_root.o drakecc_merge.schedule.o
+ar: creating libmerge.a
+g++ -o seq-drake-sort -L. -L. bincxx_drake-sort_sort.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o -lmerge -pthread -L/home/nicme26/tddd56/lib -ldrake-intel-ia -ldrake -lpelib-core -lboost_graph -lboost_regex -lrapl -lm -lrt
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=0 -o bincxx_parallel-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=0 -o bincxx_parallel-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=0 sort.cpp -MF bincxx_parallel-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=0 -o bincxx_parallel-sort_parallel-sort.e parallel-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=0 -o bincxx_parallel-sort_parallel-sort.o parallel-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=0 parallel-sort.c -MF bincxx_parallel-sort_parallel-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=0 -o bincxx_parallel-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=0 -o bincxx_parallel-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=0 utils.c -MF bincxx_parallel-sort_utils.d
+g++ -o seq-parallel-sort -L. bincxx_parallel-sort_sort.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o -pthread -L/home/nicme26/tddd56/lib -ldrake-intel-ia -ldrake -lpelib-core -lboost_graph -lboost_regex -lrapl -lm -lrt
+echo Makefile Makefile.in
+Makefile Makefile.in
+echo prefix=/home/nicme26/tddd56 > merge.pc
+echo exec_prefix= >> merge.pc
+echo libdir='$'{prefix}/lib >> merge.pc
+echo includedir='$'{prefix}/include >> merge.pc
+echo >> merge.pc
+echo Name: libmerge >> merge.pc
+echo Description: General PELAB in library research used utility >> merge.pc
+echo Version: 1.0.0 >> merge.pc
+echo URL: >> merge.pc
+echo Libs: -L'$'{libdir} -lmerge >> merge.pc
+echo Libs.private: >> merge.pc
+echo Requires: >> merge.pc
+echo Requires.private: >> merge.pc
+echo Conflicts: >> merge.pc
+echo Cflags: -I'$'{includedir} >> merge.pc
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+OK. 7.56 sec finished on 12/07/16 14:59:42; approx. 812.89 sec left (13.55 minutes)
+[INFO] Setting 2/96: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 14:59:42; approx. 404.90 sec left (6.75 minutes)
+[INFO] Setting 3/96: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:42; approx. 269.03 sec left (4.48 minutes)
+[INFO] Setting 4/96: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 14:59:42; approx. 200.93 sec left (3.35 minutes)
+[INFO] Setting 5/96: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=1... OK. 0.01 sec finished on 12/07/16 14:59:42; approx. 160.11 sec left (2.67 minutes)
+[INFO] Setting 6/96: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 14:59:42; approx. 132.79 sec left (2.21 minutes)
+[INFO] Setting 7/96: nb_threads=seq pattern=increasing size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:42; approx. 113.34 sec left (1.89 minutes)
+[INFO] Setting 9/96: nb_threads=seq pattern=increasing size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:42; approx. 87.00 sec left (1.45 minutes)
+[INFO] Setting 11/96: nb_threads=seq pattern=increasing size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:42; approx. 70.19 sec left (1.17 minutes)
+[INFO] Setting 13/96: nb_threads=seq pattern=decreasing size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:43; approx. 58.53 sec left (0.98 minutes)
+[INFO] Setting 15/96: nb_threads=seq pattern=decreasing size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:43; approx. 49.94 sec left (0.83 minutes)
+[INFO] Setting 17/96: nb_threads=seq pattern=decreasing size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:43; approx. 43.35 sec left (0.72 minutes)
+[INFO] Setting 19/96: nb_threads=seq pattern=constant size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:43; approx. 38.08 sec left (0.63 minutes)
+[INFO] Setting 21/96: nb_threads=seq pattern=constant size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:43; approx. 33.82 sec left (0.56 minutes)
+[INFO] Setting 23/96: nb_threads=seq pattern=constant size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:43; approx. 30.30 sec left (0.51 minutes)
+[INFO] Setting 25/96: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=1... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_root.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_root.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_root.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-2.graphml.o platform-2.dat.o
+rm -f
+rm -f generate p2-drake-sort p2-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=2 VARIANT_parallel-sort=p2- DRAKE_PLATFORM=platform-2.dat DRAKE_SCHEDULE=schedule-2.xml DRAKE_TASKGRAPH=merge-2.graphml VARIANT_drake-sort=p2-
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+gcc -E -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.e generate.c
+gcc -c -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.o generate.c
+gcc -M -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include generate.c -MF bincc_generate_generate.d
+gcc -o generate -L. bincc_generate_generate.o -L/home/nicme26/tddd56/lib -lpelib-core -lboost_graph -lboost_regex -lm
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=2 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=2 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=2 -UNB_THREADS -DNB_THREADS=0 sort.cpp -MF bincxx_drake-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_drake-sort_drake-sort.e drake-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_drake-sort_drake-sort.o drake-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 drake-sort.c -MF bincxx_drake-sort_drake-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_drake-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_drake-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 utils.c -MF bincxx_drake-sort_utils.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 presort.c -MF drakecc_merge_leaf_1.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 presort.c -MF drakecc_merge_leaf_2.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.o merge.c
+merge.c: In function ‘merge_run_root’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root merge.c -MF drakecc_merge_root.d
+pelib-convert --input --lib platform-ampl_input --file platform-2.dat --input --lib taskgraph-graphml --file merge-2.graphml --input --lib schedule-xml --file schedule-2.xml --output --lib schedule-drake --file merge.schedule.c
+gcc -E -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge -o drakecc_merge.schedule.e merge.schedule.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge -o drakecc_merge.schedule.o merge.schedule.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge merge.schedule.c -MF drakecc_merge.schedule.d
+ld -r -b binary -o merge-2.graphml.o merge-2.graphml
+ld -r -b binary -o platform-2.dat.o platform-2.dat
+ar rs libmerge.a drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_root.o drakecc_merge.schedule.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_root.o drakecc_merge.schedule.o
+ar: creating libmerge.a
+g++ -o p2-drake-sort -L. -L. bincxx_drake-sort_sort.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o -lmerge -pthread -L/home/nicme26/tddd56/lib -ldrake-intel-ia -ldrake -lpelib-core -lboost_graph -lboost_regex -lrapl -lm -lrt
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=2 -o bincxx_parallel-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=2 -o bincxx_parallel-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=2 sort.cpp -MF bincxx_parallel-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_parallel-sort_parallel-sort.e parallel-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_parallel-sort_parallel-sort.o parallel-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 parallel-sort.c -MF bincxx_parallel-sort_parallel-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_parallel-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_parallel-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 utils.c -MF bincxx_parallel-sort_utils.d
+g++ -o p2-parallel-sort -L. bincxx_parallel-sort_sort.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o -pthread -L/home/nicme26/tddd56/lib -ldrake-intel-ia -ldrake -lpelib-core -lboost_graph -lboost_regex -lrapl -lm -lrt
+echo Makefile Makefile.in
+Makefile Makefile.in
+echo prefix=/home/nicme26/tddd56 > merge.pc
+echo exec_prefix= >> merge.pc
+echo libdir='$'{prefix}/lib >> merge.pc
+echo includedir='$'{prefix}/include >> merge.pc
+echo >> merge.pc
+echo Name: libmerge >> merge.pc
+echo Description: General PELAB in library research used utility >> merge.pc
+echo Version: 1.0.0 >> merge.pc
+echo URL: >> merge.pc
+echo Libs: -L'$'{libdir} -lmerge >> merge.pc
+echo Libs.private: >> merge.pc
+echo Requires: >> merge.pc
+echo Requires.private: >> merge.pc
+echo Conflicts: >> merge.pc
+echo Cflags: -I'$'{includedir} >> merge.pc
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+OK. 7.77 sec finished on 12/07/16 14:59:51; approx. 49.40 sec left (0.82 minutes)
+[INFO] Setting 26/96: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 14:59:51; approx. 46.98 sec left (0.78 minutes)
+[INFO] Setting 27/96: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=1... OK. 0.01 sec finished on 12/07/16 14:59:51; approx. 44.74 sec left (0.75 minutes)
+[INFO] Setting 28/96: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 14:59:51; approx. 42.65 sec left (0.71 minutes)
+[INFO] Setting 29/96: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=1... OK. 0.01 sec finished on 12/07/16 14:59:51; approx. 40.71 sec left (0.68 minutes)
+[INFO] Setting 30/96: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 14:59:51; approx. 38.88 sec left (0.65 minutes)
+[INFO] Setting 31/96: nb_threads=2 pattern=increasing size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:51; approx. 37.19 sec left (0.62 minutes)
+[INFO] Setting 33/96: nb_threads=2 pattern=increasing size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:51; approx. 34.03 sec left (0.57 minutes)
+[INFO] Setting 35/96: nb_threads=2 pattern=increasing size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:51; approx. 31.21 sec left (0.52 minutes)
+[INFO] Setting 37/96: nb_threads=2 pattern=decreasing size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:51; approx. 28.69 sec left (0.48 minutes)
+[INFO] Setting 39/96: nb_threads=2 pattern=decreasing size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:51; approx. 26.42 sec left (0.44 minutes)
+[INFO] Setting 41/96: nb_threads=2 pattern=decreasing size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:52; approx. 24.36 sec left (0.41 minutes)
+[INFO] Setting 43/96: nb_threads=2 pattern=constant size=1048576 value=123456 input_instance=1... OK. 0.01 sec finished on 12/07/16 14:59:52; approx. 22.49 sec left (0.37 minutes)
+[INFO] Setting 45/96: nb_threads=2 pattern=constant size=4194304 value=123456 input_instance=1... OK. 0.01 sec finished on 12/07/16 14:59:52; approx. 20.82 sec left (0.35 minutes)
+[INFO] Setting 47/96: nb_threads=2 pattern=constant size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 14:59:52; approx. 19.24 sec left (0.32 minutes)
+[INFO] Setting 49/96: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=1... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_leaf_3.d drakecc_merge_root.d drakecc_merge_root_1.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_leaf_3.e drakecc_merge_root.e drakecc_merge_root_1.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-3.graphml.o platform-3.dat.o
+rm -f
+rm -f generate p3-drake-sort p3-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=3 VARIANT_parallel-sort=p3- DRAKE_PLATFORM=platform-3.dat DRAKE_SCHEDULE=schedule-3.xml DRAKE_TASKGRAPH=merge-3.graphml VARIANT_drake-sort=p3-
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+gcc -E -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.e generate.c
+gcc -c -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.o generate.c
+gcc -M -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include generate.c -MF bincc_generate_generate.d
+gcc -o generate -L. bincc_generate_generate.o -L/home/nicme26/tddd56/lib -lpelib-core -lboost_graph -lboost_regex -lm
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=3 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=3 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=3 -UNB_THREADS -DNB_THREADS=0 sort.cpp -MF bincxx_drake-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_drake-sort_drake-sort.e drake-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_drake-sort_drake-sort.o drake-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 drake-sort.c -MF bincxx_drake-sort_drake-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_drake-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_drake-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 utils.c -MF bincxx_drake-sort_utils.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 presort.c -MF drakecc_merge_leaf_1.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 presort.c -MF drakecc_merge_leaf_2.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 presort.c -MF drakecc_merge_leaf_3.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.o merge.c
+merge.c: In function ‘merge_run_root’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root merge.c -MF drakecc_merge_root.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.o merge.c
+merge.c: In function ‘merge_run_root_1’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 merge.c -MF drakecc_merge_root_1.d
+pelib-convert --input --lib platform-ampl_input --file platform-3.dat --input --lib taskgraph-graphml --file merge-3.graphml --input --lib schedule-xml --file schedule-3.xml --output --lib schedule-drake --file merge.schedule.c
+gcc -E -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge -o drakecc_merge.schedule.e merge.schedule.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge -o drakecc_merge.schedule.o merge.schedule.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge merge.schedule.c -MF drakecc_merge.schedule.d
+ld -r -b binary -o merge-3.graphml.o merge-3.graphml
+ld -r -b binary -o platform-3.dat.o platform-3.dat
+ar rs libmerge.a drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o
+ar: creating libmerge.a
+g++ -o p3-drake-sort -L. -L. bincxx_drake-sort_sort.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o -lmerge -pthread -L/home/nicme26/tddd56/lib -ldrake-intel-ia -ldrake -lpelib-core -lboost_graph -lboost_regex -lrapl -lm -lrt
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=3 -o bincxx_parallel-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=3 -o bincxx_parallel-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=3 sort.cpp -MF bincxx_parallel-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_parallel-sort_parallel-sort.e parallel-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_parallel-sort_parallel-sort.o parallel-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 parallel-sort.c -MF bincxx_parallel-sort_parallel-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_parallel-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_parallel-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 utils.c -MF bincxx_parallel-sort_utils.d
+g++ -o p3-parallel-sort -L. bincxx_parallel-sort_sort.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o -pthread -L/home/nicme26/tddd56/lib -ldrake-intel-ia -ldrake -lpelib-core -lboost_graph -lboost_regex -lrapl -lm -lrt
+echo Makefile Makefile.in
+Makefile Makefile.in
+echo prefix=/home/nicme26/tddd56 > merge.pc
+echo exec_prefix= >> merge.pc
+echo libdir='$'{prefix}/lib >> merge.pc
+echo includedir='$'{prefix}/include >> merge.pc
+echo >> merge.pc
+echo Name: libmerge >> merge.pc
+echo Description: General PELAB in library research used utility >> merge.pc
+echo Version: 1.0.0 >> merge.pc
+echo URL: >> merge.pc
+echo Libs: -L'$'{libdir} -lmerge >> merge.pc
+echo Libs.private: >> merge.pc
+echo Requires: >> merge.pc
+echo Requires.private: >> merge.pc
+echo Conflicts: >> merge.pc
+echo Cflags: -I'$'{includedir} >> merge.pc
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+OK. 9.93 sec finished on 12/07/16 15:00:02; approx. 27.30 sec left (0.46 minutes)
+[INFO] Setting 50/96: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 15:00:02; approx. 26.24 sec left (0.44 minutes)
+[INFO] Setting 51/96: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:00:02; approx. 25.21 sec left (0.42 minutes)
+[INFO] Setting 52/96: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 15:00:02; approx. 24.23 sec left (0.40 minutes)
+[INFO] Setting 53/96: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:00:02; approx. 23.27 sec left (0.39 minutes)
+[INFO] Setting 54/96: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 15:00:02; approx. 22.35 sec left (0.37 minutes)
+[INFO] Setting 55/96: nb_threads=3 pattern=increasing size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:00:02; approx. 21.47 sec left (0.36 minutes)
+[INFO] Setting 57/96: nb_threads=3 pattern=increasing size=4194304 value=123456 input_instance=1... OK. 0.01 sec finished on 12/07/16 15:00:02; approx. 19.77 sec left (0.33 minutes)
+[INFO] Setting 59/96: nb_threads=3 pattern=increasing size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:00:02; approx. 18.18 sec left (0.30 minutes)
+[INFO] Setting 61/96: nb_threads=3 pattern=decreasing size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:00:02; approx. 16.68 sec left (0.28 minutes)
+[INFO] Setting 63/96: nb_threads=3 pattern=decreasing size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:00:03; approx. 15.28 sec left (0.25 minutes)
+[INFO] Setting 65/96: nb_threads=3 pattern=decreasing size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:00:03; approx. 13.95 sec left (0.23 minutes)
+[INFO] Setting 67/96: nb_threads=3 pattern=constant size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:00:03; approx. 12.69 sec left (0.21 minutes)
+[INFO] Setting 69/96: nb_threads=3 pattern=constant size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:00:03; approx. 11.50 sec left (0.19 minutes)
+[INFO] Setting 71/96: nb_threads=3 pattern=constant size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:00:03; approx. 10.38 sec left (0.17 minutes)
+[INFO] Setting 73/96: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=1... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_leaf_4.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_leaf_3.d drakecc_merge_leaf_4.d drakecc_merge_root.d drakecc_merge_root_1.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_leaf_3.e drakecc_merge_leaf_4.e drakecc_merge_root.e drakecc_merge_root_1.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-4.graphml.o platform-4.dat.o
+rm -f
+rm -f generate p4-drake-sort p4-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=4 VARIANT_parallel-sort=p4- DRAKE_PLATFORM=platform-4.dat DRAKE_SCHEDULE=schedule-4.xml DRAKE_TASKGRAPH=merge-4.graphml VARIANT_drake-sort=p4-
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+gcc -E -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.e generate.c
+gcc -c -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.o generate.c
+gcc -M -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include generate.c -MF bincc_generate_generate.d
+gcc -o generate -L. bincc_generate_generate.o -L/home/nicme26/tddd56/lib -lpelib-core -lboost_graph -lboost_regex -lm
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 sort.cpp -MF bincxx_drake-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_drake-sort.e drake-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_drake-sort.o drake-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 drake-sort.c -MF bincxx_drake-sort_drake-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 utils.c -MF bincxx_drake-sort_utils.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 presort.c -MF drakecc_merge_leaf_1.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 presort.c -MF drakecc_merge_leaf_2.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 presort.c -MF drakecc_merge_leaf_3.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 -o drakecc_merge_leaf_4.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 -o drakecc_merge_leaf_4.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 presort.c -MF drakecc_merge_leaf_4.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.o merge.c
+merge.c: In function ‘merge_run_root’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root merge.c -MF drakecc_merge_root.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.o merge.c
+merge.c: In function ‘merge_run_root_1’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 merge.c -MF drakecc_merge_root_1.d
+pelib-convert --input --lib platform-ampl_input --file platform-4.dat --input --lib taskgraph-graphml --file merge-4.graphml --input --lib schedule-xml --file schedule-4.xml --output --lib schedule-drake --file merge.schedule.c
+terminate called after throwing an instance of 'pelib::PelibException'
+what(): Pelib exception: Task in schedule does not exist in taskgraph.
+make[1]: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables [merge.schedule.c] Aborted
+make[1]: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables Deleting file `merge.schedule.c'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables [submake-all] Error 1
+./compile: line 26: 31299 Segmentation fault pelib-convert --input --lib taskgraph-graphml --file src/merge-$drake_p.graphml --input --lib platform-ampl_input --file src/platform-$drake_p.dat --input --lib schedule-xml --file src/schedule-$drake_p.xml --output --lib schedule-tetris --file src/schedule-$drake_p.svg --args --ratio 5 --use-task-name
+Failed. 8.84 sec finished on 12/07/16 15:00:12; approx. 12.10 sec left (0.20 minutes)
+[INFO] Setting 74/96: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=2... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_leaf_4.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_leaf_3.d drakecc_merge_leaf_4.d drakecc_merge_root.d drakecc_merge_root_1.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_leaf_3.e drakecc_merge_leaf_4.e drakecc_merge_root.e drakecc_merge_root_1.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-4.graphml.o platform-4.dat.o
+rm -f
+rm -f generate p4-drake-sort p4-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=4 VARIANT_parallel-sort=p4- DRAKE_PLATFORM=platform-4.dat DRAKE_SCHEDULE=schedule-4.xml DRAKE_TASKGRAPH=merge-4.graphml VARIANT_drake-sort=p4-
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+gcc -E -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.e generate.c
+gcc -c -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.o generate.c
+gcc -M -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include generate.c -MF bincc_generate_generate.d
+gcc -o generate -L. bincc_generate_generate.o -L/home/nicme26/tddd56/lib -lpelib-core -lboost_graph -lboost_regex -lm
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 sort.cpp -MF bincxx_drake-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_drake-sort.e drake-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_drake-sort.o drake-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 drake-sort.c -MF bincxx_drake-sort_drake-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 utils.c -MF bincxx_drake-sort_utils.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 presort.c -MF drakecc_merge_leaf_1.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 presort.c -MF drakecc_merge_leaf_2.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 presort.c -MF drakecc_merge_leaf_3.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 -o drakecc_merge_leaf_4.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 -o drakecc_merge_leaf_4.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 presort.c -MF drakecc_merge_leaf_4.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.o merge.c
+merge.c: In function ‘merge_run_root’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root merge.c -MF drakecc_merge_root.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.o merge.c
+merge.c: In function ‘merge_run_root_1’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 merge.c -MF drakecc_merge_root_1.d
+pelib-convert --input --lib platform-ampl_input --file platform-4.dat --input --lib taskgraph-graphml --file merge-4.graphml --input --lib schedule-xml --file schedule-4.xml --output --lib schedule-drake --file merge.schedule.c
+terminate called after throwing an instance of 'pelib::PelibException'
+what(): Pelib exception: Task in schedule does not exist in taskgraph.
+make[1]: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables [merge.schedule.c] Aborted
+make[1]: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables Deleting file `merge.schedule.c'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables [submake-all] Error 1
+./compile: line 26: 1999 Segmentation fault pelib-convert --input --lib taskgraph-graphml --file src/merge-$drake_p.graphml --input --lib platform-ampl_input --file src/platform-$drake_p.dat --input --lib schedule-xml --file src/schedule-$drake_p.xml --output --lib schedule-tetris --file src/schedule-$drake_p.svg --args --ratio 5 --use-task-name
+Failed. 8.60 sec finished on 12/07/16 15:00:20; approx. 13.99 sec left (0.23 minutes)
+[INFO] Setting 75/96: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=1... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_leaf_4.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_leaf_3.d drakecc_merge_leaf_4.d drakecc_merge_root.d drakecc_merge_root_1.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_leaf_3.e drakecc_merge_leaf_4.e drakecc_merge_root.e drakecc_merge_root_1.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-4.graphml.o platform-4.dat.o
+rm -f
+rm -f generate p4-drake-sort p4-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=4 VARIANT_parallel-sort=p4- DRAKE_PLATFORM=platform-4.dat DRAKE_SCHEDULE=schedule-4.xml DRAKE_TASKGRAPH=merge-4.graphml VARIANT_drake-sort=p4-
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+gcc -E -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.e generate.c
+gcc -c -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.o generate.c
+gcc -M -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include generate.c -MF bincc_generate_generate.d
+gcc -o generate -L. bincc_generate_generate.o -L/home/nicme26/tddd56/lib -lpelib-core -lboost_graph -lboost_regex -lm
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 sort.cpp -MF bincxx_drake-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_drake-sort.e drake-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_drake-sort.o drake-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 drake-sort.c -MF bincxx_drake-sort_drake-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 utils.c -MF bincxx_drake-sort_utils.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 presort.c -MF drakecc_merge_leaf_1.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 presort.c -MF drakecc_merge_leaf_2.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 presort.c -MF drakecc_merge_leaf_3.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 -o drakecc_merge_leaf_4.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 -o drakecc_merge_leaf_4.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 presort.c -MF drakecc_merge_leaf_4.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.o merge.c
+merge.c: In function ‘merge_run_root’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root merge.c -MF drakecc_merge_root.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.o merge.c
+merge.c: In function ‘merge_run_root_1’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 merge.c -MF drakecc_merge_root_1.d
+pelib-convert --input --lib platform-ampl_input --file platform-4.dat --input --lib taskgraph-graphml --file merge-4.graphml --input --lib schedule-xml --file schedule-4.xml --output --lib schedule-drake --file merge.schedule.c
+terminate called after throwing an instance of 'pelib::PelibException'
+what(): Pelib exception: Task in schedule does not exist in taskgraph.
+make[1]: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables [merge.schedule.c] Aborted
+make[1]: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables Deleting file `merge.schedule.c'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables [submake-all] Error 1
+./compile: line 26: 5165 Segmentation fault pelib-convert --input --lib taskgraph-graphml --file src/merge-$drake_p.graphml --input --lib platform-ampl_input --file src/platform-$drake_p.dat --input --lib schedule-xml --file src/schedule-$drake_p.xml --output --lib schedule-tetris --file src/schedule-$drake_p.svg --args --ratio 5 --use-task-name
+Failed. 8.72 sec finished on 12/07/16 15:00:29; approx. 15.63 sec left (0.26 minutes)
+[INFO] Setting 76/96: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=2... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_leaf_4.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_leaf_3.d drakecc_merge_leaf_4.d drakecc_merge_root.d drakecc_merge_root_1.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_leaf_3.e drakecc_merge_leaf_4.e drakecc_merge_root.e drakecc_merge_root_1.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-4.graphml.o platform-4.dat.o
+rm -f
+rm -f generate p4-drake-sort p4-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=4 VARIANT_parallel-sort=p4- DRAKE_PLATFORM=platform-4.dat DRAKE_SCHEDULE=schedule-4.xml DRAKE_TASKGRAPH=merge-4.graphml VARIANT_drake-sort=p4-
+[INFO] 
+[INFO] New run on Wed Dec 7 15:03:34 CET 2016
+[INFO] Will compile 96 settings
+[INFO] Setting 1/96: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=1... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_root.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_root.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_root.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-1.graphml.o platform-1.dat.o
+rm -f
+rm -f generate seq-drake-sort seq-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=0 VARIANT_parallel-sort=seq- DRAKE_PLATFORM=platform-1.dat DRAKE_SCHEDULE=schedule-1.xml DRAKE_TASKGRAPH=merge-1.graphml VARIANT_drake-sort=seq-
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+gcc -E -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.e generate.c
+gcc -c -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.o generate.c
+gcc -M -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include generate.c -MF bincc_generate_generate.d
+gcc -o generate -L. bincc_generate_generate.o -L/home/nicme26/tddd56/lib -lpelib-core -lboost_graph -lboost_regex -lm
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=1 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=1 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=1 -UNB_THREADS -DNB_THREADS=0 sort.cpp -MF bincxx_drake-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=1 -o bincxx_drake-sort_drake-sort.e drake-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=1 -o bincxx_drake-sort_drake-sort.o drake-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=1 drake-sort.c -MF bincxx_drake-sort_drake-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=1 -o bincxx_drake-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=1 -o bincxx_drake-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=1 utils.c -MF bincxx_drake-sort_utils.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 presort.c -MF drakecc_merge_leaf_1.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 presort.c -MF drakecc_merge_leaf_2.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.o merge.c
+merge.c: In function ‘merge_run_root’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root merge.c -MF drakecc_merge_root.d
+pelib-convert --input --lib platform-ampl_input --file platform-1.dat --input --lib taskgraph-graphml --file merge-1.graphml --input --lib schedule-xml --file schedule-1.xml --output --lib schedule-drake --file merge.schedule.c
+gcc -E -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge -o drakecc_merge.schedule.e merge.schedule.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge -o drakecc_merge.schedule.o merge.schedule.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge merge.schedule.c -MF drakecc_merge.schedule.d
+ld -r -b binary -o merge-1.graphml.o merge-1.graphml
+ld -r -b binary -o platform-1.dat.o platform-1.dat
+ar rs libmerge.a drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_root.o drakecc_merge.schedule.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_root.o drakecc_merge.schedule.o
+ar: creating libmerge.a
+g++ -o seq-drake-sort -L. -L. bincxx_drake-sort_sort.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o -lmerge -pthread -L/home/nicme26/tddd56/lib -ldrake-intel-ia -ldrake -lpelib-core -lboost_graph -lboost_regex -lrapl -lm -lrt
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=0 -o bincxx_parallel-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=0 -o bincxx_parallel-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=0 sort.cpp -MF bincxx_parallel-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=0 -o bincxx_parallel-sort_parallel-sort.e parallel-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=0 -o bincxx_parallel-sort_parallel-sort.o parallel-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=0 parallel-sort.c -MF bincxx_parallel-sort_parallel-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=0 -o bincxx_parallel-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=0 -o bincxx_parallel-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=0 utils.c -MF bincxx_parallel-sort_utils.d
+g++ -o seq-parallel-sort -L. bincxx_parallel-sort_sort.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o -pthread -L/home/nicme26/tddd56/lib -ldrake-intel-ia -ldrake -lpelib-core -lboost_graph -lboost_regex -lrapl -lm -lrt
+echo Makefile Makefile.in
+Makefile Makefile.in
+echo prefix=/home/nicme26/tddd56 > merge.pc
+echo exec_prefix= >> merge.pc
+echo libdir='$'{prefix}/lib >> merge.pc
+echo includedir='$'{prefix}/include >> merge.pc
+echo >> merge.pc
+echo Name: libmerge >> merge.pc
+echo Description: General PELAB in library research used utility >> merge.pc
+echo Version: 1.0.0 >> merge.pc
+echo URL: >> merge.pc
+echo Libs: -L'$'{libdir} -lmerge >> merge.pc
+echo Libs.private: >> merge.pc
+echo Requires: >> merge.pc
+echo Requires.private: >> merge.pc
+echo Conflicts: >> merge.pc
+echo Cflags: -I'$'{includedir} >> merge.pcOK. 7.49 sec finished on 12/07/16 15:03:43; approx. 804.61 sec left (13.41 minutes)
+
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+[INFO] Setting 2/96: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 15:03:43; approx. 400.93 sec left (6.68 minutes)
+[INFO] Setting 3/96: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:43; approx. 266.14 sec left (4.44 minutes)
+[INFO] Setting 4/96: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 15:03:43; approx. 198.79 sec left (3.31 minutes)
+[INFO] Setting 5/96: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=1... OK. 0.01 sec finished on 12/07/16 15:03:43; approx. 158.36 sec left (2.64 minutes)
+[INFO] Setting 6/96: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 15:03:43; approx. 131.34 sec left (2.19 minutes)
+[INFO] Setting 7/96: nb_threads=seq pattern=increasing size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:43; approx. 112.24 sec left (1.87 minutes)
+[INFO] Setting 9/96: nb_threads=seq pattern=increasing size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:43; approx. 86.16 sec left (1.44 minutes)
+[INFO] Setting 11/96: nb_threads=seq pattern=increasing size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:43; approx. 69.53 sec left (1.16 minutes)
+[INFO] Setting 13/96: nb_threads=seq pattern=decreasing size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:43; approx. 57.98 sec left (0.97 minutes)
+[INFO] Setting 15/96: nb_threads=seq pattern=decreasing size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:44; approx. 49.48 sec left (0.82 minutes)
+[INFO] Setting 17/96: nb_threads=seq pattern=decreasing size=16777216 value=123456 input_instance=1... OK. 0.01 sec finished on 12/07/16 15:03:44; approx. 42.97 sec left (0.72 minutes)
+[INFO] Setting 19/96: nb_threads=seq pattern=constant size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:44; approx. 37.76 sec left (0.63 minutes)
+[INFO] Setting 21/96: nb_threads=seq pattern=constant size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:44; approx. 33.54 sec left (0.56 minutes)
+[INFO] Setting 23/96: nb_threads=seq pattern=constant size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:44; approx. 30.05 sec left (0.50 minutes)
+[INFO] Setting 25/96: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=1... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_root.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_root.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_root.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-2.graphml.o platform-2.dat.o
+rm -f
+rm -f generate p2-drake-sort p2-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=2 VARIANT_parallel-sort=p2- DRAKE_PLATFORM=platform-2.dat DRAKE_SCHEDULE=schedule-2.xml DRAKE_TASKGRAPH=merge-2.graphml VARIANT_drake-sort=p2-
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+gcc -E -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.e generate.c
+gcc -c -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.o generate.c
+gcc -M -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include generate.c -MF bincc_generate_generate.d
+gcc -o generate -L. bincc_generate_generate.o -L/home/nicme26/tddd56/lib -lpelib-core -lboost_graph -lboost_regex -lm
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=2 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=2 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=2 -UNB_THREADS -DNB_THREADS=0 sort.cpp -MF bincxx_drake-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_drake-sort_drake-sort.e drake-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_drake-sort_drake-sort.o drake-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 drake-sort.c -MF bincxx_drake-sort_drake-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_drake-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_drake-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 utils.c -MF bincxx_drake-sort_utils.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 presort.c -MF drakecc_merge_leaf_1.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 presort.c -MF drakecc_merge_leaf_2.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.o merge.c
+merge.c: In function ‘merge_run_root’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root merge.c -MF drakecc_merge_root.d
+pelib-convert --input --lib platform-ampl_input --file platform-2.dat --input --lib taskgraph-graphml --file merge-2.graphml --input --lib schedule-xml --file schedule-2.xml --output --lib schedule-drake --file merge.schedule.c
+gcc -E -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge -o drakecc_merge.schedule.e merge.schedule.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge -o drakecc_merge.schedule.o merge.schedule.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge merge.schedule.c -MF drakecc_merge.schedule.d
+ld -r -b binary -o merge-2.graphml.o merge-2.graphml
+ld -r -b binary -o platform-2.dat.o platform-2.dat
+ar rs libmerge.a drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_root.o drakecc_merge.schedule.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_root.o drakecc_merge.schedule.o
+ar: creating libmerge.a
+g++ -o p2-drake-sort -L. -L. bincxx_drake-sort_sort.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o -lmerge -pthread -L/home/nicme26/tddd56/lib -ldrake-intel-ia -ldrake -lpelib-core -lboost_graph -lboost_regex -lrapl -lm -lrt
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=2 -o bincxx_parallel-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=2 -o bincxx_parallel-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=2 sort.cpp -MF bincxx_parallel-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_parallel-sort_parallel-sort.e parallel-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_parallel-sort_parallel-sort.o parallel-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 parallel-sort.c -MF bincxx_parallel-sort_parallel-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_parallel-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 -o bincxx_parallel-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=2 utils.c -MF bincxx_parallel-sort_utils.d
+g++ -o p2-parallel-sort -L. bincxx_parallel-sort_sort.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o -pthread -L/home/nicme26/tddd56/lib -ldrake-intel-ia -ldrake -lpelib-core -lboost_graph -lboost_regex -lrapl -lm -lrt
+echo Makefile Makefile.in
+Makefile Makefile.in
+echo prefix=/home/nicme26/tddd56 > merge.pc
+echo exec_prefix= >> merge.pc
+echo libdir='$'{prefix}/lib >> merge.pc
+echo includedir='$'{prefix}/include >> merge.pc
+echo >> merge.pc
+echo Name: libmerge >> merge.pc
+echo Description: General PELAB in library research used utility >> merge.pc
+echo Version: 1.0.0 >> merge.pc
+echo URL: >> merge.pc
+echo Libs: -L'$'{libdir} -lmerge >> merge.pc
+echo Libs.private: >> merge.pc
+echo Requires: >> merge.pc
+echo Requires.private: >> merge.pc
+echo Conflicts: >> merge.pc
+echo Cflags: -I'$'{includedir} >> merge.pc
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+OK. 7.59 sec finished on 12/07/16 15:03:52; approx. 48.67 sec left (0.81 minutes)
+[INFO] Setting 26/96: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 15:03:52; approx. 46.29 sec left (0.77 minutes)
+[INFO] Setting 27/96: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:52; approx. 44.08 sec left (0.73 minutes)
+[INFO] Setting 28/96: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 15:03:52; approx. 42.02 sec left (0.70 minutes)
+[INFO] Setting 29/96: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:52; approx. 40.11 sec left (0.67 minutes)
+[INFO] Setting 30/96: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 15:03:52; approx. 38.32 sec left (0.64 minutes)
+[INFO] Setting 31/96: nb_threads=2 pattern=increasing size=1048576 value=123456 input_instance=1... OK. 0.01 sec finished on 12/07/16 15:03:52; approx. 36.66 sec left (0.61 minutes)
+[INFO] Setting 33/96: nb_threads=2 pattern=increasing size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:52; approx. 33.54 sec left (0.56 minutes)
+[INFO] Setting 35/96: nb_threads=2 pattern=increasing size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:52; approx. 30.76 sec left (0.51 minutes)
+[INFO] Setting 37/96: nb_threads=2 pattern=decreasing size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:52; approx. 28.28 sec left (0.47 minutes)
+[INFO] Setting 39/96: nb_threads=2 pattern=decreasing size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:52; approx. 26.03 sec left (0.43 minutes)
+[INFO] Setting 41/96: nb_threads=2 pattern=decreasing size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:52; approx. 24.01 sec left (0.40 minutes)
+[INFO] Setting 43/96: nb_threads=2 pattern=constant size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:52; approx. 22.14 sec left (0.37 minutes)
+[INFO] Setting 45/96: nb_threads=2 pattern=constant size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:52; approx. 20.44 sec left (0.34 minutes)
+[INFO] Setting 47/96: nb_threads=2 pattern=constant size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:03:53; approx. 18.88 sec left (0.31 minutes)
+[INFO] Setting 49/96: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=1... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_leaf_3.d drakecc_merge_root.d drakecc_merge_root_1.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_leaf_3.e drakecc_merge_root.e drakecc_merge_root_1.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-3.graphml.o platform-3.dat.o
+rm -f
+rm -f generate p3-drake-sort p3-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=3 VARIANT_parallel-sort=p3- DRAKE_PLATFORM=platform-3.dat DRAKE_SCHEDULE=schedule-3.xml DRAKE_TASKGRAPH=merge-3.graphml VARIANT_drake-sort=p3-
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+gcc -E -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.e generate.c
+gcc -c -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.o generate.c
+gcc -M -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include generate.c -MF bincc_generate_generate.d
+gcc -o generate -L. bincc_generate_generate.o -L/home/nicme26/tddd56/lib -lpelib-core -lboost_graph -lboost_regex -lm
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=3 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=3 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=3 -UNB_THREADS -DNB_THREADS=0 sort.cpp -MF bincxx_drake-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_drake-sort_drake-sort.e drake-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_drake-sort_drake-sort.o drake-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 drake-sort.c -MF bincxx_drake-sort_drake-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_drake-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_drake-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 utils.c -MF bincxx_drake-sort_utils.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 presort.c -MF drakecc_merge_leaf_1.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 presort.c -MF drakecc_merge_leaf_2.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 presort.c -MF drakecc_merge_leaf_3.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.o merge.c
+merge.c: In function ‘merge_run_root’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root merge.c -MF drakecc_merge_root.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.o merge.c
+merge.c: In function ‘merge_run_root_1’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 merge.c -MF drakecc_merge_root_1.d
+pelib-convert --input --lib platform-ampl_input --file platform-3.dat --input --lib taskgraph-graphml --file merge-3.graphml --input --lib schedule-xml --file schedule-3.xml --output --lib schedule-drake --file merge.schedule.c
+gcc -E -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge -o drakecc_merge.schedule.e merge.schedule.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge -o drakecc_merge.schedule.o merge.schedule.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DAPPLICATION=merge merge.schedule.c -MF drakecc_merge.schedule.d
+ld -r -b binary -o merge-3.graphml.o merge-3.graphml
+ld -r -b binary -o platform-3.dat.o platform-3.dat
+ar rs libmerge.a drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o
+ar: creating libmerge.a
+g++ -o p3-drake-sort -L. -L. bincxx_drake-sort_sort.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o -lmerge -pthread -L/home/nicme26/tddd56/lib -ldrake-intel-ia -ldrake -lpelib-core -lboost_graph -lboost_regex -lrapl -lm -lrt
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=3 -o bincxx_parallel-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=3 -o bincxx_parallel-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=3 sort.cpp -MF bincxx_parallel-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_parallel-sort_parallel-sort.e parallel-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_parallel-sort_parallel-sort.o parallel-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 parallel-sort.c -MF bincxx_parallel-sort_parallel-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_parallel-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 -o bincxx_parallel-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=3 utils.c -MF bincxx_parallel-sort_utils.d
+g++ -o p3-parallel-sort -L. bincxx_parallel-sort_sort.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o -pthread -L/home/nicme26/tddd56/lib -ldrake-intel-ia -ldrake -lpelib-core -lboost_graph -lboost_regex -lrapl -lm -lrt
+echo Makefile Makefile.in
+Makefile Makefile.in
+echo prefix=/home/nicme26/tddd56 > merge.pc
+echo exec_prefix= >> merge.pc
+echo libdir='$'{prefix}/lib >> merge.pc
+echo includedir='$'{prefix}/include >> merge.pc
+echo >> merge.pc
+echo Name: libmerge >> merge.pc
+echo Description: General PELAB in library research used utility >> merge.pc
+echo Version: 1.0.0 >> merge.pc
+echo URL: >> merge.pc
+echo Libs: -L'$'{libdir} -lmerge >> merge.pc
+echo Libs.private: >> merge.pc
+echo Requires: >> merge.pc
+echo Requires.private: >> merge.pc
+echo Conflicts: >> merge.pc
+echo Cflags: -I'$'{includedir} >> merge.pc
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+OK. 9.89 sec finished on 12/07/16 15:04:02; approx. 26.93 sec left (0.45 minutes)
+[INFO] Setting 50/96: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 25.88 sec left (0.43 minutes)
+[INFO] Setting 51/96: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 24.88 sec left (0.41 minutes)
+[INFO] Setting 52/96: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 23.90 sec left (0.40 minutes)
+[INFO] Setting 53/96: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=1... OK. 0.01 sec finished on 12/07/16 15:04:03; approx. 22.96 sec left (0.38 minutes)
+[INFO] Setting 54/96: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=2... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 22.06 sec left (0.37 minutes)
+[INFO] Setting 55/96: nb_threads=3 pattern=increasing size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 21.19 sec left (0.35 minutes)
+[INFO] Setting 57/96: nb_threads=3 pattern=increasing size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 19.50 sec left (0.33 minutes)
+[INFO] Setting 59/96: nb_threads=3 pattern=increasing size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 17.93 sec left (0.30 minutes)
+[INFO] Setting 61/96: nb_threads=3 pattern=decreasing size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 16.45 sec left (0.27 minutes)
+[INFO] Setting 63/96: nb_threads=3 pattern=decreasing size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 15.06 sec left (0.25 minutes)
+[INFO] Setting 65/96: nb_threads=3 pattern=decreasing size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 13.75 sec left (0.23 minutes)
+[INFO] Setting 67/96: nb_threads=3 pattern=constant size=1048576 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 12.51 sec left (0.21 minutes)
+[INFO] Setting 69/96: nb_threads=3 pattern=constant size=4194304 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 11.34 sec left (0.19 minutes)
+[INFO] Setting 71/96: nb_threads=3 pattern=constant size=16777216 value=123456 input_instance=1... OK. 0.00 sec finished on 12/07/16 15:04:03; approx. 10.23 sec left (0.17 minutes)
+[INFO] Setting 73/96: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=1... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_leaf_4.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_leaf_3.d drakecc_merge_leaf_4.d drakecc_merge_root.d drakecc_merge_root_1.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_leaf_3.e drakecc_merge_leaf_4.e drakecc_merge_root.e drakecc_merge_root_1.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-4.graphml.o platform-4.dat.o
+rm -f
+rm -f generate p4-drake-sort p4-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=4 VARIANT_parallel-sort=p4- DRAKE_PLATFORM=platform-4.dat DRAKE_SCHEDULE=schedule-4.xml DRAKE_TASKGRAPH=merge-4.graphml VARIANT_drake-sort=p4-
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+gcc -E -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.e generate.c
+gcc -c -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.o generate.c
+gcc -M -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include generate.c -MF bincc_generate_generate.d
+gcc -o generate -L. bincc_generate_generate.o -L/home/nicme26/tddd56/lib -lpelib-core -lboost_graph -lboost_regex -lm
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 sort.cpp -MF bincxx_drake-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_drake-sort.e drake-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_drake-sort.o drake-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 drake-sort.c -MF bincxx_drake-sort_drake-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 utils.c -MF bincxx_drake-sort_utils.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 presort.c -MF drakecc_merge_leaf_1.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 presort.c -MF drakecc_merge_leaf_2.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 presort.c -MF drakecc_merge_leaf_3.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 -o drakecc_merge_leaf_4.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 -o drakecc_merge_leaf_4.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 presort.c -MF drakecc_merge_leaf_4.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.o merge.c
+merge.c: In function ‘merge_run_root’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root merge.c -MF drakecc_merge_root.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.o merge.c
+merge.c: In function ‘merge_run_root_1’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 merge.c -MF drakecc_merge_root_1.d
+pelib-convert --input --lib platform-ampl_input --file platform-4.dat --input --lib taskgraph-graphml --file merge-4.graphml --input --lib schedule-xml --file schedule-4.xml --output --lib schedule-drake --file merge.schedule.c
+terminate called after throwing an instance of 'pelib::PelibException'
+what(): Pelib exception: Task in schedule does not exist in taskgraph.
+make[1]: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables [merge.schedule.c] Aborted
+make[1]: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables Deleting file `merge.schedule.c'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables [submake-all] Error 1
+./compile: line 26: 30285 Segmentation fault pelib-convert --input --lib taskgraph-graphml --file src/merge-$drake_p.graphml --input --lib platform-ampl_input --file src/platform-$drake_p.dat --input --lib schedule-xml --file src/schedule-$drake_p.xml --output --lib schedule-tetris --file src/schedule-$drake_p.svg --args --ratio 5 --use-task-name
+Failed. 8.26 sec finished on 12/07/16 15:04:12; approx. 11.78 sec left (0.20 minutes)
+[INFO] Setting 74/96: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=2... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_leaf_4.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_leaf_3.d drakecc_merge_leaf_4.d drakecc_merge_root.d drakecc_merge_root_1.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_leaf_3.e drakecc_merge_leaf_4.e drakecc_merge_root.e drakecc_merge_root_1.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-4.graphml.o platform-4.dat.o
+rm -f
+rm -f generate p4-drake-sort p4-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=4 VARIANT_parallel-sort=p4- DRAKE_PLATFORM=platform-4.dat DRAKE_SCHEDULE=schedule-4.xml DRAKE_TASKGRAPH=merge-4.graphml VARIANT_drake-sort=p4-
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+gcc -E -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.e generate.c
+gcc -c -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.o generate.c
+gcc -M -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include generate.c -MF bincc_generate_generate.d
+gcc -o generate -L. bincc_generate_generate.o -L/home/nicme26/tddd56/lib -lpelib-core -lboost_graph -lboost_regex -lm
+g++ -E -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.e sort.cpp
+g++ -c -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 -o bincxx_drake-sort_sort.o sort.cpp
+g++ -M -isystem ../include -O3 -DNDEBUG -DDRAKE_IA_SHARED_SIZE=262144 -DDRAKE_IA_LINE_SIZE=64 -I/home/nicme26/tddd56/include -DNB_THREADS=4 -UNB_THREADS -DNB_THREADS=0 sort.cpp -MF bincxx_drake-sort_sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_drake-sort.e drake-sort.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_drake-sort.o drake-sort.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 drake-sort.c -MF bincxx_drake-sort_drake-sort.d
+gcc -E -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_utils.e utils.c
+gcc -c -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 -o bincxx_drake-sort_utils.o utils.c
+gcc -M -isystem ../include -O3 -DNDEBUG -DNB_THREADS=4 utils.c -MF bincxx_drake-sort_utils.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 -o drakecc_merge_leaf_1.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_1 presort.c -MF drakecc_merge_leaf_1.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 -o drakecc_merge_leaf_2.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_2 presort.c -MF drakecc_merge_leaf_2.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 -o drakecc_merge_leaf_3.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_3 presort.c -MF drakecc_merge_leaf_3.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 -o drakecc_merge_leaf_4.e presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 -o drakecc_merge_leaf_4.o presort.c
+presort.c:29:2: warning: #warning Disabling debug output [-Wcpp]
+#warning Disabling debug output
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=presort -DTASK_NAME=leaf_4 presort.c -MF drakecc_merge_leaf_4.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root -o drakecc_merge_root.o merge.c
+merge.c: In function ‘merge_run_root’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root merge.c -MF drakecc_merge_root.d
+gcc -E -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.e merge.c
+gcc -c -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 -o drakecc_merge_root_1.o merge.c
+merge.c: In function ‘merge_run_root_1’:
+merge.c:128:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before ind size %i n", left_size);
+^
+merge.c:129:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before right size %i n", right_size);
+^
+merge.c:130:2: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+printf("before parent size %i n", parent_size);
+^
+gcc -M -isystem ../include -O3 -DNDEBUG -D_DRAKE_COMPILE -DAPPLICATION=merge -DTASK_MODULE=merge -DTASK_NAME=root_1 merge.c -MF drakecc_merge_root_1.d
+pelib-convert --input --lib platform-ampl_input --file platform-4.dat --input --lib taskgraph-graphml --file merge-4.graphml --input --lib schedule-xml --file schedule-4.xml --output --lib schedule-drake --file merge.schedule.c
+terminate called after throwing an instance of 'pelib::PelibException'
+what(): Pelib exception: Task in schedule does not exist in taskgraph.
+make[1]: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables [merge.schedule.c] Aborted
+make[1]: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables Deleting file `merge.schedule.c'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make: benchmark benchmark.log compile data drawplots.r include labels.r log.log Makefile Makefile.in run southfork_setup src table.csv test variables [submake-all] Error 1
+./compile: line 26: 929 Segmentation fault pelib-convert --input --lib taskgraph-graphml --file src/merge-$drake_p.graphml --input --lib platform-ampl_input --file src/platform-$drake_p.dat --input --lib schedule-xml --file src/schedule-$drake_p.xml --output --lib schedule-tetris --file src/schedule-$drake_p.svg --args --ratio 5 --use-task-name
+Failed. 8.59 sec finished on 12/07/16 15:04:20; approx. 13.69 sec left (0.23 minutes)
+[INFO] Setting 75/96: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=1... make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+rm -f bincc_generate_generate.o bincxx_drake-sort_drake-sort.o bincxx_drake-sort_utils.o bincxx_parallel-sort_parallel-sort.o bincxx_parallel-sort_utils.o drakecc_merge_leaf_1.o drakecc_merge_leaf_2.o drakecc_merge_leaf_3.o drakecc_merge_leaf_4.o drakecc_merge_root.o drakecc_merge_root_1.o drakecc_merge.schedule.o bincc_generate_generate.d bincxx_drake-sort_drake-sort.d bincxx_drake-sort_utils.d bincxx_parallel-sort_parallel-sort.d bincxx_parallel-sort_utils.d drakecc_merge_leaf_1.d drakecc_merge_leaf_2.d drakecc_merge_leaf_3.d drakecc_merge_leaf_4.d drakecc_merge_root.d drakecc_merge_root_1.d drakecc_merge.schedule.d bincc_generate_generate.e bincxx_drake-sort_drake-sort.e bincxx_drake-sort_utils.e bincxx_parallel-sort_parallel-sort.e bincxx_parallel-sort_utils.e drakecc_merge_leaf_1.e drakecc_merge_leaf_2.e drakecc_merge_leaf_3.e drakecc_merge_leaf_4.e drakecc_merge_root.e drakecc_merge_root_1.e drakecc_merge.schedule.e
+rm -f bincxx_drake-sort_sort.o bincxx_parallel-sort_sort.o bincxx_drake-sort_sort.d bincxx_parallel-sort_sort.d bincxx_drake-sort_sort.e bincxx_parallel-sort_sort.e
+rm -f merge.pc
+rm -f merge.schedule.c merge.taskgraph.graphml merge.schedule.xml
+rm -f merge-4.graphml.o platform-4.dat.o
+rm -f
+rm -f generate p4-drake-sort p4-parallel-sort
+rm -f libmerge.a
+rm -f
+rm -f *.o *.txt *.fig *.bin *.e *.d *.obj
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/src'
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/include'
+make[1]: Leaving directory `/home/isafo268/Documents/TDDD56/lab3/include'
+rm -f -r /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0
+rm -f /home/isafo268/Documents/TDDD56/lab3/Lab3-1.0.0.tar.gz
+make NB_THREADS=4 VARIANT_parallel-sort=p4- DRAKE_PLATFORM=platform-4.dat DRAKE_SCHEDULE=schedule-4.xml DRAKE_TASKGRAPH=merge-4.graphml VARIANT_drake-sort=p4-
+make[1]: Entering directory `/home/isafo268/Documents/TDDD56/lab3/src'
+gcc -E -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.e generate.c
+gcc -c -isystem ../include -O3 -DNDEBUG -I/home/nicme26/tddd56/include -o bincc_generate_generate.o generate.c

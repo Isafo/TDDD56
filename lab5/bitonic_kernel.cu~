@@ -32,8 +32,8 @@ __global__ void bitonic_sort_gpu(int *data, int N)
 			int ixj = tid^j; // Calculate indexing!
 			if ((ixj) > tid)
 			{
-				if ((tid & k) == 0 && cached[i] > cached[ixj]) exchange(cached[i], cached[ixj]);
-				if ((tid & k) != 0 && cached[i] < cached[ixj]) exchange(cached[i], cached[ixj]);
+				if ((tid & k) == 0 && cached[i] > cached[ixj]) exchange(&cached[i], &cached[ixj]);
+				if ((tid & k) != 0 && cached[i] < cached[ixj]) exchange(&cached[i], &cached[ixj]);
 			}
 			__syncthreads();
 		}
@@ -48,7 +48,7 @@ __global__ void bitonic_sort_gpu(int *data, int N)
 void bitonic_gpu(int *data, int N)
 {
 	int* d_data;
-	cudaMalloc((void*)&d_data, sizeof(int) * N);
+	cudaMalloc((void**)&d_data, sizeof(int) * N);
 	cudaMemcpy(d_data, data, sizeof(int) * N, cudaMemcpyHostToDevice);
 
 	dim3 gridDim(1, 1);

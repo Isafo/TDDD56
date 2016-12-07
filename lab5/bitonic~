@@ -1,0 +1,5 @@
+all:
+	nvcc bitonic_kernel.cu -o bitonic_kernel.o -c
+	gcc -c bitonic_main.cpp -o bitonic_main.o -I/usr/local/cuda/include
+	gcc -c milli.c -o milli.o -I/usr/local/cuda/include
+	g++ bitonic_main.o milli.o bitonic_kernel.o -o cudademo -L/usr/local/cuda/lib64 -lcuda -lcudart -lm

@@ -98,6 +98,8 @@ drake_start(task_t *task)
 
 	// Locally sort local memory
 	sort((int*)local->data, pelib_array_length(int)(local));
+	
+	//cxx_sort((int*)local->data, pelib_array_length(int)(local));
 
 	// No need to run start again
 	return 1;

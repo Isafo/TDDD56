@@ -48,12 +48,15 @@ int main()
   bitonic_gpu(data2, SIZE);
   printf("%f\n", GetSeconds());
 
-  for (int i=0;i<SIZE;i++)
-    if (data[i] != data2[i])
+  for (int i=0;i<SIZE;i++){
+		printf("cpu %d \n", data[i]);
+		printf("gpu %d \n", data2[i]);
+	}
+		/*if (data[i] != data2[i])
     {
-      printf("Error at %d ", i);
+      printf("Error at %d \n", i);
       return(1);
-    }
+    }*/
 
   // Print result
   if (SIZE <= MAXPRINTSIZE)

@@ -19,10 +19,9 @@ __global__ void find_max(int *g_idata, unsigned int n)
 	while (i != 0)
 	{
 		if (sIdx < i)
-			if (sdata[sIdx] < sdata[sIdx + i]) {
+			if (sdata[sIdx] < sdata[sIdx + i])
 				sdata[sIdx] = sdata[sIdx + i];
-				__syncthreads();
-			}
+			__syncthreads();
 		i /= 2;
 	}
 
@@ -70,18 +69,18 @@ void find_max_cpu(int *data, int N)
 //#define SIZE 1024
 #define SIZE 16
 // Dummy data in comments below for testing
-int data[SIZE] = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
-int data2[SIZE] = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
+int data[SIZE];// = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
+int data2[SIZE];// = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
 
 int main()
 {
   // Generate 2 copies of random data
-  /*srand(time(NULL));
+  srand(time(NULL));
   for (long i=0;i<SIZE;i++)
   {
     data[i] = rand() % (SIZE * 5);
     data2[i] = data[i];
-  }*/
+  }
   
   // The GPU will not easily beat the CPU here!
   // Reduction needs optimizing or it will be slow.
