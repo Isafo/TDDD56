@@ -5,15 +5,13 @@
 
 __global__ void find_max(int *g_idata, unsigned int n)
 {
-	__shared__ int sdata[16];
+	extern __shared__ int sdata[];
 
 	unsigned int sIdx = threadIdx.x;
 	unsigned int tid = blockIdx.x*blockDim.x + threadIdx.x;
 	int i = blockDim.x;
 
 	sdata[sIdx] = g_idata[tid];
-	sdata[sIdx + i] = g_idata[tid + i];
-
 	__syncthreads();
 
 	while (i != 0)
@@ -21,14 +19,14 @@ __global__ void find_max(int *g_idata, unsigned int n)
 		if (sIdx < i)
 			if (sdata[sIdx] < sdata[sIdx + i])
 				sdata[sIdx] = sdata[sIdx + i];
-			__syncthreads();
+		
+		__syncthreads();
 		i /= 2;
 	}
 
 	__syncthreads();
 
-	g_idata[tid] = sdata[sIdx];
-
+	g_idata[blockIdx.x] = sdata[0];
 }
 
 void launch_cuda_kernel(int *data, int N)
@@ -40,12 +38,16 @@ void launch_cuda_kernel(int *data, int N)
 	cudaMalloc( (void**)&devdata, size);
 	cudaMemcpy(devdata, data, size, cudaMemcpyHostToDevice );
 	
-	// Dummy launch
-	dim3 dimBlock( 8, 1 );
-	dim3 dimGrid( 8, 1 );
-	find_max<<<dimGrid, dimBlock>>>(devdata, N);
+	int nr_blocks = N / 1024;
+	int nr_threads = 1024;
+	dim3 dimBlock( nr_threads, 1 );
+	dim3 dimGrid( nr_blocks + 1, 1 );
+	
+	find_max<<<dimGrid, dimBlock, nr_threads * sizeof(int)>>>(devdata, N);
 	cudaError_t err = cudaPeekAtLastError();
 	if (err) printf("cudaPeekAtLastError %d %s\n", err, cudaGetErrorString(err));
+
+	find_max_cpu(data, nr_blocks);
 
 	// Only the result needs copying!
 	cudaMemcpy(data, devdata, sizeof(int), cudaMemcpyDeviceToHost ); 
@@ -66,7 +68,6 @@ void find_max_cpu(int *data, int N)
 	data[0] = m;
 }
 
-//#define SIZE 1024
 #define SIZE 16
 // Dummy data in comments below for testing
 int data[SIZE];// = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};

@@ -125,9 +125,9 @@ drake_run(task_t *task)
 	int ind1 = 0;
 	int ind2 = 0;
 
-	printf("before ind size %i \n", left_size);
-	printf("before right size %i \n", right_size);
-	printf("before parent size %i \n", parent_size);
+	//printf("before ind size %i \n", left_size);
+	//printf("before right size %i \n", right_size);
+	//printf("before parent size %i \n", parent_size);
 
 	// merge the sub arrays
 	while (left_size > ind1 && right_size > ind2 && ind1 + ind2 < parent_size) {
@@ -154,26 +154,32 @@ drake_run(task_t *task)
 	// This returns 0 is more data can be accessible in later iterations, 1 if no more input can be expected from the task or if the task
 	// will not receive any more input from any of its input channels.
 
-	printf("left size %i \n", ind1);
-	printf("right size %i \n", ind2);
-	printf("both size %i \n", ind1 + ind2);
+	//printf("left size %i \n", ind1);
+	//printf("right size %i \n", ind2);
+	//printf("both size %i \n", ind1 + ind2);
 
 	// insert the remaining elements
-	while(ind1 < left_size && ind1 + ind2 < parent_size && drake_task_killed(right_link->prod))
+	if (right_size == 0 && (right_link->prod == NULL) || drake_task_killed(right_link->prod) && pelic_cfifo_length(int)(right_link->buffer) == 0)
 	{
-		parent[ind1 + ind2] = left[ind1];
-		++ind1;
+		while (ind1 < left_size && ind1 + ind2 < parent_size)
+		{
+			parent[ind1 + ind2] = left[ind1];
+			++ind1;
+		}
+	}
+	
+	if (left_size == 0 && (left_link->prod == NULL) || drake_task_killed(left_link->prod) && pelic_cfifo_length(int)(left_link->buffer) == 0)
+	{
+		while (ind2 < right_size && ind1 + ind2 < parent_size && drake_task_killed(left_link->prod))
+		{
+			parent[ind1 + ind2] = right[ind2];
+			++ind2;
+		}
 	}
 
-	while(ind2 < right_size && ind1 + ind2 < parent_size && drake_task_killed(left_link->prod))
-	{
-		parent[ind1 + ind2] = right[ind2];
-		++ind2;
-	}
-
-	printf("after left size %i \n", ind1);
-	printf("after right size %i \n", ind2);
-	printf("both size %i \n", ind1 + ind2);
+	//printf("after left size %i \n", ind1);
+	//printf("after right size %i \n", ind2);
+	//printf("both size %i \n", ind1 + ind2);
 
 	// Write the number of element you consumed from left child and right child into left_consumed and right_consumed, respectively
 	// and the total number of elements you pushed toward parent in parent_pushed
@@ -195,7 +201,7 @@ drake_run(task_t *task)
 	//
 	// That returns 1 if all predecessors of task t are killed and all input buffers are empty, or if task t is killed and 0 otherwise.
 
-	return drake_task_depleted(task);
+	return drake_task_depleted(task) && pelib_cfifo_length(int)(right_link->buffer) == 0 && pelib_cfifo_length(int)(left_link->buffer == 0);
 }
 
 int
