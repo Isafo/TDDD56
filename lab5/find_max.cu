@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include "milli.c"
 
+#define SIZE 131072
+
 __global__ void find_max(int *g_idata, unsigned int n)
 {
 	extern __shared__ int sdata[];
@@ -39,7 +41,11 @@ void find_max_cpu(int* data, int N);
 void launch_cuda_kernel(int *data, int N)
 {
 	// Handle your CUDA kernel launches in this function
-	
+
+	cudaEvent_t e_start;
+	cudaEventCreate(&e_start);
+	cudaEventRecord(e_start,0);
+
 	int *devdata;
 	int size = sizeof(int) * N;
 	cudaMalloc( (void**)&devdata, size);
@@ -66,6 +72,20 @@ void launch_cuda_kernel(int *data, int N)
 	cudaMemcpy(data, devdata, sizeof(int), cudaMemcpyDeviceToHost ); 
 	cudaFree(devdata);
 
+	cudaEvent_t e_stop;
+	cudaEventCreate(&e_stop);
+	cudaEventRecord(e_stop,0);
+
+	cudaEventSynchronize(e_start);
+	cudaEventSynchronize(e_stop);
+
+	float time;
+	cudaEventElapsedTime(&time, e_start, e_stop);
+	cudaEventDestroy(e_start);
+	cudaEventDestroy(e_stop);
+
+	printf("Cuda time: %f \n", time * 0.001);
+
 //	find_max_cpu(data, nr_blocks);
 }
 
@@ -84,7 +104,6 @@ void find_max_cpu(int *data, int N)
 	data[0] = m;
 }
 
-#define SIZE 256
 // Dummy data in comments below for testing
 int data[SIZE];// = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
 int data2[SIZE];// = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
