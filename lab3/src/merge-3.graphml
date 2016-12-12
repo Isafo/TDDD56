@@ -19,6 +19,7 @@
   <graph id="G" edgedefault="directed">
     <data key="g_name">pipelined_merge</data>
     <data key="g_deadline">0</data>
+   
     <node id="n0">
       <data key="v_name">leaf_1</data>
       <data key="v_module">presort</data>
@@ -27,6 +28,7 @@
       <data key="v_efficiency">1 1e-06 1e-06 </data>
       <data key="v_max_width">1</data>
     </node>
+   
     <node id="n1">
       <data key="v_name">leaf_2</data>
       <data key="v_module">presort</data>
@@ -35,6 +37,7 @@
       <data key="v_efficiency">1 1e-06 1e-06 </data>
       <data key="v_max_width">1</data>
     </node>
+   
     <node id="n2">
       <data key="v_name">root_1</data>
       <data key="v_module">merge</data>
@@ -43,6 +46,7 @@
       <data key="v_efficiency">1 1e-06 1e-06 </data>
       <data key="v_max_width">1</data>
     </node>
+   
     <edge source="n0" target="n2">
       <data key="e_producer_name">output</data>
       <data key="e_consumer_name">left</data>
@@ -65,7 +69,37 @@
       <data key="v_max_width">1</data>
     </node>
 
+    <node id="n4">
+      <data key="v_name">leaf_4</data>
+      <data key="v_module">presort</data>
+      <data key="v_workload">1</data>
+      <data key="v_streaming">0</data>
+      <data key="v_efficiency">1 1e-06 1e-06 </data>
+      <data key="v_max_width">1</data>
+    </node>
+
     <node id="n5">
+      <data key="v_name">root_2</data>
+      <data key="v_module">merge</data>
+      <data key="v_workload">1</data>
+      <data key="v_streaming">1</data>
+      <data key="v_efficiency">1 1e-06 1e-06 </data>
+      <data key="v_max_width">1</data>
+    </node>
+    <edge source="n3" target="n5">
+      <data key="e_producer_name">output</data>
+      <data key="e_consumer_name">left</data>
+      <data key="e_type">int</data>
+      <data key="e_rate">1</data>
+    </edge>
+    <edge source="n4" target="n5">
+      <data key="e_producer_name">output</data>
+      <data key="e_consumer_name">right</data>
+      <data key="e_type">int</data>
+      <data key="e_rate">1</data>
+    </edge>
+
+    <node id="n6">
       <data key="v_name">root</data>
       <data key="v_module">merge</data>
       <data key="v_workload">1</data>
@@ -73,17 +107,18 @@
       <data key="v_efficiency">1 1e-06 1e-06 </data>
       <data key="v_max_width">1</data>
     </node>
-    <edge source="n2" target="n5">
+    <edge source="n2" target="n6">
       <data key="e_producer_name">output</data>
       <data key="e_consumer_name">left</data>
       <data key="e_type">int</data>
       <data key="e_rate">1</data>
     </edge>
-    <edge source="n3" target="n5">
+    <edge source="n5" target="n6">
       <data key="e_producer_name">output</data>
       <data key="e_consumer_name">right</data>
       <data key="e_type">int</data>
       <data key="e_rate">1</data>
     </edge>
+
   </graph>
 </graphml>

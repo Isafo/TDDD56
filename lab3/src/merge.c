@@ -158,8 +158,10 @@ drake_run(task_t *task)
 	//printf("right size %i \n", ind2);
 	//printf("both size %i \n", ind1 + ind2);
 
+//	int test = pelic_cfifo_length(int)(right_link->prod);
+
 	// insert the remaining elements
-	if (right_size == 0 && (right_link->prod == NULL) || drake_task_killed(right_link->prod) && pelic_cfifo_length(int)(right_link->buffer) == 0)
+	if (right_size == 0 && (right_link->prod == NULL) || drake_task_killed(right_link->prod) &&  pelib_cfifo_length(int)(right_link->buffer) == 0)
 	{
 		while (ind1 < left_size && ind1 + ind2 < parent_size)
 		{
@@ -168,7 +170,7 @@ drake_run(task_t *task)
 		}
 	}
 	
-	if (left_size == 0 && (left_link->prod == NULL) || drake_task_killed(left_link->prod) && pelic_cfifo_length(int)(left_link->buffer) == 0)
+	if (left_size == 0 && (left_link->prod == NULL) || drake_task_killed(left_link->prod) && pelib_cfifo_length(int)(left_link->buffer) == 0)
 	{
 		while (ind2 < right_size && ind1 + ind2 < parent_size && drake_task_killed(left_link->prod))
 		{
@@ -201,7 +203,7 @@ drake_run(task_t *task)
 	//
 	// That returns 1 if all predecessors of task t are killed and all input buffers are empty, or if task t is killed and 0 otherwise.
 
-	return drake_task_depleted(task) && pelib_cfifo_length(int)(right_link->buffer) == 0 && pelib_cfifo_length(int)(left_link->buffer == 0);
+	return drake_task_depleted(task) && pelib_cfifo_length(int)(right_link->buffer) == 0 && pelib_cfifo_length(int)(left_link->buffer) == 0;
 }
 
 int
