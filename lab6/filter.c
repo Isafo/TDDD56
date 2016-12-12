@@ -111,31 +111,31 @@ void close_OpenCL()
 // Global variables for image data
 
 unsigned char *image, *out;
-cl_uint n, m; // Image size
+cl_uint width, height; // Image size
 
 ////////////////////////////////////////////////////////////////////////////////
 // main computation function
 ////////////////////////////////////////////////////////////////////////////////
 void computeImages()
 {
-	image = readppm("maskros512.ppm", (int *)&n, (int *)&m);
-	out = (unsigned char*) malloc(n*m*3);
+	image = readppm("maskros512.ppm", (int *)&width, (int *)&height);
+	out = (unsigned char*) malloc(width*height*3);
 	cl_mem in_data, out_data;
 	cl_int ciErrNum = CL_SUCCESS;
 	
 	// Create space for data and copy image to device (note that we could also use clEnqueueWriteBuffer to upload)
 	in_data = clCreateBuffer(cxGPUContext, CL_MEM_READ_ONLY | CL_MEM_USE_HOST_PTR,
-		3*n*m * sizeof(unsigned char), image, &ciErrNum);
+		3*width*height * sizeof(unsigned char), image, &ciErrNum);
 	printCLError(ciErrNum,6);
 	out_data = clCreateBuffer(cxGPUContext, CL_MEM_WRITE_ONLY,
-		3*n*m * sizeof(unsigned char), NULL, &ciErrNum);
+		3*width*height * sizeof(unsigned char), NULL, &ciErrNum);
 	printCLError(ciErrNum,7);
 
 	// set the args values
 	ciErrNum  = clSetKernelArg(theKernel, 0, sizeof(cl_mem),  (void *) &in_data);
 	ciErrNum |= clSetKernelArg(theKernel, 1, sizeof(cl_mem),  (void *) &out_data);
-	ciErrNum |= clSetKernelArg(theKernel, 2, sizeof(cl_uint), (void *) &n);
-	ciErrNum |= clSetKernelArg(theKernel, 3, sizeof(cl_uint), (void *) &m);
+	ciErrNum |= clSetKernelArg(theKernel, 2, sizeof(cl_uint), (void *) &width);
+	ciErrNum |= clSetKernelArg(theKernel, 3, sizeof(cl_uint), (void *) &height);
 	printCLError(ciErrNum,8);
 
 	// Computing arrangement
@@ -155,7 +155,7 @@ void computeImages()
 	printCLError(ciErrNum,10);
 	printf("time %lf\n", GetSeconds());
 
-	ciErrNum = clEnqueueReadBuffer(commandQueue, out_data, CL_TRUE, 0, 3*n*m * sizeof(unsigned char), out, 0, NULL, &event);
+	ciErrNum = clEnqueueReadBuffer(commandQueue, out_data, CL_TRUE, 0, 3*width*height * sizeof(unsigned char), out, 0, NULL, &event);
 	printCLError(ciErrNum,11);
 	clWaitForEvents(1, &event); // Synch
 	printCLError(ciErrNum,10);
@@ -175,9 +175,9 @@ void Draw()
 	glClearColor( 0.0, 0.0, 0.0, 1.0 );
 	glClear( GL_COLOR_BUFFER_BIT );
 	glRasterPos2f(-1, -1);
-	glDrawPixels( n, m, GL_RGB, GL_UNSIGNED_BYTE, image );
+	glDrawPixels( width, height, GL_RGB, GL_UNSIGNED_BYTE, image );
 	glRasterPos2i(0, -1);
-	glDrawPixels( n, m, GL_RGB, GL_UNSIGNED_BYTE, out );
+	glDrawPixels( width, height, GL_RGB, GL_UNSIGNED_BYTE, out );
 	glFlush();
 }
 
