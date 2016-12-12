@@ -3,6 +3,19 @@
 // the string "World!" from "Hello " and an array of offsets.
 // By Ingemar Ragnemalm, based on the hello.c demo (which was NOT Hello World in any way).
 
+// Question: How is the communication between the host and the graphic card handled?
+// Answar: Find device
+// allocate and copy data to the device,
+// run the kernel and wait untill its done
+// read memory from device
+// free memory.
+
+//Question: What function executes your kernel?
+// Answar: clEnqueueNDRangeKernel();
+
+//Question: How does the kernel know what element to work on?
+// Answar: clCreateBuffer create space for the data and clSetKernelArg send the data to the device.
+
 #include <stdio.h>
 #include <math.h>
 #include "CLutilities.h"
