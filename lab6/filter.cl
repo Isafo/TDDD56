@@ -13,7 +13,7 @@ __kernel void filter(__global unsigned char *image, __global unsigned char *out,
 
   	int k, l;
   	unsigned int sumx, sumy, sumz;
-  	__local unsigned char[width*height] shared;
+  	__local unsigned char[width*height*3] shared;
 
   	shared[ii*width + jj] = image[i*width + j];
   	barrier(CLK_LOCAL_MEM_FENCE)
@@ -36,20 +36,18 @@ __kernel void filter(__global unsigned char *image, __global unsigned char *out,
 					sumy += shared[((i+k)*width+(j+l))*3+1];
 					sumz += shared[((i+k)*width+(j+l))*3+2];
 				}
-			barrier(CLK_LOCAL_MEM_FENCE);	
 			out[(i*width+j)*3+0] = sumx/divby;
 			out[(i*width+j)*3+1] = sumy/divby;
 			out[(i*width+j)*3+2] = sumz/divby;
-			barrier(CLK_LOCAL_MEM_FENCE);
 		}
 		else
 		// Edge pixels are not filtered
 		{
-			barrier(CLK_LOCAL_MEM_FENCE);
 			out[(i*width+j)*3+0] = shared[(i*width+j)*3+0];
 			out[(i*width+j)*3+1] = shared[(i*width+j)*3+1];
 			out[(i*width+j)*3+2] = shared[(i*width+j)*3+2];
-			barrier(CLK_LOCAL_MEM_FENCE);
+			
 		}
+		barrier(CLK_LOCAL_MEM_FENCE);
 	}
 }
