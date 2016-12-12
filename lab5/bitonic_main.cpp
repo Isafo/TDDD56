@@ -5,11 +5,14 @@
 #include "bitonic_kernel.h"
 #include <stdio.h>
 #include "milli.h"
+#include <stdlib.h>
+#include <time.h>
 
-#define SIZE 16
+#define SIZE 256
 #define MAXPRINTSIZE 32
-int data[SIZE] = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
-int data2[SIZE] = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
+
+int data[SIZE];// = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
+int data2[SIZE];// = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
 
 static void exchange(int *i, int *j)
 {
@@ -41,6 +44,13 @@ void bitonic_cpu(int *data, int N)
 
 int main()
 {
+  srand(time(NULL));
+  for(long i = 0; i < SIZE; i++)
+  {
+    data[i] = rand() % (SIZE * 5);
+    data2[i] = data[i];
+  }
+
   ResetMilli();
   bitonic_cpu(data, SIZE);
   printf("%f\n", GetSeconds());
@@ -48,15 +58,12 @@ int main()
   bitonic_gpu(data2, SIZE);
   printf("%f\n", GetSeconds());
 
-  for (int i=0;i<SIZE;i++){
-		printf("cpu %d \n", data[i]);
-		printf("gpu %d \n", data2[i]);
-	}
-		/*if (data[i] != data2[i])
-    {
-      printf("Error at %d \n", i);
-      return(1);
-    }*/
+for(int i = 0; i < SIZE; i++)	
+  if (data[i] != data2[i])
+  {
+    printf("Error at %d \n", i);
+    return(1);
+  }
 
   // Print result
   if (SIZE <= MAXPRINTSIZE)

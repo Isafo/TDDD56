@@ -9,9 +9,13 @@ __global__ void find_max(int *g_idata, unsigned int n)
 
 	unsigned int sIdx = threadIdx.x;
 	unsigned int tid = blockIdx.x*blockDim.x + threadIdx.x;
-	int i = blockDim.x;
+	int i = blockDim.x / 2;
 
-	sdata[sIdx] = g_idata[tid];
+	if(tid < n)	
+		sdata[sIdx] = g_idata[tid];
+	else
+		sdata[sIdx] = -1;
+
 	__syncthreads();
 
 	while (i != 0)
@@ -19,15 +23,18 @@ __global__ void find_max(int *g_idata, unsigned int n)
 		if (sIdx < i)
 			if (sdata[sIdx] < sdata[sIdx + i])
 				sdata[sIdx] = sdata[sIdx + i];
-		
+
 		__syncthreads();
 		i /= 2;
 	}
 
 	__syncthreads();
 
-	g_idata[blockIdx.x] = sdata[0];
+	if(sIdx == 0)
+		g_idata[blockIdx.x] = sdata[0];
 }
+
+void find_max_cpu(int* data, int N);
 
 void launch_cuda_kernel(int *data, int N)
 {
@@ -38,20 +45,28 @@ void launch_cuda_kernel(int *data, int N)
 	cudaMalloc( (void**)&devdata, size);
 	cudaMemcpy(devdata, data, size, cudaMemcpyHostToDevice );
 	
-	int nr_blocks = N / 1024;
 	int nr_threads = 1024;
 	dim3 dimBlock( nr_threads, 1 );
-	dim3 dimGrid( nr_blocks + 1, 1 );
 	
-	find_max<<<dimGrid, dimBlock, nr_threads * sizeof(int)>>>(devdata, N);
-	cudaError_t err = cudaPeekAtLastError();
-	if (err) printf("cudaPeekAtLastError %d %s\n", err, cudaGetErrorString(err));
+	int cur_size = N;
+	
+	while(cur_size > 1)
+	{
+		int nr_blocks = cur_size / 1024 + 1;		
+		dim3 dimGrid(nr_blocks, 1);
 
-	find_max_cpu(data, nr_blocks);
+		find_max<<<dimGrid, dimBlock, nr_threads * sizeof(int)>>>(devdata, cur_size);
+		cudaError_t err = cudaPeekAtLastError();
+		if (err) printf("cudaPeekAtLastError %d %s\n", err, cudaGetErrorString(err));
+
+		cur_size /= nr_threads;
+	}
 
 	// Only the result needs copying!
 	cudaMemcpy(data, devdata, sizeof(int), cudaMemcpyDeviceToHost ); 
 	cudaFree(devdata);
+
+//	find_max_cpu(data, nr_blocks);
 }
 
 // CPU max finder (sequential)
@@ -64,11 +79,12 @@ void find_max_cpu(int *data, int N)
 	{
 		if (data[i] > m)
 			m = data[i];
+	
 	}
 	data[0] = m;
 }
 
-#define SIZE 16
+#define SIZE 256
 // Dummy data in comments below for testing
 int data[SIZE];// = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
 int data2[SIZE];// = {1, 2, 5, 3, 6, 8, 5, 3, 1, 65, 8, 5, 3, 34, 2, 54};
