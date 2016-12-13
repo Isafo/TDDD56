@@ -85,9 +85,9 @@ __kernel void filter(__global unsigned char *image, __global unsigned char *out,
 					sumz += image[((i+k)*width+(j+l))*3+2];
 #else
 
-					sumx += localmen[((i+k)*width+(j+l))*3+0]
-					sumy += localmen[((i+k)*width+(j+l))*3+1]
-					sumz += localmen[((i+k)*width+(j+l))*3+2]			
+					sumx += localmen[((ii+k)*localSize+(jj+l))*3+0]
+					sumy += localmen[((ii+k)*localSize+(jj+l))*3+1]
+					sumz += localmen[((ii+k)*localSize+(jj+l))*3+2]			
 #endif					
 				}
 			out[(i*width+j)*3+0] = sumx/divby;
@@ -102,9 +102,9 @@ __kernel void filter(__global unsigned char *image, __global unsigned char *out,
 			out[(i*width+j)*3+1] = image[(i*width+j)*3+1];
 			out[(i*width+j)*3+2] = image[(i*width+j)*3+2];
 #else
-			out[(i*width+j)*3+0] = localmen[((i+k)*width+(j+l))*3+2];
-			out[(i*width+j)*3+1] = localmen[((i+k)*width+(j+l))*3+2];
-			out[(i*width+j)*3+2] = localmen[((i+k)*width+(j+l))*3+2];
+			out[(i*width+j)*3+0] = localmen[((ii+k)*localSize+(jj+l))*3+2];
+			out[(i*width+j)*3+1] = localmen[((ii+k)*localSize+(jj+l))*3+2];
+			out[(i*width+j)*3+2] = localmen[((ii+k)*localSize+(jj+l))*3+2];
 #endif
 			
 		}
