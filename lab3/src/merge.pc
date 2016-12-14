@@ -1,0 +1,15 @@
+prefix=/home/nicme26/tddd56
+exec_prefix=
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libmerge
+Description: General PELAB in library research used utility
+Version: 1.0.0
+URL:
+Libs: -L${libdir} -lmerge
+Libs.private:
+Requires:
+Requires.private:
+Conflicts:
+Cflags: -I${includedir}

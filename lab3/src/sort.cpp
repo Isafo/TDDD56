@@ -92,7 +92,7 @@ simple_quicksort(int *array, size_t size)
 		// Better take a sample and pick
 		// it median value.
 		pivot = array[size / 2];
-		
+
 		left = (int*)malloc(size * sizeof(int));
 		right = (int*)malloc(size * sizeof(int));
 
@@ -115,7 +115,7 @@ simple_quicksort(int *array, size_t size)
 			}
 		}
 
-		// Recurse		
+		// Recurse
 		simple_quicksort(left, left_size);
 		simple_quicksort(right, right_size);
 
@@ -155,7 +155,7 @@ void copy(int* a1, int* a2, size_t size)
 
 void merge(int* array, size_t size1, size_t size2)
 {
-	printf("merge \n");
+	//printf("merge \n");
 	int* temp = (int*)malloc(sizeof(int) * (size1 + size2));
 	int ind1 = 0;
 	int ind2 = 0;
@@ -188,7 +188,7 @@ void merge(int* array, size_t size1, size_t size2)
 }
 
 void merge_sort(int* array, size_t size)
-{	
+{
 	if(size == 1)
 	{
 		return;
@@ -197,7 +197,7 @@ void merge_sort(int* array, size_t size)
 	{
 		// Compare elements
 		if(array[0] > array[1])
-		{	
+		{
 			int temp = array[0];
 			array[0] = array[1];
 			array[1] = temp;
@@ -206,7 +206,7 @@ void merge_sort(int* array, size_t size)
 	}
 	else
 	{
-		int* left; 
+		int* left;
 		int* right;
 		int left_size, right_size;
 		int split_size = size / 2;
@@ -229,45 +229,45 @@ void merge_sort(int* array, size_t size)
 void* parallel_merge_sort(void* args)
 {
 	struct thread_args* args_t = (thread_args*)args;
-	
-	printf("NB_THREADS = %i, DEaPTH = %i \n", NB_THREADS, args_t->depth);
+
+	//printf("NB_THREADS = %i, DEaPTH = %i \n", NB_THREADS, args_t->depth);
 
 	if(args_t->depth > 0)
 	{
-		printf("if \n");
+		//printf("if \n");
 		pthread_t d_thread;
-		
+
 		struct thread_args args1;
 		struct thread_args args2;
-		
+
 		args1.depth = 0;
 		args1.size = args_t->size / 2;
-		args1.subarray = args_t->subarray; 
-		
-		printf("size 1 %i \n", args1.size);	
-	
+		args1.subarray = args_t->subarray;
+
+		//printf("size 1 %i \n", args1.size);
+
 		pthread_create(&d_thread, NULL, parallel_merge_sort, (void*)&args1);
 
-		printf("here \n");		
-	
+		//printf("here \n");
+
 		args2.depth = 0;
 		args2.size = args_t->size - args_t->size / 2;
-		printf("size 2: %i \n", args2.size);
+		//printf("size 2: %i \n", args2.size);
 		args2.subarray = args_t->subarray + args_t->size / 2;
-		merge_sort(args2.subarray, args2.size); 
-		
-		printf("befofore join \n");		
+		merge_sort(args2.subarray, args2.size);
+
+		//printf("befofore join \n");
 
 		pthread_join(d_thread, NULL);
-		
-		printf("after join");
+
+		//printf("after join");
 
 		merge(args_t->subarray, args1.size, args2.size);
-		printf("fourth \n");
+		//printf("fourth \n");
 	}
 	else
 		merge_sort(args_t->subarray, args_t->size);
-	
+
 }
 
 // This is used as sequential sort in the pipelined sort implementation with drake (see merge.c)
@@ -294,7 +294,7 @@ sort(int* array, size_t size)
 #else
 	struct thread_args t_args[NB_THREADS];
 
-#if NB_THREADS == 3 || NB_THREADS == 1	
+#if NB_THREADS == 3 || NB_THREADS == 1
 	int step_size = size / NB_THREADS;
 #else
 	int step_size = size / 2;
@@ -303,18 +303,18 @@ sort(int* array, size_t size)
 
 	// invalidate cache line?
 	int i;
-#if NB_THREADS == 3 || NB_THREADS == 1 	
+#if NB_THREADS == 3 || NB_THREADS == 1
 	for (i = 0; i < NB_THREADS - 1; ++i)
-#else 
+#else
 	for(i = 0; i < 1; ++i)
 #endif
-	{ 
+	{
 		t_args[i].depth = NB_THREADS - 3;
 		t_args[i].size = step_size;
 		t_args[i].subarray = array + step_size*i;
 		pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args[i]);
 	}
-	
+
 	// Speciall case for the last thread to handle the last if size in unevenly devided by NB_THREADS
 	t_args[i].subarray = array + step_size*i;
 #if NB_THREADS == 4
@@ -325,10 +325,10 @@ sort(int* array, size_t size)
 	t_args[i].depth = NB_THREADS - 3;
 	pthread_create(&thread[i], NULL, parallel_merge_sort, (void*)&t_args[i]);
 
-	printf("b4 join \n");
+	//printf("b4 join \n");
 
 	int j;
-#if NB_THREADS == 3 || NB_THREADS == 1 
+#if NB_THREADS == 3 || NB_THREADS == 1
 	for (j = 0; j < NB_THREADS; ++j)
 #else
 	for(j = 0; j < 2; ++j)
@@ -336,7 +336,7 @@ sort(int* array, size_t size)
 	{
 		pthread_join(thread[j], NULL);
 	}
-	printf("aftre join \n");
+	//printf("aftre join \n");
 
 	// merge the threads
 #if NB_THREADS == 2 || NB_THREADS == 4
@@ -345,7 +345,7 @@ sort(int* array, size_t size)
 	merge(array, step_size, step_size);
 	merge(array, step_size * 2, size - step_size*2);
 #endif
-	printf("after merge \n");
+	//printf("after merge \n");
 
 	return;
 
@@ -366,4 +366,3 @@ sort(int* array, size_t size)
 	// Some parallel sorting-related code
 #endif // #if NB_THREADS
 }
-

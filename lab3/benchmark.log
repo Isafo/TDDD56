@@ -481,4 +481,968 @@ Failed. 0.05 sec finished on 11/23/16 15:08:02; approx. 0.41 sec left (0.01 minu
 [INFO] Instance 380/384: nb_threads=4 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Cannot find input file "/tmp/isafo268//input-constant-16777216-v123456.bin". Run "freja compile" and try again.
 Failed. 0.05 sec finished on 11/23/16 15:08:02; approx. 0.33 sec left (0.01 minutes)
 [INFO] Failed. Batch took 31.38 seconds (0.52 minutes) to run, or 0.08 seconds per instance run (0.00 minutes).
+[INFO] Merging all results to benchmark/Wed_Nov_23_15-07-31_CET_2016/table.csv ...[INFO] Merging all results to benchmark/table.csv ...[INFO] 
+[INFO] New run on Wed Dec 14 13:50:33 CET 2016
+[INFO] Will run 384 instances
+[INFO] Instance 1/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.45 sec finished on 12/14/16 13:50:35; approx. 554.56 sec left (9.24 minutes)
+[INFO] Instance 2/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.42 sec finished on 12/14/16 13:50:35; approx. 373.71 sec left (6.23 minutes)
+[INFO] Instance 3/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.42 sec finished on 12/14/16 13:50:36; approx. 311.25 sec left (5.19 minutes)
+[INFO] Instance 4/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.36 sec finished on 12/14/16 13:50:36; approx. 274.12 sec left (4.57 minutes)
+[INFO] Instance 5/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.36 sec finished on 12/14/16 13:50:36; approx. 253.51 sec left (4.23 minutes)
+[INFO] Instance 6/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.39 sec finished on 12/14/16 13:50:37; approx. 239.87 sec left (4.00 minutes)
+[INFO] Instance 7/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.35 sec finished on 12/14/16 13:50:37; approx. 227.37 sec left (3.79 minutes)
+[INFO] Instance 8/384: nb_threads=seq pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.36 sec finished on 12/14/16 13:50:38; approx. 218.05 sec left (3.63 minutes)
+[INFO] Instance 9/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.45 sec finished on 12/14/16 13:50:39; approx. 257.85 sec left (4.30 minutes)
+[INFO] Instance 10/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.43 sec finished on 12/14/16 13:50:41; approx. 287.87 sec left (4.80 minutes)
+[INFO] Instance 11/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.46 sec finished on 12/14/16 13:50:42; approx. 313.31 sec left (5.22 minutes)
+[INFO] Instance 12/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.44 sec finished on 12/14/16 13:50:44; approx. 333.15 sec left (5.55 minutes)
+[INFO] Instance 13/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.45 sec finished on 12/14/16 13:50:45; approx. 351.40 sec left (5.86 minutes)
+[INFO] Instance 14/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.40 sec finished on 12/14/16 13:50:47; approx. 364.25 sec left (6.07 minutes)
+[INFO] Instance 15/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.44 sec finished on 12/14/16 13:50:48; approx. 376.22 sec left (6.27 minutes)
+[INFO] Instance 16/384: nb_threads=seq pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.44 sec finished on 12/14/16 13:50:50; approx. 386.82 sec left (6.45 minutes)
+[INFO] Instance 17/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 5.93 sec finished on 12/14/16 13:50:56; approx. 493.05 sec left (8.22 minutes)
+[INFO] Instance 18/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 6.01 sec finished on 12/14/16 13:51:02; approx. 587.74 sec left (9.80 minutes)
+[INFO] Instance 19/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 6.16 sec finished on 12/14/16 13:51:08; approx. 674.90 sec left (11.25 minutes)
+[INFO] Instance 20/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 6.26 sec finished on 12/14/16 13:51:15; approx. 754.55 sec left (12.58 minutes)
+[INFO] Instance 21/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 6.05 sec finished on 12/14/16 13:51:21; approx. 823.09 sec left (13.72 minutes)
+[INFO] Instance 22/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 5.90 sec finished on 12/14/16 13:51:27; approx. 881.76 sec left (14.70 minutes)
+[INFO] Instance 23/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 6.10 sec finished on 12/14/16 13:51:33; approx. 937.86 sec left (15.63 minutes)
+[INFO] Instance 24/384: nb_threads=seq pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 6.19 sec finished on 12/14/16 13:51:39; approx. 990.35 sec left (16.51 minutes)
+[INFO] Instance 25/384: nb_threads=seq pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.23 sec finished on 12/14/16 13:51:40; approx. 953.21 sec left (15.89 minutes)
+[INFO] Instance 26/384: nb_threads=seq pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.14 sec finished on 12/14/16 13:51:40; approx. 916.99 sec left (15.28 minutes)
+[INFO] Instance 27/384: nb_threads=seq pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.16 sec finished on 12/14/16 13:51:40; approx. 883.56 sec left (14.73 minutes)
+[INFO] Instance 28/384: nb_threads=seq pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.15 sec finished on 12/14/16 13:51:40; approx. 852.41 sec left (14.21 minutes)
+[INFO] Instance 33/384: nb_threads=seq pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.51 sec finished on 12/14/16 13:51:41; approx. 720.64 sec left (12.01 minutes)
+[INFO] Instance 34/384: nb_threads=seq pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.51 sec finished on 12/14/16 13:51:41; approx. 703.39 sec left (11.72 minutes)
+[INFO] Instance 35/384: nb_threads=seq pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.57 sec finished on 12/14/16 13:51:42; approx. 687.65 sec left (11.46 minutes)
+[INFO] Instance 36/384: nb_threads=seq pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.61 sec finished on 12/14/16 13:51:43; approx. 673.19 sec left (11.22 minutes)
+[INFO] Instance 41/384: nb_threads=seq pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.11 sec finished on 12/14/16 13:51:45; approx. 602.03 sec left (10.03 minutes)
+[INFO] Instance 42/384: nb_threads=seq pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.11 sec finished on 12/14/16 13:51:47; approx. 603.76 sec left (10.06 minutes)
+[INFO] Instance 43/384: nb_threads=seq pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.33 sec finished on 12/14/16 13:51:50; approx. 607.12 sec left (10.12 minutes)
+[INFO] Instance 44/384: nb_threads=seq pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.34 sec finished on 12/14/16 13:51:52; approx. 610.30 sec left (10.17 minutes)
+[INFO] Instance 49/384: nb_threads=seq pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.15 sec finished on 12/14/16 13:51:53; approx. 542.55 sec left (9.04 minutes)
+[INFO] Instance 50/384: nb_threads=seq pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.16 sec finished on 12/14/16 13:51:53; approx. 531.67 sec left (8.86 minutes)
+[INFO] Instance 51/384: nb_threads=seq pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.17 sec finished on 12/14/16 13:51:53; approx. 521.22 sec left (8.69 minutes)
+[INFO] Instance 52/384: nb_threads=seq pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.19 sec finished on 12/14/16 13:51:53; approx. 511.28 sec left (8.52 minutes)
+[INFO] Instance 57/384: nb_threads=seq pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.56 sec finished on 12/14/16 13:51:54; approx. 463.81 sec left (7.73 minutes)
+[INFO] Instance 58/384: nb_threads=seq pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.61 sec finished on 12/14/16 13:51:55; approx. 458.23 sec left (7.64 minutes)
+[INFO] Instance 59/384: nb_threads=seq pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.64 sec finished on 12/14/16 13:51:55; approx. 453.14 sec left (7.55 minutes)
+[INFO] Instance 60/384: nb_threads=seq pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.64 sec finished on 12/14/16 13:51:56; approx. 448.13 sec left (7.47 minutes)
+[INFO] Instance 65/384: nb_threads=seq pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.30 sec finished on 12/14/16 13:51:59; approx. 419.54 sec left (6.99 minutes)
+[INFO] Instance 66/384: nb_threads=seq pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.40 sec finished on 12/14/16 13:52:01; approx. 423.81 sec left (7.06 minutes)
+[INFO] Instance 67/384: nb_threads=seq pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.60 sec finished on 12/14/16 13:52:04; approx. 428.79 sec left (7.15 minutes)
+[INFO] Instance 68/384: nb_threads=seq pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.69 sec finished on 12/14/16 13:52:07; approx. 434.01 sec left (7.23 minutes)
+[INFO] Instance 73/384: nb_threads=seq pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.15 sec finished on 12/14/16 13:52:07; approx. 399.41 sec left (6.66 minutes)
+[INFO] Instance 74/384: nb_threads=seq pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.14 sec finished on 12/14/16 13:52:07; approx. 393.54 sec left (6.56 minutes)
+[INFO] Instance 75/384: nb_threads=seq pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.15 sec finished on 12/14/16 13:52:07; approx. 387.89 sec left (6.46 minutes)
+[INFO] Instance 76/384: nb_threads=seq pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.15 sec finished on 12/14/16 13:52:08; approx. 382.39 sec left (6.37 minutes)
+[INFO] Instance 81/384: nb_threads=seq pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.52 sec finished on 12/14/16 13:52:08; approx. 355.73 sec left (5.93 minutes)
+[INFO] Instance 82/384: nb_threads=seq pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.53 sec finished on 12/14/16 13:52:09; approx. 352.36 sec left (5.87 minutes)
+[INFO] Instance 83/384: nb_threads=seq pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.58 sec finished on 12/14/16 13:52:09; approx. 349.23 sec left (5.82 minutes)
+[INFO] Instance 84/384: nb_threads=seq pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.58 sec finished on 12/14/16 13:52:10; approx. 346.21 sec left (5.77 minutes)
+[INFO] Instance 89/384: nb_threads=seq pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/seq-parallel-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.11 sec finished on 12/14/16 13:52:12; approx. 329.13 sec left (5.49 minutes)
+[INFO] Instance 90/384: nb_threads=seq pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/seq-parallel-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.05 sec finished on 12/14/16 13:52:15; approx. 331.24 sec left (5.52 minutes)
+[INFO] Instance 91/384: nb_threads=seq pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/seq-drake-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.41 sec finished on 12/14/16 13:52:17; approx. 334.41 sec left (5.57 minutes)
+[INFO] Instance 92/384: nb_threads=seq pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/seq-drake-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.59 sec finished on 12/14/16 13:52:20; approx. 338.18 sec left (5.64 minutes)
+[INFO] Instance 97/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.31 sec finished on 12/14/16 13:52:20; approx. 316.91 sec left (5.28 minutes)
+[INFO] Instance 98/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.29 sec finished on 12/14/16 13:52:21; approx. 313.67 sec left (5.23 minutes)
+[INFO] Instance 99/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.27 sec finished on 12/14/16 13:52:21; approx. 310.38 sec left (5.17 minutes)
+[INFO] Instance 100/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.29 sec finished on 12/14/16 13:52:21; approx. 307.26 sec left (5.12 minutes)
+[INFO] Instance 101/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.31 sec finished on 12/14/16 13:52:22; approx. 304.34 sec left (5.07 minutes)
+[INFO] Instance 102/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.27 sec finished on 12/14/16 13:52:22; approx. 301.22 sec left (5.02 minutes)
+[INFO] Instance 103/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.27 sec finished on 12/14/16 13:52:22; approx. 298.16 sec left (4.97 minutes)
+[INFO] Instance 104/384: nb_threads=2 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.29 sec finished on 12/14/16 13:52:23; approx. 295.22 sec left (4.92 minutes)
+[INFO] Instance 105/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.29 sec finished on 12/14/16 13:52:24; approx. 295.04 sec left (4.92 minutes)
+[INFO] Instance 106/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.19 sec finished on 12/14/16 13:52:25; approx. 294.53 sec left (4.91 minutes)
+[INFO] Instance 107/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.09 sec finished on 12/14/16 13:52:27; approx. 293.72 sec left (4.90 minutes)
+[INFO] Instance 108/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.10 sec finished on 12/14/16 13:52:28; approx. 292.92 sec left (4.88 minutes)
+[INFO] Instance 109/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.16 sec finished on 12/14/16 13:52:29; approx. 292.35 sec left (4.87 minutes)
+[INFO] Instance 110/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.10 sec finished on 12/14/16 13:52:30; approx. 291.56 sec left (4.86 minutes)
+[INFO] Instance 111/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.09 sec finished on 12/14/16 13:52:31; approx. 290.74 sec left (4.85 minutes)
+[INFO] Instance 112/384: nb_threads=2 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.12 sec finished on 12/14/16 13:52:33; approx. 289.96 sec left (4.83 minutes)
+[INFO] Instance 113/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.74 sec finished on 12/14/16 13:52:37; approx. 297.98 sec left (4.97 minutes)
+[INFO] Instance 114/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.74 sec finished on 12/14/16 13:52:42; approx. 305.68 sec left (5.09 minutes)
+[INFO] Instance 115/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.82 sec finished on 12/14/16 13:52:47; approx. 313.40 sec left (5.22 minutes)
+[INFO] Instance 116/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.70 sec finished on 12/14/16 13:52:52; approx. 320.56 sec left (5.34 minutes)
+[INFO] Instance 117/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.77 sec finished on 12/14/16 13:52:57; approx. 327.76 sec left (5.46 minutes)
+[INFO] Instance 118/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.77 sec finished on 12/14/16 13:53:02; approx. 334.63 sec left (5.58 minutes)
+[INFO] Instance 119/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.62 sec finished on 12/14/16 13:53:06; approx. 341.09 sec left (5.68 minutes)
+[INFO] Instance 120/384: nb_threads=2 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.69 sec finished on 12/14/16 13:53:11; approx. 347.45 sec left (5.79 minutes)
+[INFO] Instance 121/384: nb_threads=2 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.19 sec finished on 12/14/16 13:53:11; approx. 343.91 sec left (5.73 minutes)
+[INFO] Instance 122/384: nb_threads=2 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.13 sec finished on 12/14/16 13:53:12; approx. 340.27 sec left (5.67 minutes)
+[INFO] Instance 123/384: nb_threads=2 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.12 sec finished on 12/14/16 13:53:12; approx. 336.62 sec left (5.61 minutes)
+[INFO] Instance 124/384: nb_threads=2 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.12 sec finished on 12/14/16 13:53:12; approx. 333.01 sec left (5.55 minutes)
+[INFO] Instance 129/384: nb_threads=2 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.53 sec finished on 12/14/16 13:53:13; approx. 315.41 sec left (5.26 minutes)
+[INFO] Instance 130/384: nb_threads=2 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.46 sec finished on 12/14/16 13:53:13; approx. 312.81 sec left (5.21 minutes)
+[INFO] Instance 131/384: nb_threads=2 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.41 sec finished on 12/14/16 13:53:14; approx. 310.12 sec left (5.17 minutes)
+[INFO] Instance 132/384: nb_threads=2 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.41 sec finished on 12/14/16 13:53:14; approx. 307.49 sec left (5.12 minutes)
+[INFO] Instance 137/384: nb_threads=2 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.67 sec finished on 12/14/16 13:53:16; approx. 293.79 sec left (4.90 minutes)
+[INFO] Instance 138/384: nb_threads=2 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.76 sec finished on 12/14/16 13:53:18; approx. 293.77 sec left (4.90 minutes)
+[INFO] Instance 139/384: nb_threads=2 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.72 sec finished on 12/14/16 13:53:20; approx. 293.63 sec left (4.89 minutes)
+[INFO] Instance 140/384: nb_threads=2 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.65 sec finished on 12/14/16 13:53:21; approx. 293.37 sec left (4.89 minutes)
+[INFO] Instance 145/384: nb_threads=2 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.13 sec finished on 12/14/16 13:53:22; approx. 278.01 sec left (4.63 minutes)
+[INFO] Instance 146/384: nb_threads=2 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.13 sec finished on 12/14/16 13:53:22; approx. 275.27 sec left (4.59 minutes)
+[INFO] Instance 147/384: nb_threads=2 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.13 sec finished on 12/14/16 13:53:22; approx. 272.56 sec left (4.54 minutes)
+[INFO] Instance 148/384: nb_threads=2 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.13 sec finished on 12/14/16 13:53:22; approx. 269.90 sec left (4.50 minutes)
+[INFO] Instance 153/384: nb_threads=2 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.47 sec finished on 12/14/16 13:53:23; approx. 256.58 sec left (4.28 minutes)
+[INFO] Instance 154/384: nb_threads=2 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.53 sec finished on 12/14/16 13:53:24; approx. 254.73 sec left (4.25 minutes)
+[INFO] Instance 155/384: nb_threads=2 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.46 sec finished on 12/14/16 13:53:24; approx. 252.79 sec left (4.21 minutes)
+[INFO] Instance 156/384: nb_threads=2 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.46 sec finished on 12/14/16 13:53:25; approx. 250.85 sec left (4.18 minutes)
+[INFO] Instance 161/384: nb_threads=2 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.98 sec finished on 12/14/16 13:53:27; approx. 240.79 sec left (4.01 minutes)
+[INFO] Instance 162/384: nb_threads=2 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.93 sec finished on 12/14/16 13:53:29; approx. 240.97 sec left (4.02 minutes)
+[INFO] Instance 163/384: nb_threads=2 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.92 sec finished on 12/14/16 13:53:31; approx. 241.11 sec left (4.02 minutes)
+[INFO] Instance 164/384: nb_threads=2 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 2.00 sec finished on 12/14/16 13:53:33; approx. 241.37 sec left (4.02 minutes)
+[INFO] Instance 169/384: nb_threads=2 pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.12 sec finished on 12/14/16 13:53:33; approx. 229.35 sec left (3.82 minutes)
+[INFO] Instance 170/384: nb_threads=2 pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.12 sec finished on 12/14/16 13:53:34; approx. 227.15 sec left (3.79 minutes)
+[INFO] Instance 171/384: nb_threads=2 pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.12 sec finished on 12/14/16 13:53:34; approx. 224.97 sec left (3.75 minutes)
+[INFO] Instance 172/384: nb_threads=2 pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.12 sec finished on 12/14/16 13:53:34; approx. 222.84 sec left (3.71 minutes)
+[INFO] Instance 177/384: nb_threads=2 pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.52 sec finished on 12/14/16 13:53:35; approx. 212.30 sec left (3.54 minutes)
+[INFO] Instance 178/384: nb_threads=2 pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.47 sec finished on 12/14/16 13:53:35; approx. 210.72 sec left (3.51 minutes)
+[INFO] Instance 179/384: nb_threads=2 pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.52 sec finished on 12/14/16 13:53:36; approx. 209.22 sec left (3.49 minutes)
+[INFO] Instance 180/384: nb_threads=2 pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.46 sec finished on 12/14/16 13:53:36; approx. 207.67 sec left (3.46 minutes)
+[INFO] Instance 185/384: nb_threads=2 pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p2-parallel-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.66 sec finished on 12/14/16 13:53:38; approx. 199.16 sec left (3.32 minutes)
+[INFO] Instance 186/384: nb_threads=2 pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p2-parallel-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.71 sec finished on 12/14/16 13:53:40; approx. 198.96 sec left (3.32 minutes)
+[INFO] Instance 187/384: nb_threads=2 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p2-drake-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.73 sec finished on 12/14/16 13:53:42; approx. 198.79 sec left (3.31 minutes)
+[INFO] Instance 188/384: nb_threads=2 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p2-drake-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.78 sec finished on 12/14/16 13:53:44; approx. 198.67 sec left (3.31 minutes)
+[INFO] Instance 193/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.26 sec finished on 12/14/16 13:53:44; approx. 189.09 sec left (3.15 minutes)
+[INFO] Instance 194/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.33 sec finished on 12/14/16 13:53:45; approx. 187.52 sec left (3.13 minutes)
+[INFO] Instance 195/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.28 sec finished on 12/14/16 13:53:45; approx. 185.91 sec left (3.10 minutes)
+[INFO] Instance 196/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.31 sec finished on 12/14/16 13:53:45; approx. 184.35 sec left (3.07 minutes)
+[INFO] Instance 197/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.26 sec finished on 12/14/16 13:53:46; approx. 182.78 sec left (3.05 minutes)
+[INFO] Instance 198/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.26 sec finished on 12/14/16 13:53:46; approx. 181.20 sec left (3.02 minutes)
+[INFO] Instance 199/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.27 sec finished on 12/14/16 13:53:46; approx. 179.63 sec left (2.99 minutes)
+[INFO] Instance 200/384: nb_threads=3 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.28 sec finished on 12/14/16 13:53:47; approx. 178.10 sec left (2.97 minutes)
+[INFO] Instance 201/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.06 sec finished on 12/14/16 13:53:48; approx. 177.30 sec left (2.96 minutes)
+[INFO] Instance 202/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.13 sec finished on 12/14/16 13:53:49; approx. 176.53 sec left (2.94 minutes)
+[INFO] Instance 203/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.08 sec finished on 12/14/16 13:53:50; approx. 175.71 sec left (2.93 minutes)
+[INFO] Instance 204/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.10 sec finished on 12/14/16 13:53:51; approx. 174.93 sec left (2.92 minutes)
+[INFO] Instance 205/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.10 sec finished on 12/14/16 13:53:53; approx. 174.16 sec left (2.90 minutes)
+[INFO] Instance 206/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.04 sec finished on 12/14/16 13:53:54; approx. 173.31 sec left (2.89 minutes)
+[INFO] Instance 207/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.08 sec finished on 12/14/16 13:53:55; approx. 172.49 sec left (2.87 minutes)
+[INFO] Instance 208/384: nb_threads=3 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.08 sec finished on 12/14/16 13:53:56; approx. 171.67 sec left (2.86 minutes)
+[INFO] Instance 209/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.35 sec finished on 12/14/16 13:54:00; approx. 173.60 sec left (2.89 minutes)
+[INFO] Instance 210/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.34 sec finished on 12/14/16 13:54:05; approx. 175.43 sec left (2.92 minutes)
+[INFO] Instance 211/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.66 sec finished on 12/14/16 13:54:10; approx. 177.48 sec left (2.96 minutes)
+[INFO] Instance 212/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.62 sec finished on 12/14/16 13:54:14; approx. 179.43 sec left (2.99 minutes)
+[INFO] Instance 213/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.44 sec finished on 12/14/16 13:54:19; approx. 181.21 sec left (3.02 minutes)
+[INFO] Instance 214/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.29 sec finished on 12/14/16 13:54:23; approx. 182.78 sec left (3.05 minutes)
+[INFO] Instance 215/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.57 sec finished on 12/14/16 13:54:28; approx. 184.51 sec left (3.08 minutes)
+[INFO] Instance 216/384: nb_threads=3 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.56 sec finished on 12/14/16 13:54:33; approx. 186.17 sec left (3.10 minutes)
+[INFO] Instance 217/384: nb_threads=3 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.12 sec finished on 12/14/16 13:54:33; approx. 184.40 sec left (3.07 minutes)
+[INFO] Instance 218/384: nb_threads=3 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.11 sec finished on 12/14/16 13:54:33; approx. 182.60 sec left (3.04 minutes)
+[INFO] Instance 219/384: nb_threads=3 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.19 sec finished on 12/14/16 13:54:33; approx. 180.87 sec left (3.01 minutes)
+[INFO] Instance 220/384: nb_threads=3 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.20 sec finished on 12/14/16 13:54:34; approx. 179.18 sec left (2.99 minutes)
+[INFO] Instance 225/384: nb_threads=3 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.39 sec finished on 12/14/16 13:54:34; approx. 170.28 sec left (2.84 minutes)
+[INFO] Instance 226/384: nb_threads=3 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.39 sec finished on 12/14/16 13:54:35; approx. 168.79 sec left (2.81 minutes)
+[INFO] Instance 227/384: nb_threads=3 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.45 sec finished on 12/14/16 13:54:35; approx. 167.36 sec left (2.79 minutes)
+[INFO] Instance 228/384: nb_threads=3 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.44 sec finished on 12/14/16 13:54:36; approx. 165.92 sec left (2.77 minutes)
+[INFO] Instance 233/384: nb_threads=3 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.53 sec finished on 12/14/16 13:54:37; approx. 158.30 sec left (2.64 minutes)
+[INFO] Instance 234/384: nb_threads=3 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.52 sec finished on 12/14/16 13:54:39; approx. 157.60 sec left (2.63 minutes)
+[INFO] Instance 235/384: nb_threads=3 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.65 sec finished on 12/14/16 13:54:41; approx. 156.97 sec left (2.62 minutes)
+[INFO] Instance 236/384: nb_threads=3 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.64 sec finished on 12/14/16 13:54:42; approx. 156.34 sec left (2.61 minutes)
+[INFO] Instance 241/384: nb_threads=3 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.13 sec finished on 12/14/16 13:54:43; approx. 148.14 sec left (2.47 minutes)
+[INFO] Instance 242/384: nb_threads=3 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.16 sec finished on 12/14/16 13:54:43; approx. 146.64 sec left (2.44 minutes)
+[INFO] Instance 243/384: nb_threads=3 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.15 sec finished on 12/14/16 13:54:43; approx. 145.13 sec left (2.42 minutes)
+[INFO] Instance 244/384: nb_threads=3 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.13 sec finished on 12/14/16 13:54:43; approx. 143.63 sec left (2.39 minutes)
+[INFO] Instance 249/384: nb_threads=3 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.47 sec finished on 12/14/16 13:54:44; approx. 136.08 sec left (2.27 minutes)
+[INFO] Instance 250/384: nb_threads=3 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.49 sec finished on 12/14/16 13:54:45; approx. 134.85 sec left (2.25 minutes)
+[INFO] Instance 251/384: nb_threads=3 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.46 sec finished on 12/14/16 13:54:45; approx. 133.59 sec left (2.23 minutes)
+[INFO] Instance 252/384: nb_threads=3 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.46 sec finished on 12/14/16 13:54:46; approx. 132.34 sec left (2.21 minutes)
+[INFO] Instance 257/384: nb_threads=3 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.83 sec finished on 12/14/16 13:54:48; approx. 125.88 sec left (2.10 minutes)
+[INFO] Instance 258/384: nb_threads=3 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.81 sec finished on 12/14/16 13:54:50; approx. 125.34 sec left (2.09 minutes)
+[INFO] Instance 259/384: nb_threads=3 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.94 sec finished on 12/14/16 13:54:52; approx. 124.83 sec left (2.08 minutes)
+[INFO] Instance 260/384: nb_threads=3 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.85 sec finished on 12/14/16 13:54:54; approx. 124.28 sec left (2.07 minutes)
+[INFO] Instance 265/384: nb_threads=3 pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.11 sec finished on 12/14/16 13:54:54; approx. 117.16 sec left (1.95 minutes)
+[INFO] Instance 266/384: nb_threads=3 pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.12 sec finished on 12/14/16 13:54:54; approx. 115.82 sec left (1.93 minutes)
+[INFO] Instance 267/384: nb_threads=3 pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.13 sec finished on 12/14/16 13:54:54; approx. 114.49 sec left (1.91 minutes)
+[INFO] Instance 268/384: nb_threads=3 pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.13 sec finished on 12/14/16 13:54:55; approx. 113.17 sec left (1.89 minutes)
+[INFO] Instance 273/384: nb_threads=3 pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.41 sec finished on 12/14/16 13:54:55; approx. 106.57 sec left (1.78 minutes)
+[INFO] Instance 274/384: nb_threads=3 pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.38 sec finished on 12/14/16 13:54:56; approx. 105.40 sec left (1.76 minutes)
+[INFO] Instance 275/384: nb_threads=3 pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.46 sec finished on 12/14/16 13:54:56; approx. 104.27 sec left (1.74 minutes)
+[INFO] Instance 276/384: nb_threads=3 pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.44 sec finished on 12/14/16 13:54:57; approx. 103.14 sec left (1.72 minutes)
+[INFO] Instance 281/384: nb_threads=3 pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p3-parallel-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.48 sec finished on 12/14/16 13:54:58; approx. 97.25 sec left (1.62 minutes)
+[INFO] Instance 282/384: nb_threads=3 pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p3-parallel-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.63 sec finished on 12/14/16 13:55:00; approx. 96.59 sec left (1.61 minutes)
+[INFO] Instance 283/384: nb_threads=3 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p3-drake-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.71 sec finished on 12/14/16 13:55:02; approx. 95.94 sec left (1.60 minutes)
+[INFO] Instance 284/384: nb_threads=3 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p3-drake-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.66 sec finished on 12/14/16 13:55:04; approx. 95.27 sec left (1.59 minutes)
+[INFO] Instance 289/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.28 sec finished on 12/14/16 13:55:04; approx. 89.12 sec left (1.49 minutes)
+[INFO] Instance 290/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.30 sec finished on 12/14/16 13:55:05; approx. 88.00 sec left (1.47 minutes)
+[INFO] Instance 291/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.34 sec finished on 12/14/16 13:55:05; approx. 86.90 sec left (1.45 minutes)
+[INFO] Instance 292/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-uniform-random-1048576-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.27 sec finished on 12/14/16 13:55:05; approx. 85.78 sec left (1.43 minutes)
+[INFO] Instance 293/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.25 sec finished on 12/14/16 13:55:06; approx. 84.67 sec left (1.41 minutes)
+[INFO] Instance 294/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.24 sec finished on 12/14/16 13:55:06; approx. 83.55 sec left (1.39 minutes)
+[INFO] Instance 295/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.24 sec finished on 12/14/16 13:55:06; approx. 82.43 sec left (1.37 minutes)
+[INFO] Instance 296/384: nb_threads=4 pattern=uniform-random size=1048576 value=123456 input_instance=2 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-uniform-random-1048576-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.24 sec finished on 12/14/16 13:55:07; approx. 81.32 sec left (1.36 minutes)
+[INFO] Instance 297/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.99 sec finished on 12/14/16 13:55:08; approx. 80.45 sec left (1.34 minutes)
+[INFO] Instance 298/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.01 sec finished on 12/14/16 13:55:09; approx. 79.57 sec left (1.33 minutes)
+[INFO] Instance 299/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.07 sec finished on 12/14/16 13:55:10; approx. 78.71 sec left (1.31 minutes)
+[INFO] Instance 300/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-uniform-random-4194304-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.97 sec finished on 12/14/16 13:55:11; approx. 77.82 sec left (1.30 minutes)
+[INFO] Instance 301/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.98 sec finished on 12/14/16 13:55:12; approx. 76.93 sec left (1.28 minutes)
+[INFO] Instance 302/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.95 sec finished on 12/14/16 13:55:13; approx. 76.03 sec left (1.27 minutes)
+[INFO] Instance 303/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.93 sec finished on 12/14/16 13:55:14; approx. 75.12 sec left (1.25 minutes)
+[INFO] Instance 304/384: nb_threads=4 pattern=uniform-random size=4194304 value=123456 input_instance=2 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-uniform-random-4194304-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.92 sec finished on 12/14/16 13:55:15; approx. 74.21 sec left (1.24 minutes)
+[INFO] Instance 305/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.29 sec finished on 12/14/16 13:55:20; approx. 74.18 sec left (1.24 minutes)
+[INFO] Instance 306/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.09 sec finished on 12/14/16 13:55:24; approx. 74.07 sec left (1.23 minutes)
+[INFO] Instance 307/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 3.98 sec finished on 12/14/16 13:55:28; approx. 73.90 sec left (1.23 minutes)
+[INFO] Instance 308/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-uniform-random-16777216-i1.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.16 sec finished on 12/14/16 13:55:32; approx. 73.74 sec left (1.23 minutes)
+[INFO] Instance 309/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.17 sec finished on 12/14/16 13:55:36; approx. 73.57 sec left (1.23 minutes)
+[INFO] Instance 310/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 4.12 sec finished on 12/14/16 13:55:40; approx. 73.36 sec left (1.22 minutes)
+[INFO] Instance 311/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 3.87 sec finished on 12/14/16 13:55:44; approx. 73.06 sec left (1.22 minutes)
+[INFO] Instance 312/384: nb_threads=4 pattern=uniform-random size=16777216 value=123456 input_instance=2 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-uniform-random-16777216-i2.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 3.87 sec finished on 12/14/16 13:55:48; approx. 72.74 sec left (1.21 minutes)
+[INFO] Instance 313/384: nb_threads=4 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.11 sec finished on 12/14/16 13:55:49; approx. 71.55 sec left (1.19 minutes)
+[INFO] Instance 314/384: nb_threads=4 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.10 sec finished on 12/14/16 13:55:49; approx. 70.35 sec left (1.17 minutes)
+[INFO] Instance 315/384: nb_threads=4 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.11 sec finished on 12/14/16 13:55:49; approx. 69.17 sec left (1.15 minutes)
+[INFO] Instance 316/384: nb_threads=4 pattern=increasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-increasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.10 sec finished on 12/14/16 13:55:49; approx. 67.98 sec left (1.13 minutes)
+[INFO] Instance 321/384: nb_threads=4 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.39 sec finished on 12/14/16 13:55:50; approx. 62.12 sec left (1.04 minutes)
+[INFO] Instance 322/384: nb_threads=4 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.35 sec finished on 12/14/16 13:55:50; approx. 61.03 sec left (1.02 minutes)
+[INFO] Instance 323/384: nb_threads=4 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.34 sec finished on 12/14/16 13:55:51; approx. 59.93 sec left (1.00 minutes)
+[INFO] Instance 324/384: nb_threads=4 pattern=increasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-increasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.34 sec finished on 12/14/16 13:55:51; approx. 58.85 sec left (0.98 minutes)
+[INFO] Instance 329/384: nb_threads=4 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.33 sec finished on 12/14/16 13:55:52; approx. 53.38 sec left (0.89 minutes)
+[INFO] Instance 330/384: nb_threads=4 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.38 sec finished on 12/14/16 13:55:54; approx. 52.49 sec left (0.87 minutes)
+[INFO] Instance 331/384: nb_threads=4 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.34 sec finished on 12/14/16 13:55:55; approx. 51.59 sec left (0.86 minutes)
+[INFO] Instance 332/384: nb_threads=4 pattern=increasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-increasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.38 sec finished on 12/14/16 13:55:57; approx. 50.69 sec left (0.84 minutes)
+[INFO] Instance 337/384: nb_threads=4 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.11 sec finished on 12/14/16 13:55:57; approx. 45.18 sec left (0.75 minutes)
+[INFO] Instance 338/384: nb_threads=4 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.11 sec finished on 12/14/16 13:55:57; approx. 44.12 sec left (0.74 minutes)
+[INFO] Instance 339/384: nb_threads=4 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.12 sec finished on 12/14/16 13:55:58; approx. 43.06 sec left (0.72 minutes)
+[INFO] Instance 340/384: nb_threads=4 pattern=decreasing size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-decreasing-1048576.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.12 sec finished on 12/14/16 13:55:58; approx. 42.00 sec left (0.70 minutes)
+[INFO] Instance 345/384: nb_threads=4 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.39 sec finished on 12/14/16 13:55:58; approx. 36.76 sec left (0.61 minutes)
+[INFO] Instance 346/384: nb_threads=4 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.40 sec finished on 12/14/16 13:55:59; approx. 35.76 sec left (0.60 minutes)
+[INFO] Instance 347/384: nb_threads=4 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.50 sec finished on 12/14/16 13:55:59; approx. 34.78 sec left (0.58 minutes)
+[INFO] Instance 348/384: nb_threads=4 pattern=decreasing size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-decreasing-4194304.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.39 sec finished on 12/14/16 13:56:00; approx. 33.80 sec left (0.56 minutes)
+[INFO] Instance 353/384: nb_threads=4 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.65 sec finished on 12/14/16 13:56:02; approx. 28.85 sec left (0.48 minutes)
+[INFO] Instance 354/384: nb_threads=4 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.66 sec finished on 12/14/16 13:56:03; approx. 27.99 sec left (0.47 minutes)
+[INFO] Instance 355/384: nb_threads=4 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.59 sec finished on 12/14/16 13:56:05; approx. 27.12 sec left (0.45 minutes)
+[INFO] Instance 356/384: nb_threads=4 pattern=decreasing size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-decreasing-16777216.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.59 sec finished on 12/14/16 13:56:07; approx. 26.24 sec left (0.44 minutes)
+[INFO] Instance 361/384: nb_threads=4 pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.12 sec finished on 12/14/16 13:56:07; approx. 21.28 sec left (0.35 minutes)
+[INFO] Instance 362/384: nb_threads=4 pattern=constant size=1048576 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.12 sec finished on 12/14/16 13:56:07; approx. 20.31 sec left (0.34 minutes)
+[INFO] Instance 363/384: nb_threads=4 pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.10 sec finished on 12/14/16 13:56:07; approx. 19.34 sec left (0.32 minutes)
+[INFO] Instance 364/384: nb_threads=4 pattern=constant size=1048576 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-constant-1048576-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.11 sec finished on 12/14/16 13:56:08; approx. 18.38 sec left (0.31 minutes)
+[INFO] Instance 369/384: nb_threads=4 pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.35 sec finished on 12/14/16 13:56:08; approx. 13.62 sec left (0.23 minutes)
+[INFO] Instance 370/384: nb_threads=4 pattern=constant size=4194304 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.40 sec finished on 12/14/16 13:56:09; approx. 12.70 sec left (0.21 minutes)
+[INFO] Instance 371/384: nb_threads=4 pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.37 sec finished on 12/14/16 13:56:09; approx. 11.77 sec left (0.20 minutes)
+[INFO] Instance 372/384: nb_threads=4 pattern=constant size=4194304 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-constant-4194304-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 0.43 sec finished on 12/14/16 13:56:10; approx. 10.85 sec left (0.18 minutes)
+[INFO] Instance 377/384: nb_threads=4 pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=1... Running src/p4-parallel-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.40 sec finished on 12/14/16 13:56:11; approx. 6.28 sec left (0.10 minutes)
+[INFO] Instance 378/384: nb_threads=4 pattern=constant size=16777216 value=123456 input_instance=1 implementation=parallel run_instance=2... Running src/p4-parallel-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.38 sec finished on 12/14/16 13:56:13; approx. 5.39 sec left (0.09 minutes)
+[INFO] Instance 379/384: nb_threads=4 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=1... Running src/p4-drake-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.39 sec finished on 12/14/16 13:56:14; approx. 4.50 sec left (0.07 minutes)
+[INFO] Instance 380/384: nb_threads=4 pattern=constant size=16777216 value=123456 input_instance=1 implementation=drake run_instance=2... Running src/p4-drake-sort /tmp/isafo268//input-constant-16777216-v123456.bin ...
+[utils.c:check_sorted:28] Input length OK.
+[utils.c:check_sorted:46] No difference between sorted and qsorted arrays.
+OK. 1.36 sec finished on 12/14/16 13:56:16; approx. 3.60 sec left (0.06 minutes)
+[INFO] Success. Batch took 342.58 seconds (5.71 minutes) to run, or 0.89 seconds per instance run (0.01 minutes).
 [INFO] Merging all results to benchmark/Wed_Nov_23_15-07-31_CET_2016/table.csv ...[INFO] Merging all results to benchmark/table.csv ...
