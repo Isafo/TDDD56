@@ -13,13 +13,12 @@
 // 4) We want to use as many threads in a block as possible preferrably a warp so in this case workgroup of size 32x32
 //
 // 5) 		no local 			local
-//		8
-//		0.0072				0.0026
 //kernelsize:	4
 //time		0.0026				0.0011
 //ks:		2
 //t		0.00125				0.00085				
-
+//		8
+//		0.0072				0.0026
 
 #define IS_LOCAL 0
 #define KERNELSIZE 8
